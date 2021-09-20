@@ -1,0 +1,29 @@
+$color-a: #000;
+$color-b: #81bd38;
+$color-main: #f88; 
+
+//font-family
+$font-family-ja: serif;
+$font-family-en: sans-serif;
+
+//layout
+$layout-width: 1440px;
+
+//inner
+$layout-width-inner: 1180px;
+
+//header-height
+$header-height-pc: 80px;
+$header-height-sp: 60px;
+
+// unit
+// --------------------------------------------------------------------------
+// viewport size(for smartphone)
+// デバイス幅 750px のデザインカンプ上で何pxかを表す
+// 下記の例はカンプ上の60px
+// ```scss
+// .sample {
+//   width: 60 * $vw;
+// }
+// ```
+$vw: 100vw / 750;

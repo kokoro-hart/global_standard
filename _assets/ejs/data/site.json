@@ -1,0 +1,26 @@
+{
+  "siteInfo": {
+    "name": "テスト",
+    "siteUrl": "サイトのドメイン"
+  },
+  "pages": {
+    "home": {
+      "name": "トップページ",
+      "description": "テストページの説明",
+      "type": "website",
+      "slug": "/"
+    },
+    "about": {
+      "name": "ABOUTページ",
+      "description": "ABOUTページの説明",
+      "type": "article",
+      "slug": "/about/"
+    },
+    "works": {
+      "name": "WORKSページ",
+      "description": "WORKSページの説明",
+      "type": "article",
+      "slug": "/works/"
+    }
+  }
+}
