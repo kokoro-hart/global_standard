@@ -1,29 +1,30 @@
-$color-a: #000;
-$color-b: #81bd38;
-$color-main: #f88; 
+// --------------------------------------------------------------------------
+//  Color 
+// --------------------------------------------------------------------------
+//text color
+$color-text-black: #1A1A1A;
+$color-text-white: #FFF;
+//main color
+$color-main: #163F74;
+$color-main-thin: #EEF3F8;
+$color-main-dark: #002A52;
+//accent color
+$color-accent-yellow: #FEF251;
+$color-accent-red: #D33365;
 
+// --------------------------------------------------------------------------
+//  Fonts
+// --------------------------------------------------------------------------
 //font-family
 $font-family-ja: serif;
 $font-family-en: sans-serif;
 
-//layout
-$layout-width: 1440px;
-
-//inner
-$layout-width-inner: 1180px;
-
+// --------------------------------------------------------------------------
+//  Layout
+// --------------------------------------------------------------------------
+//container
+$layout-width-container: 1180px;
 //header-height
-$header-height-pc: 80px;
+$header-height-pc: 100px;
 $header-height-sp: 60px;
 
-// unit
-// --------------------------------------------------------------------------
-// viewport size(for smartphone)
-// デバイス幅 750px のデザインカンプ上で何pxかを表す
-// 下記の例はカンプ上の60px
-// ```scss
-// .sample {
-//   width: 60 * $vw;
-// }
-// ```
-$vw: 100vw / 750;
