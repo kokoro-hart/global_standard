@@ -1,0 +1,52 @@
+@use "foundation/global";
+
+.c-global-nav {
+  position: fixed;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100vw;
+  height: 0;
+  background-color: global.$color-main;
+  transition: all 0.3s ease-out;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item {
+    margin-bottom: 40px;
+    @include global.fz(16);
+    @include global.lh(1.5);
+    color: global.$color-text-white;
+  }
+  &__link {
+    display: block;
+  }
+}
+//ボタンタイプのナビゲーションアイテム
+.c-global-nav__item_type_button {
+  @extend .c-global-nav__item;
+  max-width: 295px;
+  width: 100%;
+  height: 68px;
+  border: 1px solid global.$color-text-white;
+  text-align: center;
+  padding: 22px 0;
+  //背景白
+  &_bg_white {
+    @extend .c-global-nav__item_type_button;
+    background-color: global.$color-text-white;
+    color: global.$color-main;
+  }
+}
+//SPナビゲーションアクティブ時
+.c-global-nav {
+  &.is-active {
+    visibility: visible;
+    height: calc(100vh - global.$header-height-sp);
+  }
+}
