@@ -1,26 +1,38 @@
 {
   "siteInfo": {
-    "name": "テスト",
+    "name": "Global Standard",
     "siteUrl": "サイトのドメイン"
   },
   "pages": {
     "home": {
-      "name": "トップページ",
-      "description": "テストページの説明",
+      "name": "トップ",
+      "description": "トップページの説明",
       "type": "website",
       "slug": "/"
     },
     "about": {
-      "name": "ABOUTページ",
-      "description": "ABOUTページの説明",
+      "name": "当社について",
+      "description": "当社についての説明",
       "type": "article",
       "slug": "/about/"
     },
-    "works": {
-      "name": "WORKSページ",
-      "description": "WORKSページの説明",
+    "service": {
+      "name": "サービス",
+      "description": "サービスページの説明",
       "type": "article",
-      "slug": "/works/"
+      "slug": "/service/"
+    },
+    "case": {
+      "name": "導入事例",
+      "description": "導入事例ページの説明",
+      "type": "article",
+      "slug": "/case/"
+    },
+    "news": {
+      "name": "お知らせ",
+      "description": "お知らせページの説明",
+      "type": "article",
+      "slug": "/case/"
     }
   }
 }
