@@ -2,8 +2,8 @@
   font-size: $size + px + if($importantFlg, " !important", "");
   font-size: $size/10 + rem + if($importantFlg, " !important", "");
 }
-
-// media query
+// --------------------------------------------------------------------------
+//  Media Query
 // --------------------------------------------------------------------------
 // @include mixins.mq(引数1, 引数2) {
 //   [style]
@@ -40,14 +40,19 @@
 // }
 // ```
 
-// Breakpoint
+// --------------------------------------------------------------------------
+//  Breakpoint
+// --------------------------------------------------------------------------
 $screen: (
-  sm: 320px,
-  md: 767px,
-  lg: 1040px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 ) !default;
 
-@mixin mq($size, $width: max) {
+@mixin mq($size, $width: min) {
   $result: 0;
 
   @if (type-of($size) == number) {
@@ -69,24 +74,48 @@ $screen: (
   }
 }
 
-//font-size
-@mixin fz($font_pc: "", $font_sp: "") {
-  font-size: #{$font_pc}px;
+// --------------------------------------------------------------------------
+//  Fonts size & line-hight
+// --------------------------------------------------------------------------
+//font size(モバイルファースト)
+@mixin fz($font_xs: "", $font_md: "") {
+  font-size: #{$font_xs}px;
 
-  @if ($font_sp != "") {
+  @if ($font_md != "") {
     @include mq(md) {
-      font-size: #{$font_sp}px;
+      font-size: #{$font_md}px;
     }
   }
 }
+//line-height(モバイルファースト)
+@mixin lh($lineH_xs: "", $lineH_md: ""){
+	line-height: #{$lineH_xs}em;
 
-//line-height
-@mixin lh($lineH_pc: "", $lineH_sp: ""){
-	line-height: #{$lineH_pc}em;
-
-	@if ($lineH_sp != "") {
+	@if ($lineH_md != "") {
 		@include mq(md) {
-      line-height: #{$lineH_sp}em;
+      line-height: #{$lineH_md}em;
     }
 	}
 }
+
+// //font size(PCファースト)
+// @mixin fz($font_pc: "", $font_sp: "") {
+//   font-size: #{$font_pc}px;
+
+//   @if ($font_sp != "") {
+//     @include mq(md) {
+//       font-size: #{$font_sp}px;
+//     }
+//   }
+// }
+// //line-height(PCファースト)
+// @mixin lh($lineH_pc: "", $lineH_sp: ""){
+// 	line-height: #{$lineH_pc}em;
+
+// 	@if ($lineH_sp != "") {
+// 		@include mq(md) {
+//       line-height: #{$lineH_sp}em;
+//     }
+// 	}
+// }
+
