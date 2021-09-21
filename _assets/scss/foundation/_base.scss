@@ -1,21 +1,4 @@
 @use "global";
-
-.is-only-sp {
-  display: none;
-
-  @include global.mq(md) {
-    display: block;
-  }
-}
-
-.is-only-pc {
-  display: inherit;
-
-  @include global.mq(md) {
-    display: none;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -24,9 +7,6 @@
 
 html,
 body {
-  color: global.$color-a;
-  font-family: global.$font-family-ja;
-  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: 'palt';
   padding: 0;
@@ -41,6 +21,12 @@ body,
 button,
 input {
   line-height: 1.6;
+}
+
+body {
+  @include global.fz(14);
+  font-family: global.$font-family-ja;
+  background-color: global.$color-text-white;
 }
 
 a {
