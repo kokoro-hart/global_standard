@@ -8,18 +8,34 @@
 //slickを使うとき
 // import '@modules/slick-carousel';
 
+
+// ------------------------------------------------------------------
+//   360vw以下はリサイズする
+// ------------------------------------------------------------------
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value =
+      window.outerWidth > 360
+        ? 'width=device-width,initial-scale=1'
+        : 'width=360';
+    if (viewport.getAttribute('content') !== value) {
+      viewport.setAttribute('content', value);
+    }
+  }
+  addEventListener('resize', switchViewport, false);
+  switchViewport();
+})();
+
 // ------------------------------------------------------------------
 //  ハンバーガーメニュー
 // ------------------------------------------------------------------
-const jsHamburger = document.getElementById('js-hamburger');
+const jsDrawerButton = document.getElementById('js-drawer');
 const body = document.body;
 const spGlobalNav = document.getElementById('js-global-nav')
-//クリックはaddEventListenerでイベント登録しました。
-jsHamburger.addEventListener('click', function () {
+jsDrawerButton.addEventListener('click', function () {
   body.classList.toggle('is-drawerActive')
-  //thisはクリックした要素、getAttributeは属性の値を取得する
   if (this.getAttribute('aria-expanded') == 'false') {
-    //setAttributeは属性に値をセットする
     this.setAttribute('aria-expanded', 'true');
     spGlobalNav.setAttribute('area-hidden', 'false');
     spGlobalNav.classList.add('is-active');
@@ -28,9 +44,4 @@ jsHamburger.addEventListener('click', function () {
     spGlobalNav.setAttribute('area-hidden', 'true');
     spGlobalNav.classList.remove('is-active');
   };
-});
-spGlobalNav.addEventListener('click', function () {
-  this.setAttribute('area-hidden', 'true');
-  this.classList.remove('is-active');
-  jsHamburger.setAttribute('aria-expanded', 'false');
 });
