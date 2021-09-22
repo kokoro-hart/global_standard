@@ -1,15 +1,16 @@
 @use "foundation/global";
-.c-hamburger-button {
+//ドロワーボタン
+.c-drawer-button {
   position: relative;
   width: 27px;
-  height: 15px;
+  height: 22px;
   &__line {
     display: inline-block;
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: global.$color-main;
-    border-radius: 1px;
+    border-radius: 2px;
     transition: all 0.3s ease-in-out;
     &:nth-last-of-type(1) {
       top: 0;
@@ -26,19 +27,19 @@
     }
   }
 }
-
-.c-hamburger-button[aria-expanded="true"] {
-  .c-hamburger-button__line {
+//ドロワーボタンアクティブ時
+.c-drawer-button[aria-expanded="true"] {
+  .c-drawer-button__line {
     &:nth-last-of-type(1) {
       top: 50%;
-      transform: rotate(45deg);
+      transform: translateY(-50%) rotate(45deg);
     }
     &:nth-last-of-type(2) {
       width: 0;
     }
     &:nth-last-of-type(3) {
       top: 50%;
-      transform: rotate(-45deg);
+      transform: translateY(-50%) rotate(-45deg);
     }
   }
 }
