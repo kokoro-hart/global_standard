@@ -1,0 +1,17 @@
+@use "foundation/global";
+
+//セクションのタイトル
+.c-section-title {
+  color: global.$color-main;
+  &__head {
+    @include global.fz(52, 100);
+    @include global.lh(1.2);
+    font-family: global.$font-family-en;
+    font-weight: 500;
+  }
+  &__foot {
+    @include global.fz(16, 24);
+    @include global.lh(1.5);
+    font-weight: 700;
+  }
+}
