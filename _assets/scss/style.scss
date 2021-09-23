@@ -12,6 +12,8 @@
 @use "layout/layout";
 @use "layout/header";
 @use "layout/footer";
+@use "layout/inner";
+@use "layout/section";
 
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
@@ -20,7 +22,7 @@
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
-@use "object/Project/index";
+@use "object/Project/home";
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */
