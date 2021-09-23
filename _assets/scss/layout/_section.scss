@@ -1,8 +1,0 @@
-@use "foundation/global";
-
-.l-section {
-  padding: 60px 0;
-  @include global.mq(md) {
-    padding: 120px 0;
-  }
-}
