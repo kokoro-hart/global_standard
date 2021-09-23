@@ -12,8 +12,6 @@
 @use "layout/layout";
 @use "layout/header";
 @use "layout/footer";
-@use "layout/inner";
-@use "layout/section";
 
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
@@ -29,3 +27,4 @@
    ----------------------------------------------------------------- */
 @use "object/utility/utilities";
 @use "object/utility/hidden";
+@use "object/utility/font";
