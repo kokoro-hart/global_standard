@@ -43,3 +43,99 @@
     }
   }
 }
+
+//View more->○ ボタン
+.c-more-button-wrapper {
+  text-align: right;
+}
+.c-more-button {
+  $this: &;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+
+  //ホバー
+  @include global.mq(md) {
+    &:hover {
+      #{$this}__arrow {
+        right: -15.2%;
+        width: 142px;
+      }
+    }
+  }
+
+  //テキスト
+  &__text {
+    color: global.$color-main;
+    @include global.fz(20, 32);
+    @include global.lh(1.2);
+    font-weight: 500;
+    font-family: global.$font-family-en;
+    @include global.mq(md) {
+      display: inline-block;
+      transform: translateY(-3px);
+      padding-right: 142px;
+    }
+  }
+
+  //矢印
+  &__arrow {
+    position: relative;
+    display: inline-block;
+    width: 64.5px;
+    height: 2px;
+    margin: 0 21px 0 8px;
+    background-color: global.$color-main;
+    vertical-align: middle;
+    @include global.mq(md) {
+      position: absolute;
+      right: 1%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 95px;
+      transition: width 0.3s, right 0.3s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2.2px;
+      right: 4px;
+      height: 14px;
+      width: 2px;
+      transform: rotate(-55deg);
+      background-color: global.$color-main;
+      @include global.mq(md) {
+        bottom: -3.2px;
+        height: 18px;
+        right: 6px;
+      }
+    }
+    &--color-white {
+      background-color: global.$color-text-white;
+      &::after {
+        background-color: global.$color-text-white;
+      }
+    }
+  }
+
+  //丸
+  &__circle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    width: 40px;
+    height: 40px;
+    background-color: global.$color-accent-yellow;
+    border-radius: 50%;
+    @include global.mq(md) {
+      width: 51px;
+      height: 51px;
+    }
+    &--border {
+      border: 2px solid global.$color-accent-yellow;
+    background-color: transparent;
+    }
+  }
+}
