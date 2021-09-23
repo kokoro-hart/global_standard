@@ -4,9 +4,31 @@
 
 <%# console.log(jsonData) %>
 <main class="p-home">
-  <div class="inner-block">
-    homeです
-  </div>
+  <section class="l-section"></section>
+  <section class="p-home-about l-section l-skew">
+    <div class="l-inner">
+      <div class="p-heading">
+        <div class="c-section-title">
+          <div class="c-section-title__en">ABOUT US</div>
+          <h2 class="c-section-title__ja">当社について</h2>
+        </div>
+        <a href="" class="c-more-button u-hidden-md-down">View more</a>
+      </div>
+      <div class="p-home-about__text">
+        急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。
+        コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。 文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
+      </div>
+      <div class="p-home-about__img-wrapper">
+        <picture class="p-home-about__picture">
+          <source class="p-home-about__img" srcset="img/common/company.jpg" media="(min-width: 768px)" />
+          <source class="p-home-about__img" srcset="img/common/company_sp@2x.jpg" media="(max-width: 767px)" />
+          <img src="img/common/company.jpg" alt="" class="p-home-about__img">
+        <picture>
+        <a href="" class="c-more-button u-hidden-md-up">View more</a>
+        <div class="p-home-about__bg"></div>
+      </div>
+    </div>
+  </section>
 </main>
 
 
