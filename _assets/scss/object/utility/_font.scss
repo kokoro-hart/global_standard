@@ -1,0 +1,9 @@
+@use "foundation/global";
+
+.u-font-italic {
+  font-style: italic;
+}
+
+.u-color-white {
+  color: global.$color-text-white;
+}
