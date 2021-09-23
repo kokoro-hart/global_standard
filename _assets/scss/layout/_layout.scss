@@ -1,1 +1,27 @@
 @use "foundation/global";
+
+//インナー
+.l-inner {
+  max-width: 1180px;
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+//セクション
+.l-section {
+  padding: 60px 0;
+  @include global.mq(md) {
+    padding: 120px 0;
+  }
+}
+
+//レアウトのみ斜め（小要素は全て水平に戻す）
+.l-skew {
+  transform: skewY(10deg);
+  & > * {
+    transform: skewY(-10deg);
+  }
+}
+
