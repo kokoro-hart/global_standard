@@ -4,28 +4,47 @@
 
 <%# console.log(jsonData) %>
 <main class="p-home">
-  <section class="l-section"></section>
+  <section class="p-home-fv l-section"></section>
+
   <section class="p-home-about l-section l-skew">
-    <div class="l-inner">
-      <div class="p-heading">
+    <div class="p-home-about__bg-wrapper">
+      <div class="p-home-about__bg u-hidden-md-down"></div>
+    </div>
+    <div class="p-home-about__inner l-inner">
+      <div class="l-section-heading">
         <div class="c-section-title">
-          <div class="c-section-title__en">ABOUT US</div>
-          <h2 class="c-section-title__ja">当社について</h2>
+          <div class="c-section-title__head u-font-italic">ABOUT US</div>
+          <h2 class="c-section-title__foot">当社について</h2>
         </div>
-        <a href="" class="c-more-button u-hidden-md-down">View more</a>
+        <a href="/about/" class="c-more-button u-hidden-md-down">
+          <span class="c-more-button__text u-font-italic u-color-white">View more</span>
+          <span class="c-more-button__arrow c-more-button__arrow--color-white"></span>
+          <span class="c-more-button__circle c-more-button__circle--border"></span>
+        </a>
       </div>
-      <div class="p-home-about__text">
-        急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。
-        コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。 文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
-      </div>
-      <div class="p-home-about__img-wrapper">
-        <picture class="p-home-about__picture">
-          <source class="p-home-about__img" srcset="img/common/company.jpg" media="(min-width: 768px)" />
-          <source class="p-home-about__img" srcset="img/common/company_sp@2x.jpg" media="(max-width: 767px)" />
-          <img src="img/common/company.jpg" alt="" class="p-home-about__img">
-        <picture>
-        <a href="" class="c-more-button u-hidden-md-up">View more</a>
-        <div class="p-home-about__bg"></div>
+      <div class="p-home-about__contents">
+        <div class="p-home-about__text">
+          急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。
+          <br>
+          <br>
+          コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。
+          <br>
+          <br>
+          文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
+        </div>
+        <div class="p-home-about__img-wrapper">
+          <figure class="p-home-about__figure">
+            <img src="/img/common/img-company.jpeg" alt="aboutイメージ" class="p-home-about__img">
+          </figure>
+          <div class="p-home-about__link-wrapper u-hidden-md-up">
+            <a href="/about/" class="c-more-button">
+              <span class="c-more-button__text u-font-italic u-color-white">View more</span>
+              <span class="c-more-button__arrow c-more-button__arrow--color-white"></span>
+              <span class="c-more-button__circle c-more-button__circle--border"></span>
+            </a>
+          </div>
+          <div class="p-home-about__bg u-hidden-md-up"></div>
+        </div>
       </div>
     </div>
   </section>
