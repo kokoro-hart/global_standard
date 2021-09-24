@@ -1,0 +1,73 @@
+@use "foundation/global";
+
+//-----------------
+//ABOUTセクション
+//-----------------
+.p-home-about {
+  width: 100%;
+  background: linear-gradient(transparent 19%, global.$color-main-thin 19%);
+  @include global.mq(md) {
+    margin: 30px 0 125px;
+    background: linear-gradient(transparent 40.5%, global.$color-main-thin 40.5%);
+  }
+  &__contents {
+    @include global.mq(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__text {
+    margin-top: 56px;
+    color: global.$color-text-black;
+    @include global.fz(14);
+    @include global.lh(1.7);
+    font-weight: 500;
+    @include global.mq(md) {
+      width: calc(36.27% - 40px / 2);
+      margin: 0;
+    }
+  }
+  &__img-wrapper {
+    position: relative;
+    margin-top: 30px;
+    padding: 10.66667vw 0 32vw;
+    @include global.mq(md) {
+      width: calc(63.73% - 40px / 2);
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__link-wrapper {
+    text-align: right;
+    margin-top: 30px;
+  }
+  &__bg-wrapper {
+    @include global.mq(md) {
+      position: relative;
+      padding-top: 85px;
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 96.53333vw;
+    right: -20px;
+    width: 78.66667vw;
+    z-index: -2;
+    background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;
+    @include global.mq(md) {
+      display: block;
+      height: 70.3125vw;
+      max-height: 800px;
+      right: 0;
+      width: 40%;
+    }
+  }
+}
