@@ -4,10 +4,16 @@
 .c-section-title {
   color: global.$color-main;
   &__head {
-    @include global.fz(52, 100);
+    font-size: 52px;
     @include global.lh(1.2);
     font-family: global.$font-family-en;
     font-weight: 500;
+    @include global.mq(md) {
+      font-size: 7.815vw;
+    }
+    @include global.mq(lg) {
+      font-size: 100px;
+    }
   }
   &__foot {
     @include global.fz(16, 24);
