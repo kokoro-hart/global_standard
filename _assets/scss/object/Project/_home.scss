@@ -1,5 +1,8 @@
 @use "foundation/global";
 
+//トップページ
+//-----------------
+
 //-----------------
 //ABOUTセクション
 //-----------------
@@ -69,5 +72,164 @@
       right: 0;
       width: 40%;
     }
+  }
+}
+
+//-----------------
+//SERVICEセクション
+//-----------------
+.p-home-service {
+  margin: 0 0 60px;
+  width: 100%;
+  background: linear-gradient(transparent 50%, global.$color-main-thin 50%);
+  &__contents {
+    width: 100%;
+    padding-top: 55px;
+    margin-top: 10px;
+    @include global.mq(md) {
+      margin-top: 30px;
+    }
+  }
+  &__cards {
+    @include global.mq(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &__link-wrapper {
+    margin-top: 32px;
+    text-align: right;
+  }
+}
+//serviceカード
+.p-home-service-card {
+  width: 100%;
+  padding-left: 15px;
+  @include global.mq(md,max) {
+    &:not(:first-child) {
+      margin-top: 74px;
+    }
+  }
+  @include global.mq(md) {
+    width: calc(33.333% - 12.72% / 3);
+    &:nth-child(3n+2) {
+      margin-top: 60px;
+    }
+    &:nth-child(3n) {
+      margin-top: 120px;
+    }
+  }
+  &__head {
+    position: relative;
+    width: 100%;
+  }
+  &__number {
+    position: absolute;
+    top: -60px;
+    right: 0;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__title {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    color: global.$color-main;
+    font-weight: 700;
+    @include global.fz(28);
+    @include global.lh(1.4);
+  }
+  &__title-inside {
+    display: inline-block;
+    background-color: global.$color-text-white;
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+  &__text {
+    margin-top: 12px;
+    @include global.fz(14);
+    @include global.lh(1.7);
+  }
+}
+
+//--------------------
+//CASE STUDYセクション
+//--------------------
+.p-home-case {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: url(../img/common/bg-case.jpeg) no-repeat center center / cover ;
+  &__cards {
+    width: 100%;
+    margin-top: 40px;
+    @include global.mq(md) {
+      margin-top: 11px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &__link-wrapper {
+    margin-top: 58px;
+    text-align: right;
+  }
+}
+//導入事例カード
+.p-home-case-card {
+  $this: &;
+  display: inline-block;
+  width: 100%;
+  color: global.$color-text-white;
+  margin-top: 52px;
+  &:hover {
+    #{$this}__arrow {
+      color: global.$color-accent-yellow;
+      transform: translateX(5px);
+    }
+  }
+  @include global.mq(md) {
+    margin-top: 70px;
+    width: calc(50% - 7.4% / 2 );
+  }
+  @include global.mq(lg) {
+    width: calc(33.333% - 12.73% / 3);
+  }
+  
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 251 / 335 * 100%;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    margin-top: 10px;
+    @include global.fz(16);
+    @include global.lh(1.5);
+    font-weight: 700;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  &__category {
+    padding: 6px 16px;
+    border: 1px solid global.$color-text-white; 
+    @include global.lh(1.4);
+  }
+  &__arrow {
+    color: global.$color-text-white;
+    transition: transform 0.3s ease-out;
   }
 }
