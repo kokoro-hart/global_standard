@@ -116,6 +116,12 @@
         background-color: global.$color-text-white;
       }
     }
+    &--color-black {
+      background-color: global.$color-text-black;
+      &::after {
+        background-color: global.$color-text-black;
+      }
+    }
   }
 
   //丸
