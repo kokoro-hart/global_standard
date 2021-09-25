@@ -134,8 +134,9 @@
       height: 51px;
     }
     &--border {
+      z-index: 1;
       border: 2px solid global.$color-accent-yellow;
-    background-color: transparent;
+      background-color: transparent;
     }
   }
 }
