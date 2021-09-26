@@ -7,10 +7,17 @@
   height: inherit;
   margin: 0 auto;
   padding: 0 20px;
+
+  &--wide {
+    @include global.mq(md) {
+      padding: 0 40px;
+    }
+  }
 }
 
 //セクション
 .l-section {
+  width: 100%;
   padding: 60px 0;
   @include global.mq(md) {
     padding: 120px 0;
