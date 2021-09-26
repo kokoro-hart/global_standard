@@ -7,11 +7,14 @@
   height: inherit;
   margin: 0 auto;
   padding: 0 20px;
+  @include global.mq(md) {
+    padding: 0 40px;
+  }
 
-  &--wide {
-    @include global.mq(md) {
-      padding: 0 40px;
-    }
+  //狭い
+  &--narrow {
+    @extend .l-inner;
+    max-width: 848px;
   }
 }
 
