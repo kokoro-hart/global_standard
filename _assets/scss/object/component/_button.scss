@@ -45,10 +45,7 @@
 }
 
 //View more->○ ボタン
-.c-more-button-wrapper {
-  text-align: right;
-}
-.c-more-button {
+.c-button-more {
   $this: &;
   position: relative;
   display: inline-block;
@@ -143,6 +140,57 @@
       z-index: 1;
       border: 2px solid global.$color-accent-yellow;
       background-color: transparent;
+    }
+  }
+}
+
+//四角のボタン
+.c-button-square {
+  $this: &;
+  position: relative;
+  display: inline-block;
+  max-width: 295px;
+  width: 100%;
+  padding: 28px 10px;
+  border: 1px solid global.$color-main;
+  color: global.$color-main;
+  @include global.fz(14, 16);
+  @include global.lh(1.7, 1.5);
+  text-align: center;
+  transition: color 0.3s ease-out;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: global.$color-main;
+    transition: width 0.3s ease-out;
+  }
+  &:hover {
+    color: global.$color-text-white;
+    #{$this}__svg {
+      transform: translateY(-50%) translateX(5px);
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+  @include global.mq(md) {
+    max-width: 304px;
+    padding: 27px 15px;
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+    @include global.mq(md) {
+      width: 20px;
+      height: 13px;
     }
   }
 }
