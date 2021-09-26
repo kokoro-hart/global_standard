@@ -1,14 +1,50 @@
-<footer id="footer" class="c-footer">
-  <div class="inner-block">
-    <nav>
-      <ul>
-        <% for(let page in jsonData.pages){ %>
-        <li><a href="<%= jsonData.pages[page].slug %>"><%= jsonData.pages[page].name %></a></li>
-        <% }; %>
-      </ul>
-    </nav>
-    <p><small>（c）<%= jsonData.siteInfo.name %></small></p>
-  </div><!-- /inner-block -->
+<div class="c-footer-links">
+  <div class="c-footer-links__item" style="background-image: url(../img/common/img-download.jpeg);">
+    <div class="c-footer-links__item-inner">
+      <h2 class="c-footer-links__title-head u-font-italic">DOWNLOAD</h2>
+      <p class="c-footer-links__title-foot">資料ダウンロード</p>
+      <a href="" class="c-footer-links__button u-font-italic">
+        View more
+        <svg class="c-svg c-footer-links__svg" width="20" height="13.5">
+          <use xlink:href="/img/svg/sprite.min.svg#icon-arrow02" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="c-footer-links__item" style="background-image: url(../img/common/img-contact.jpeg);">
+    <div class="c-footer-links__item-inner">
+      <h2 class="c-footer-links__title-head u-font-italic">CONTACT</h2>
+      <p class="c-footer-links__title-foot">お問い合わせ</p>
+      <a href="" class="c-footer-links__button u-font-italic">
+        View more
+        <svg class="c-svg c-footer-links__svg" width="20" height="13.5">
+          <use xlink:href="/img/svg/sprite.min.svg#icon-arrow02" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="l-footer">
+  <div class="l-footer__inner">
+    <h1 class="l-footer-logo">
+      <a class="l-footer-logo__link" href="/">
+        <svg class="c-svg l-footer-logo__svg" width="282" height="53">
+          <use xlink:href="/img/svg/sprite.min.svg#logo02"/>
+        </svg>
+      </a>
+    </h1>
+    <div class="l-footer__info">
+      <p class="l-footer__text">
+        〒550-1000　大阪市西区土佐堀9-5-5 <br>
+        TEL　06-123-4567 <br>
+        FAX　06-123-4568
+      </p>
+    </div>
+    <div class="l-footer__copyright">
+      <span lang="en">©︎2021 Global Standard. All Rights Reserved.</span>
+    </div>
+  </div>
 </footer>
 
 </div><!-- /wrapper -->

@@ -1,0 +1,105 @@
+@use "foundation/global";
+
+.c-footer-links {
+  $this: &;
+  width: 100%;
+  @include global.mq(md) {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    padding: 45px 40px 26px;
+    background: no-repeat center center / cover;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: global.$color-main;
+      opacity: 0.8;
+    }
+    @include global.mq(md) {
+      width: 50%;
+      padding: 56px 40px 50px;
+    } 
+  }
+  &__item-inner {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+  }
+  &__title-head {
+    color: global.$color-text-white;
+    @include global.fz(40);
+    @include global.lh(1.2);
+    font-family: global.$font-family-en;
+    font-weight: 500;
+    @include global.mq(md) {
+      font-size: 4.6875vw;
+    }
+    @include global.mq(lg) {
+      font-size: 60px;
+    }
+  }
+  &__title-foot {
+    color: global.$color-text-white;
+    @include global.fz(16);
+    @include global.lh(1.5);
+  }
+  &__button {
+    display: inline-block;
+    position: relative;
+    max-width: 295px;
+    width: 100%;
+    padding: 30px 12px;
+    margin-top: 40px;
+    border: 2px solid global.$color-accent-yellow;
+    color: global.$color-accent-yellow;
+    @include global.fz(16,24);
+    @include global.lh(1.2);
+    font-family: global.$font-family-en;
+    font-weight: 500;
+    transition: color 0.3s ease-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: global.$color-accent-yellow;
+      transition: width 0.3s ease-out;
+      z-index: -1;
+    }
+    &:hover {
+      color: global.$color-text-black;
+      #{$this}__svg {
+        transform: translateY(-50%) translateX(5px);
+      }
+      &:after {
+        width: 100%;
+      }
+    }
+
+    @include global.mq(md) {
+      padding: 34px 15px;
+      border-width: 3px;
+    }
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-out;
+    @include global.mq(md) {
+      right: 31px;
+    }
+  }
+}
+
