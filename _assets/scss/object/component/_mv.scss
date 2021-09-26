@@ -1,0 +1,60 @@
+@use "foundation/global";
+
+.c-mv-lower {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-top: global.$header-height-sp;
+  background: no-repeat center center / cover;
+  @include global.mq(xl) {
+    margin-top: global.$header-height-pc;
+  }
+  &__svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: global.$color-main;
+  }
+  &__svg--sp {
+    width: 165px;
+  }
+  &__svg--pc {
+    width: 365px;
+  }
+  &__heading {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 21px;
+    @include global.mq(md) {
+      left: 17%;
+    }
+  }
+  &__heading-head {
+    display: inline-block;
+    color: global.$color-main;
+    @include global.fz(32,60);
+    @include global.lh(1.2);
+    font-weight: 500;
+    background-color: global.$color-text-white;
+    font-family: global.$font-family-en;
+  }
+  &__heading-foot {
+    display: inline-block;
+    margin-top: 8px;
+    color: global.$color-main;
+    @include global.fz(16,20);
+    @include global.lh(1.5, 1.45);
+    font-weight: 700;
+    background-color: global.$color-text-white;
+  }
+}
+
+.c-mv-lower--bg-about {
+  background-image: url(../img/common/mv-company_sp.jpeg);
+  @include global.mq(md) {
+    background-image: url(../img/common/mv-company_pc.jpeg);
+  }
+}
