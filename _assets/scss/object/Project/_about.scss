@@ -92,7 +92,9 @@
     width: 100%;
     padding: 40px 20px; 
     background-color: global.$color-text-white;
-    
+    @include global.mq(md) {
+      padding: 60px 40px 80px;
+    }
   }
   &__title {
     @include global.fz(24);
@@ -105,20 +107,35 @@
     flex-wrap: wrap;
     width: 100%;
     margin-top: 41px;
+    @include global.mq(md) {
+      margin-top: 61px;
+    }
   }
   &__dt,
   &__dd {
     padding: 16px 0;
-    @include global.lh(1.43);
+    @include global.fz(14, 16);
+    @include global.lh(1.43, 1.5);
+    font-weight: 500;
     border-top: 1px solid global.$color-main;
     &:last-of-type {
       border-bottom: 1px solid global.$color-main;
+    }
+    @include global.mq(md) {
+      padding: 24px 0;
     }
   }
   &__dt {
     width: 33.9%;
     display: flex;
     align-items: center;
+    @include global.mq(sm) {
+      padding-left: 12px;
+    }
+    @include global.mq(md) {
+      width: 20.07%;
+      padding-left: 32px;
+    }
   }
   &__dd {
     width: 66.1%;
@@ -127,5 +144,108 @@
     &:last-of-type {
       border-color: global.$color-border-thin;
     }
+    @include global.mq(md) {
+      width: 70.93%;
+      padding-left: 36px;
+    }
+  }
+}
+
+//-----------
+// 役員紹介
+//-----------
+.p-about-officer {
+  margin-bottom: 100px;
+  background: linear-gradient(transparent 46.5%, global.$color-main-thin 46.5%);
+  color: global.$color-text-black;
+  @include global.mq(md) {
+    background: linear-gradient(transparent 62%, global.$color-main-thin 62%);
+  }
+  &__title {
+    @include global.fz(24);
+    @include global.lh(1.45);
+    font-weight: 700;
+    text-align: center;
+  }
+  &__items {
+    width: 100%;
+    margin-top: 41px;
+    @include global.mq(md) {
+      max-width: 688px;
+      margin: 60px auto 0;
+    }
+  }
+  &__item {
+    width: 100%;
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+    @include global.mq(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+  }
+  &__figure {
+    width: 100%;
+    text-align: center;
+    padding: 0 40px;
+    @include global.mq(md) {
+      padding: 0;
+      width: calc(37.79% - 5.81% / 2);
+    }
+  }
+  &__avatar {
+    display: inline-block;
+  }
+  &__info {
+    margin-top: 18px;
+    @include global.mq(md) {
+      margin-top: 0;
+      width: calc(62.21% - 5.81% / 2);
+    }
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+  }
+  &__director {
+    @include global.fz(14);
+    @include global.lh(1.42);
+    font-weight: 700;
+  }
+  &__name {
+    margin-left: 20px;
+    @include global.fz(20);
+    @include global.lh(1.45);
+  }
+  &__career {
+    margin-top: 16px;
+    @include global.fz(14);
+    @include global.lh(1.7);
+    @include global.mq(md) {
+      margin-top: 28px;
+    }
+  }
+  &__sns-list {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+    @include global.mq(md) {
+      margin-top: 28px;
+    }
+  }
+  &__sns-item {
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+  &__sns-link {
+    display: inline-block;
+  }
+  &__sns-svg {
+    color: global.$color-text-black;
+    height: 28px;
+    width: 28px;
   }
 }
