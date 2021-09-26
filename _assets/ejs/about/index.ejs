@@ -1,14 +1,28 @@
 <% let pageId='about' ; %>
 
-<%- include('../common/_header', {pageId:pageId }) %>
+  <%- include('../common/_header', {pageId:pageId }) %>
 
-<% console.log(jsonData) %>
-<main class="p-news">
-  <div class="inner-block">
-    aboutページです
-  </div>
-</main>
+    <%# console.log(jsonData) %>
+      <main class="p-about">
+        <div class="c-mv-lower c-mv-lower--bg-about">
+          <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+            <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+          </svg>
+          <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+            <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+          </svg>
+          <div class="c-mv-lower__heading">
+            <h2 class="c-mv-lower__heading-head u-font-italic">
+              ABOUT US
+            </h2>
+            <br>
+            <p class="c-mv-lower__heading-foot">
+              当社について
+            </p>
+          </div>
+        </div>
+        <div class="l-section"></div>
+      </main>
 
 
-
-<%- include('../common/_footer', {pageId:pageId }) %>
+      <%- include('../common/_footer', {pageId:pageId }) %>
