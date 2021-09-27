@@ -58,3 +58,9 @@
     background-image: url(../img/common/mv-company_pc.jpeg);
   }
 }
+.c-mv-lower--bg-service {
+  background-image: url(../img/common/mv-service_sp.jpeg);
+  @include global.mq(md) {
+    background-image: url(../img/common/mv-service_pc.jpeg);
+  }
+}
