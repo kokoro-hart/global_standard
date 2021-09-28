@@ -19,12 +19,14 @@
 @use "object/component/mv";
 @use "object/component/button";
 @use "object/component/title";
+@use "object/component/accordion";
 @use "object/component/footer-links";
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
 @use "object/Project/home";
 @use "object/Project/about";
+@use "object/Project/service";
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */
