@@ -64,3 +64,9 @@
     background-image: url(../img/common/mv-service_pc.jpeg);
   }
 }
+.c-mv-lower--bg-news {
+  background-image: url(../img/common/mv-news_sp.jpeg);
+  @include global.mq(md) {
+    background-image: url(../img/common/mv-news_pc.jpeg);
+  }
+}
