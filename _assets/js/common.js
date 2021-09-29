@@ -3,15 +3,14 @@
  * webpack.config.jsにて定義している
  */
 
-//jQueryを使うとき
-//import $ from "@modules/jquery";
-//slickを使うとき
+// import $ from "@modules/jquery";
+
 // import '@modules/slick-carousel';
 
 
-// ------------------------------------------------------------------
+// -----------------------------
 //   360vw以下はリサイズする
-// ------------------------------------------------------------------
+// -----------------------------
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
@@ -27,15 +26,15 @@
   switchViewport();
 })();
 
-// ------------------------------------------------------------------
+// ----------------------------
 //  ハンバーガーメニュー
-// ------------------------------------------------------------------
+// ----------------------------
 const jsDrawerButton = document.getElementById('js-drawer');
 const body = document.body;
 const spGlobalNav = document.getElementById('js-global-nav')
 jsDrawerButton.addEventListener('click', function () {
   body.classList.toggle('is-drawerActive')
-  if (this.getAttribute('aria-expanded') == 'false') {
+  if (jsDrawerButton.getAttribute('aria-expanded') == 'false') {
     this.setAttribute('aria-expanded', 'true');
     spGlobalNav.setAttribute('area-hidden', 'false');
     spGlobalNav.classList.add('is-active');
@@ -44,4 +43,28 @@ jsDrawerButton.addEventListener('click', function () {
     spGlobalNav.setAttribute('area-hidden', 'true');
     spGlobalNav.classList.remove('is-active');
   };
+});
+
+// ----------------------------
+//  アコーディオンメニュー
+// ----------------------------
+const accordionTitle = document.querySelectorAll('.js-accordion-title');
+//forEachでtitleを一つ一つtitleEachに入れている
+accordionTitle.forEach(titleEach => {
+  //nextElementSiblingはjQueryのnext()みたいなもの
+  let content = titleEach.nextElementSibling
+  titleEach.addEventListener('click', () => {
+    titleEach.classList.toggle('is-active')
+    content.classList.toggle('is-open')
+    
+    if (content.getAttribute('aria-expanded') == 'false') {
+      content.setAttribute('aria-expanded', 'true');
+      content.setAttribute('area-hidden', 'false');
+      content.classList.add('is-open');
+    } else {
+      content.setAttribute('aria-expanded', 'false')
+      content.setAttribute('area-hidden', 'true');
+      content.classList.remove('is-open');
+    };
+  })
 });
