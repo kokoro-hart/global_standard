@@ -29,10 +29,11 @@
       "slug": "/case/"
     },
     "news": {
-      "name": "お知らせ",
-      "description": "お知らせページの説明",
+      "name": "ニュース",
+      "description": "ニュースページの説明",
       "type": "article",
-      "slug": "/case/"
+      "slug": "/news/"
     }
+    
   }
 }
