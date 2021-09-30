@@ -1,0 +1,83 @@
+@use "foundation/global";
+
+.c-sidebar {
+  &__title {
+    color: global.$color-text-black;
+    @include global.fz(20);
+    @include global.lh(2);
+    font-weight: 700;
+  }
+}
+
+.c-sidebar-new {
+  padding-top: 100px;
+  &__item {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-thumbnail {
+    width: calc(37.61% - 12px / 2);
+  }
+  &__item-img {
+    height: 24vw;
+    object-fit: cover;
+  }
+  &__item-body {
+    width: calc(62.39% - 12px / 2);
+  }
+  &__item-meta {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-cat {
+    @include global.fz(12);
+    @include global.lh(1.66);
+    padding: 3px 11px;
+    border: 1px solid global.$color-accent-red;
+    color: global.$color-accent-red;
+  }
+  &__item-time {
+    color: global.$color-text-gray;
+    @include global.fz(14);
+    @include global.lh(1.7);
+  }
+  &__item-title {
+    margin-top: 6px;
+    color: global.$color-text-black;
+    @include global.fz(14);
+    @include global.lh(1.42);
+    font-weight: 700;
+  }
+}
+
+.c-sidebar-cats {
+  padding-top: 100px;
+  &__list {
+    margin-top: 16px;
+  }
+  &__item {
+    position: relative;
+    padding: 16px 40px;
+    border-top: 1px solid global.$color-border;
+    &:last-of-type {
+      border-bottom: 1px solid global.$color-border;
+    }
+  }
+  &__link {
+    display: block;
+    color: global.$color-text-black;
+    @include global.fz(16);
+    @include global.lh(1.2);
+    font-weight: 700;
+  }
+  &__svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: global.$color-main;
+    width: 10px;
+    height: 16px;
+  }
+}
