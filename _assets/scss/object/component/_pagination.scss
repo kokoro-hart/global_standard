@@ -1,0 +1,27 @@
+@use "foundation/global";
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: global.$color-text-gray;
+    background-color: global.$color-pagination-bg;
+    @include global.fz(16);
+    @include global.lh(1);
+    font-weight: 500;
+    font-family: global.$font-family-ja;
+    transition: background-color 0.3s, color 0.3s;
+    &:not(:first-child) {
+      margin-left: 6px;
+    }
+  }
+  .current {
+    color: global.$color-text-white;
+    background-color: global.$color-main;
+  }
+}
