@@ -39,7 +39,7 @@
       </div>
     </div>
     <section class="l-archive">
-      <div class="l-inner">
+      <div class="l-archive__inner l-inner">
         <main class="p-news-main l-archive__main">
           <h2 class="p-news-main__title">ニュース</h2>
           <a href="" class="p-news-main__item">
@@ -186,17 +186,25 @@
           </a>
 
           <div class="p-news-main__pagination c-pagination">
-            <a href="" class="prev page-numbers">＜</a>
+            <a href="" class="prev page-numbers">
+              <svg class="c-svg c-pagination__svg" width="8" height="14">
+                <use xlink:href="/img/svg/sprite.min.svg#pagination-prev" />
+              </svg>
+            </a>
             <span class="page-numbers current">1</span>
             <span class="page-numbers">2</span>
             <span class="page-numbers">3</span>
-            <a href="" class="next page-numbers">＞</a>
+            <a href="" class="next page-numbers">
+              <svg class="c-svg c-pagination__svg" width="8" height="14">
+                <use xlink:href="/img/svg/sprite.min.svg#pagination-next" />
+              </svg>
+            </a>
           </div>
         </main>
 
-        <aside class="c-sidebar l-sidebar">
+        <aside class="p-news-sidebar l-archive__sidebar">
           <article class="c-sidebar-new">
-            <h2 class="c-sidebar__title">新着記事</h2>
+            <h2 class="c-sidebar-title">新着記事</h2>
             <a href="" class="c-sidebar-new__item">
               <div class="c-sidebar-new__item-thumbnail">
                 <img src="/img/common/icatch-news.jpeg" alt="" class="c-sidebar-new__item-img">
@@ -261,7 +269,7 @@
 
 
           <article class="c-sidebar-cats">
-            <h2 class="c-sidebar__title">カテゴリ</h2>
+            <h2 class="c-sidebar-title">カテゴリ</h2>
             <ul class="c-sidebar-cats__list">
               <li class="c-sidebar-cats__item">
                 <a href="" class="c-sidebar-cats__link">
