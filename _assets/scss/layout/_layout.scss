@@ -42,3 +42,38 @@
   justify-content: space-between;
   align-items: center;
 }
+
+//アーカイブページ
+.l-archive {
+  width: 100%;
+  padding: 60px 0 100px;
+  @include global.mq(md) {
+    padding: 80px 0 160px;
+  }
+  &__inner {
+    @include global.mq(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  //メインエリア
+  &__main {
+    width: 100%;
+    @include global.mq(md) {
+      width: calc(67.91% - 25px / 2);
+    }
+    @include global.mq(lg) {
+      width: calc(70.91% - 40px / 2);
+    }
+  }
+  //サイドバー
+  &__sidebar {
+    width: 100%;
+    @include global.mq(md) {
+      width: calc(32.09% - 25px / 2);
+    }
+    @include global.mq(lg) {
+      width: calc(29.09% - 40px / 2);
+    }
+  }
+}
