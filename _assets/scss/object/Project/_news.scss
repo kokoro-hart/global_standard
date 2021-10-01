@@ -4,26 +4,40 @@
 //------------------------------
 
 .p-news-main {
-  &__cat-name {
+  &__title {
     color: global.$color-text-black;
-    @include global.fz(20);
-    @include global.lh(2);
+    @include global.fz(20,32);
+    @include global.lh(2,1.25);
     font-weight: 700;
   }
   &__item {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    @include global.mq(md) {
+      margin-top: 40px;
+    }
   }
   &__item-thumbnail {
     width: calc(37.61% - 12px / 2);
+    @include global.mq(md) {
+      width: calc(34.21% - 20px / 2);
+    }
   }
   &__item-img {
     height: 24vw;
     object-fit: cover;
+    @include global.mq(md) {
+      height: 12.1875vw;
+      max-height: 156px;
+    }
   }
   &__item-body {
     width: calc(62.39% - 12px / 2);
+    @include global.mq(md) {
+      width: calc(65.79% - 20px / 2);
+      margin-top: 12px;
+    }
   }
   &__item-meta {
     display: flex;
@@ -35,15 +49,18 @@
     color: global.$color-accent-red;
   }
   &__item-cat {
-    @include global.fz(12);
-    @include global.lh(1.66);
+    @include global.fz(12,14);
+    @include global.lh(1.66, 1.71);
     padding: 3px 11px;
     border: 1px solid global.$color-accent-red;
+    @include global.mq(md) {
+      padding: 6px 24px;
+    }
   }
   &__item-new {
     margin-left: 8px;
-    @include global.fz(14);
-    @include global.lh(1.7);
+    @include global.fz(14,16);
+    @include global.lh(1.7,1.5);
   }
   &__item-time {
     color: global.$color-text-gray;
@@ -53,12 +70,18 @@
   &__item-title {
     margin-top: 6px;
     color: global.$color-text-black;
-    @include global.fz(14);
-    @include global.lh(1.42);
+    @include global.fz(14,16);
+    @include global.lh(1.42, 1.75);
     font-weight: 700;
+    @include global.mq(md) {
+      margin-top: 12px;
+    }
   }
   &__pagination {
     margin-top: 40px;
+    @include global.mq(md) {
+      margin-top: 60px;
+    }
   }
 }
 
