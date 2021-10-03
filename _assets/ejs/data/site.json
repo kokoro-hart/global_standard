@@ -3,6 +3,7 @@
     "name": "Global Standard",
     "siteUrl": "サイトのドメイン"
   },
+
   "pages": {
     "home": {
       "name": "トップ",
@@ -29,11 +30,25 @@
       "slug": "/case/"
     },
     "news": {
-      "name": "ニュース",
+      "name": "お知らせ",
       "description": "ニュースページの説明",
       "type": "article",
       "slug": "/news/"
     }
-    
+  },
+
+  "contacts": {
+    "download": {
+      "name": "資料ダウンロード",
+      "description": "資料ダウンロードページの説明",
+      "type": "article",
+      "slug": "/download/"
+    },
+    "contact": {
+      "name": "お問い合わせ",
+      "description": "お問い合わせページの説明",
+      "type": "article",
+      "slug": "/contact/"
+    }
   }
 }
