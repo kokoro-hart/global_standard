@@ -4,7 +4,48 @@
 
 <%# console.log(jsonData) %>
 <main class="p-home">
-  <section class="p-home-fv l-section"></section>
+  <!-------
+    MV
+  --------->
+  <section class="p-home-mv">
+    <div class="p-home-mv__inner">
+      <div class="p-home-mv-slider">
+        <div class="p-home-mv-slider__items">
+          <picture class="p-home-mv-slider__item">
+            <source class="p-home-mv-slider__img" srcset="/img/common/img-mv01_pc.jpeg" media="(min-width: 768px)" alt="スライダーイメージ" />
+            <img src="/img/common/img-mv01_sp.jpeg" alt="スライダーイメージ" class="p-home-mv-slider__img">
+          </picture>
+          <picture class="p-home-mv-slider__item">
+            <source class="p-home-mv-slider__img" srcset="/img/common/img-mv02_pc.jpeg" media="(min-width: 768px)" alt="スライダーイメージ" />
+            <img src="/img/common/img-mv02_sp.jpeg" alt="スライダーイメージ" class="p-home-mv-slider__img">
+          </picture>
+          <picture class="p-home-mv-slider__item">
+            <source class="p-home-mv-slider__img" srcset="/img/common/img-mv03_pc.jpeg" media="(min-width: 768px)" alt="スライダーイメージ" />
+            <img src="/img/common/img-mv03_sp.jpeg" alt="スライダーイメージ" class="p-home-mv-slider__img">
+          </picture> 
+          <picture class="p-home-mv-slider__item">
+            <source class="p-home-mv-slider__img" srcset="/img/common/img-mv01_pc.jpeg" media="(min-width: 768px)"
+              alt="スライダーイメージ" />
+            <img src="/img/common/img-mv01_sp.jpeg" alt="スライダーイメージ" class="p-home-mv-slider__img">
+          </picture>
+          <picture class="p-home-mv-slider__item">
+            <source class="p-home-mv-slider__img" srcset="/img/common/img-mv02_pc.jpeg" media="(min-width: 768px)" alt="スライダーイメージ" />
+            <img src="/img/common/img-mv02_sp.jpeg" alt="スライダーイメージ" class="p-home-mv-slider__img">
+          </picture> 
+        </div>
+        <div class="p-home-mv__main">
+          <h2 class="p-home-mv__title-wrapper">
+            <div class="p-home-mv__title-head">
+            <p class="p-home-mv__title u-font-italic">YOU CAN</p>
+            <p class="p-home-mv__title u-font-italic">CHANGE</p>
+            </div>
+            <p class="p-home-mv__title u-font-italic">THE WORLD</p>
+          </h2>
+          <p class="p-home-mv__lead">世界で活躍できるグローバルな人材を育てる</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-------
     ABOUT
@@ -14,7 +55,7 @@
       <div class="p-home-about__bg u-hidden-md-down"></div>
     </div>
     <div class="p-home-about__inner l-inner">
-      <div class="l-section-heading">
+      <div class="l-section__head">
         <div class="c-section-title">
           <h2 class="c-section-title__head u-font-italic">ABOUT US</h2>
           <p class="c-section-title__foot">当社について</p>
@@ -56,7 +97,7 @@
   ------------>
   <section class="p-home-service l-section l-skew">
     <div class="p-home-service__inner l-inner">
-      <div class="l-section-heading">
+      <div class="l-section__head">
         <div class="c-section-title">
           <h2 class="c-section-title__head">SERVICE</h2>
           <p class="c-section-title__foot">サービス</p>
@@ -136,7 +177,7 @@
   -------------->
   <section class="p-home-case l-section">
     <div class="p-home-case__inner l-inner">
-      <div class="l-section-heading">
+      <div class="l-section__head">
         <div class="c-section-title">
           <h2 class="c-section-title__head u-color-white">CASE STUDY</h2>
           <p class="c-section-title__foot u-color-white">導入事例</p>
@@ -235,7 +276,7 @@
   --------->
   <section class="p-home-news l-section l-skew">
     <div class="p-home-news__inner l-inner">
-      <div class="l-section-heading">
+      <div class="l-section__head">
         <div class="c-section-title">
           <h2 class="c-section-title__head u-font-italic">NEWS</h2>
           <p class="c-section-title__foot">新着情報</p>
