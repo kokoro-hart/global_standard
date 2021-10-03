@@ -1,0 +1,77 @@
+<% let pageId='download' ; %>
+
+  <%- include('../common/_header', {pageId:pageId }) %>
+
+    <%# console.log(jsonData) %>
+      <div class="c-mv-lower c-mv-lower--bg-about">
+        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+          <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+        </svg>
+        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+          <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+        </svg>
+        <div class="c-mv-lower__heading">
+          <h2 class="c-mv-lower__heading-head u-font-italic">
+            DOWNLOAD
+          </h2>
+          <br>
+          <p class="c-mv-lower__heading-foot">
+            資料ダウンロード
+          </p>
+        </div>
+      </div>
+
+      <!-----------
+              Breadcrumb
+            ------------->
+      <div class="c-breadcrumb u-mt-12">
+        <div class="l-inner">
+          <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a class="c-breadcrumb__link" itemprop="item" href="/"><span itemprop="name">ホーム</span></a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a class="c-breadcrumb__link" itemprop="item" href="/download/"><span itemprop="name">資料ダウンロード</span></a>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="p-download">
+        <div class="p-download__inner l-inner">
+          <div class="p-download-document">
+            <h2 class="p-download-document__title">
+              世界で活躍できるグローバルな人材を育てる３つの研修プログラムをご用意しております。
+            </h2>
+            <div class="p-download-document__feature">
+              <img src="/img/common/img-document.png" alt="資料イメージ" class="p-download-document__img">
+            </div>
+            <p class="p-download-document__text">
+              急速にグローバルに活躍できる企業が生き残る時代と移り変わりました。 ビジネス英語や経営学を効率よく学びながら、世界各国から集まるビジネスパーソンと交流し、世界レベルでの人脈を構築する研修をご用意しております。
+              <br>
+              <br>
+              英語に苦手意識のある方でもご安心ください。 ビジネスで必要なコミュニケーションが取れるようになるまで実績豊富な講師陣がサポートいたします。 まずはこちらの資料をごらんください。
+            </p>
+          </div>
+
+          <div class="p-download-form">
+            <h2 class="p-download-form__title">
+              資料請求いただき
+              <br>
+              ありがとうございました！
+            </h2>
+            <p class="p-download-form__text">
+              資料は以下のリンクよりダウンロードください。<br>
+              → <a href="" target="_blank" rel="noopener noreferrer" class="p-download-form__text-link">資料のダウンロードリンクはこちら</a>
+            </p>
+            <p class="p-download-form__text">
+              また、ご入力いただいたメールアドレスの方へもダウンロードリンクを送付しておりますので、ご確認いただけますと幸いです。
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <%- include('../common/_footer', {pageId:pageId }) %>
