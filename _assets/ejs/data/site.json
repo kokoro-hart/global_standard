@@ -34,10 +34,7 @@
       "description": "ニュースページの説明",
       "type": "article",
       "slug": "/news/"
-    }
-  },
-
-  "contacts": {
+    },
     "download": {
       "name": "資料ダウンロード",
       "description": "資料ダウンロードページの説明",

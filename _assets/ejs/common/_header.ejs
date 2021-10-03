@@ -49,7 +49,11 @@
           <ul class="c-global-nav__list">
             <% for(let page in jsonData.pages){ %>
               <% if (page===pageId) { %>
-                <li class="c-global-nav__item"><%= jsonData.pages[page].name %></li>
+                <li class="c-global-nav__item">
+                  <a class="c-global-nav__link">
+                    <%= jsonData.pages[page].name %>
+                  </a>
+                </li>
               <% } else { %>
                 <li class="c-global-nav__item">
                   <a class="c-global-nav__link" href="<%= jsonData.pages[page].slug %>">
@@ -59,10 +63,6 @@
               <% } %>
             <% }; %>
           </ul>
-          <div class="c-global-nav__button-area">
-            <a href="" class="c-global-nav__button">資料ダウンロード</a>
-            <a href="" class="c-global-nav__button c-global-nav__button--color-reverse">お問い合わせ</a>
-          </div>
         </nav>
 
         <button id="js-drawer" class="c-drawer-button u-hidden-xl-up" aria-controls="js-glabal-menu" aria-expanded="false"
