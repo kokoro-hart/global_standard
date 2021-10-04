@@ -1,0 +1,45 @@
+@use "foundation/global";
+
+.p-contact {
+  padding: 60px 0 100px;
+  @include global.mq(md) {
+    padding: 80px 0 160px;
+  }
+  &__inner {
+    max-width: 688px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__intro {
+    @include global.fz(14);
+    @include global.lh(1.7);
+  }
+  &__intro-link {
+    text-decoration: underline global.$color-main;
+    color: global.$color-main;
+  }
+  &__submit {
+    @include global.mq(md) {
+      max-width: 204px;
+    }
+  } 
+}
+
+.p-contact-form {
+  margin-top: 60px;
+  @include global.mq(md) {
+    margin-top: 80px;
+  }
+  &__title {
+    @include global.fz(24);
+    @include global.lh(1.45);
+    font-weight: 700;
+    text-align: center;
+  }
+  &__items {
+    margin-top: 41px;
+    @include global.mq(md) {
+      margin-top: 61px;
+    }
+  }
+}

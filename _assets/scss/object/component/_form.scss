@@ -57,6 +57,25 @@
       color: global.$color-case-nav-dark;
     }
   }
+  &__select {
+    position: relative;
+    appearance: none;
+    color: global.$color-text-black;
+    &::after {
+      content: "";
+      width: 10px;
+      height: 6px;
+    }
+  }
+  &__select:invalid {
+  color: global.$color-case-nav-dark;
+  }
+  &__textarea {
+    height: 140px;
+    @include global.mq(md) {
+      height: 240px;
+    }
+  }
   &__privacy {
     margin-top: 40px;
     text-align: center;
