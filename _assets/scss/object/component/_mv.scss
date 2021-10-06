@@ -1,5 +1,6 @@
 @use "foundation/global";
 
+//下層ページのメインビジュアル
 .c-mv-lower {
   position: relative;
   width: 100%;
@@ -35,7 +36,7 @@
   &__heading-head {
     display: inline-block;
     color: global.$color-main;
-    @include global.fz(32,60);
+    @include global.fz(32, 60);
     @include global.lh(1.2);
     font-weight: 500;
     background-color: global.$color-text-white;
@@ -45,28 +46,78 @@
     display: inline-block;
     margin-top: 8px;
     color: global.$color-main;
-    @include global.fz(16,20);
+    @include global.fz(16, 20);
     @include global.lh(1.5, 1.45);
     font-weight: 700;
     background-color: global.$color-text-white;
   }
 }
 
+//aboutページの場合
 .c-mv-lower--bg-about {
-  background-image: url(../img/common/mv-company_sp.jpeg);
-  @include global.mq(md) {
-    background-image: url(../img/common/mv-company_pc.jpeg);
+  background-image: url(../img/webp/mv-company_sp.webp);
+
+  @include global.browser("ie11") {//IE11の場合
+    background-image: url(../img/common/mv-company_sp.jpeg);
+  }
+  @include global.browser("safari") {//safariの場合
+    background-image: url(../img/common/mv-company_sp.jpeg);
+  }
+
+  @include global.mq(md) {//min-width768px〜
+    background-image: url(../img/webp/mv-company_pc.webp);
+
+    @include global.browser("ie11") {//IE11の場合
+      background-image: url(../img/common/mv-company_pc.jpeg);
+    }
+    @include global.browser("safari") {//safariの場合
+      background-image: url(../img/common/mv-company_pc.jpeg);
+    }
   }
 }
+
+//serviceページの場合
 .c-mv-lower--bg-service {
-  background-image: url(../img/common/mv-service_sp.jpeg);
-  @include global.mq(md) {
-    background-image: url(../img/common/mv-service_pc.jpeg);
+  background-image: url(../img/webp/mv-service_sp.webp);
+
+  @include global.browser("ie11") {//IE11の場合
+    background-image: url(../img/common/mv-service_sp.jpeg);
+  }
+  @include global.browser("safari") {//safariの場合
+    background-image: url(../img/common/mv-service_sp.jpeg);
+  }
+
+  @include global.mq(md) {//min-width768px〜
+    background-image: url(../img/webp/mv-service_pc.webp);
+
+    @include global.browser("ie11") {//IE11の場合
+      background-image: url(../img/common/mv-service_pc.jpeg);
+    }
+    @include global.browser("safari") {//safariの場合
+      background-image: url(../img/common/mv-service_pc.jpeg);
+    }
   }
 }
+
+//newsページの場合
 .c-mv-lower--bg-news {
-  background-image: url(../img/common/mv-news_sp.jpeg);
-  @include global.mq(md) {
-    background-image: url(../img/common/mv-news_pc.jpeg);
+  background-image: url(../img/webp/mv-news_sp.webp);
+
+  @include global.browser("ie11") {//IE11の場合
+    background-image: url(../img/common/mv-news_sp.jpeg);
+  }
+  @include global.browser("safari") {//safariの場合
+    background-image: url(../img/common/mv-news_sp.jpeg);
+  }
+
+  @include global.mq(md) {//min-width768px〜
+    background-image: url(../img/webp/mv-news_pc.webp);
+
+    @include global.browser("ie11") {//IE11の場合
+      background-image: url(../img/common/mv-news_pc.jpeg);
+    }
+    @include global.browser("safari") {//safariの場合
+      background-image: url(../img/common/mv-news_pc.jpeg);
+    }
   }
 }

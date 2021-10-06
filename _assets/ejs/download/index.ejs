@@ -45,9 +45,12 @@
             <h2 class="p-download-document__title">
               世界で活躍できるグローバルな人材を育てる３つの研修プログラムをご用意しております。
             </h2>
-            <div class="p-download-document__feature">
-              <img src="/img/common/img-document.png" alt="資料イメージ" class="p-download-document__img">
-            </div>
+            <p class="p-download-document__feature">
+              <picture class="p-download-document__picture">
+                <source class="p-download-document__img" srcset="/img/webp/img-document.webp" type="image/webp" alt="document.webp" />
+                <img src="/img/common/img-document.png" class="p-download-document__img" alt="document.png">
+              </picture>
+            </p>
             <p class="p-download-document__text">
               急速にグローバルに活躍できる企業が生き残る時代と移り変わりました。 ビジネス英語や経営学を効率よく学びながら、世界各国から集まるビジネスパーソンと交流し、世界レベルでの人脈を構築する研修をご用意しております。
               <br>
@@ -84,7 +87,7 @@
                       <label class="c-form__label c-form__label--required" for="your-name">お名前</label>
                     </dt>
                     <dd class="c-form__dd">
-                      <input class="c-form__input" name="" id="your-name" type="text" placeholder="例）鈴木一郎" autocomplete="name">
+                      <input class="c-form__input" name="" id="your-name" type="text" placeholder="例）鈴木一郎" autocomplete="name" required>
                     </dd>
                   </div>
 
@@ -93,7 +96,7 @@
                       <label class="c-form__label c-form__label--required" for="your-ruby">お名前（フリガナ）</label>
                     </dt>
                     <dd class="c-form__dd">
-                      <input class="c-form__input" name="" id="your-ruby" type="text" placeholder="例）スズキ イチロウ" autocomplete="off">
+                      <input class="c-form__input" name="" id="your-ruby" type="text" placeholder="例）スズキ イチロウ" autocomplete="off" required>
                     </dd>
                   </div>
 
@@ -102,7 +105,7 @@
                       <label class="c-form__label c-form__label--required" for="your-email">メールアドレス</label>
                     </dt>
                     <dd class="c-form__dd">
-                      <input class="c-form__input" name="" id="your-email" type="email" placeholder="例）info@example.com" autocomplete="email">
+                      <input class="c-form__input" name="" id="your-email" type="email" placeholder="例）info@example.com" autocomplete="email" required>
                     </dd>
                   </div>
                 </dl>
