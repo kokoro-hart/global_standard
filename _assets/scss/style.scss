@@ -9,7 +9,10 @@
 
 /* Layout (prefix: l- )
    ----------------------------------------------------------------- */
-@use "layout/layout";
+@use "layout/inner";
+@use "layout/section";
+@use "layout/skew";
+@use "layout/archive";
 @use "layout/header";
 @use "layout/footer";
 
