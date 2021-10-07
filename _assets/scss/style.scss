@@ -1,5 +1,5 @@
 /* Vendor
-   ----------------------------------------------------------------- */
+   --------------------------------------------------------------- */
 @use "vendor/ress";
 
 /* Foundation
@@ -22,6 +22,7 @@
 @use "object/component/accordion";
 @use "object/component/pagination";
 @use "object/component/sidebar";
+@use "object/component/form";
 @use "object/component/footer-links";
 
 /* Project (prefix: p- )
@@ -29,8 +30,11 @@
 @use "object/Project/home";
 @use "object/Project/about";
 @use "object/Project/service";
+@use "object/Project/case";
 @use "object/Project/news";
 @use "object/Project/single";
+@use "object/Project/download";
+@use "object/Project/contact";
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */
