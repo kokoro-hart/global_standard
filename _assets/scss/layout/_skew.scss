@@ -1,0 +1,13 @@
+@use "foundation/global";
+
+/* layout 背景のみ斜めのレイアウト
+  -------------------------------------------------------------- */
+
+.l-skew {
+  transform: skewY(10deg);
+  
+  //小要素は全て水平に戻す
+  & > * {
+    transform: skewY(-10deg);
+  }
+}

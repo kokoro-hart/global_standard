@@ -1,0 +1,25 @@
+@use "foundation/global";
+
+/* layout セクション
+  -------------------------------------------------------------- */
+
+.l-section {
+  width: 100%;
+  padding: 60px 0;
+  @include global.mq(md) {
+    padding: 120px 0;
+  }
+  &__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.l-section-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
