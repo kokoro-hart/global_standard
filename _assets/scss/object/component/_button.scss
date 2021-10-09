@@ -1,16 +1,23 @@
 @use "foundation/global";
-//ドロワーボタン
+
+// Component ボタン
+//--------------------------------------------------------------------------
+
+// ドロワーボタン
+//-----------------------
 .c-drawer-button {
   position: relative;
   width: 27px;
   height: 22px;
+
+  //ハンバーガーライン
   &__line {
     display: inline-block;
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: global.$color-main;
     border-radius: 2px;
+    background-color: global.$color-main;
     transition: all 0.3s ease-in-out;
     &:nth-last-of-type(1) {
       top: 0;
@@ -27,8 +34,10 @@
     }
   }
 }
+
+
 //ドロワーボタンアクティブ時
-.c-drawer-button[aria-expanded="true"] {
+.c-drawer-button.is-active {
   .c-drawer-button__line {
     &:nth-last-of-type(1) {
       top: 50%;
@@ -44,15 +53,16 @@
   }
 }
 
-//View more->○ ボタン
+
+// View more->○ ボタン
+//-----------------------
 .c-button-more {
   $this: &;
   position: relative;
   display: inline-block;
   text-align: right;
 
-  //ホバー
-  @include global.mq(md) {
+  @include global.mq(md) {//min-width 768px〜
     &:hover {
       #{$this}__arrow {
         right: -15.2%;
@@ -68,7 +78,8 @@
     @include global.lh(1.2);
     font-weight: 500;
     font-family: global.$font-family-en;
-    @include global.mq(md) {
+
+    @include global.mq(md) {//min-width 768px〜
       display: inline-block;
       transform: translateY(-3px);
       padding-right: 142px;
@@ -81,38 +92,44 @@
     display: inline-block;
     width: 64.5px;
     height: 2px;
-    margin: 0 21px 0 8px;
+    margin-right: 21px;
+    margin-left: 8px;
     background-color: global.$color-main;
     vertical-align: middle;
-    @include global.mq(md) {
+
+    @include global.mq(md) {//min-width 768px〜
       position: absolute;
-      right: 1%;
       top: 50%;
+      right: 1%;
       transform: translateY(-50%);
       width: 95px;
       transition: width 0.3s, right 0.3s;
     }
+
     &::after {
       content: "";
       position: absolute;
       bottom: -2.2px;
       right: 4px;
+      transform: rotate(-55deg);
       height: 14px;
       width: 2px;
-      transform: rotate(-55deg);
       background-color: global.$color-main;
-      @include global.mq(md) {
+
+      @include global.mq(md) {//min-width 768px〜
         bottom: -3.2px;
-        height: 18px;
         right: 6px;
+        height: 18px;
       }
     }
+
     &--color-white {
       background-color: global.$color-text-white;
       &::after {
         background-color: global.$color-text-white;
       }
     }
+
     &--color-black {
       background-color: global.$color-text-black;
       &::after {
@@ -130,12 +147,14 @@
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: global.$color-accent-yellow;
     border-radius: 50%;
-    @include global.mq(md) {
+    background-color: global.$color-accent-yellow;
+
+    @include global.mq(md) {//min-width 768px〜
       width: 51px;
       height: 51px;
     }
+
     &--border {
       z-index: 1;
       border: 2px solid global.$color-accent-yellow;
@@ -144,7 +163,9 @@
   }
 }
 
-//四角のボタン
+
+// 四角のボタン
+//-----------------------
 .c-button-square {
   $this: &;
   position: relative;
@@ -158,6 +179,16 @@
   @include global.lh(1.7, 1.5);
   text-align: center;
   transition: color 0.3s ease-out;
+
+  @include global.mq(md) {//min-width 768px〜
+    max-width: 304px;
+    padding: 27px 15px;
+  }
+
+  @include global.mq(lg) {//min-width 992px〜
+    padding: 27px 35px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -169,6 +200,7 @@
     background-color: global.$color-main;
     transition: width 0.3s ease-out;
   }
+
   &:hover {
     color: global.$color-text-white;
     #{$this}__svg {
@@ -178,19 +210,28 @@
       width: 100%;
     }
   }
-  @include global.mq(md) {
-    max-width: 304px;
-    padding: 27px 15px;
-  }
+
   &__svg {
     position: absolute;
     top: 50%;
     right: 12px;
     transform: translateY(-50%);
     transition: transform 0.3s ease-out;
-    @include global.mq(md) {
+
+    @include global.mq(md) {//min-width 768px〜
       width: 20px;
       height: 13px;
     }
   }
+}
+
+//四角の送信ボタン
+.c-button-square--submit {
+  transition: background-color 0.3s ease-out;
+  background-color: global.$color-text-white;
+
+  &:hover {
+    color: global.$color-text-white;
+    background-color: global.$color-main;
+  } 
 }

@@ -19,7 +19,6 @@
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
 @use "object/component/global-nav";
-@use "object/component/mv";
 @use "object/component/button";
 @use "object/component/title";
 @use "object/component/accordion";
@@ -30,6 +29,7 @@
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
+@use "object/Project/mv";
 @use "object/Project/home";
 @use "object/Project/about";
 @use "object/Project/service";
@@ -41,7 +41,6 @@
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */
-@use "object/utility/utilities";
 @use "object/utility/hidden";
 @use "object/utility/font";
 @use "object/utility/margin";

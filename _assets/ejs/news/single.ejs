@@ -3,27 +3,25 @@
   <%- include('../common/_header', {pageId:pageId }) %>
 
     <%# console.log(jsonData) %>
-      <div class="c-mv-lower c-mv-lower--bg-news">
-        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+      <div class="p-mv-lower p-mv-lower--bg-news">
+        <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
           <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
         </svg>
-        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+        <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
           <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
         </svg>
-        <div class="c-mv-lower__heading">
-          <h2 class="c-mv-lower__heading-head u-font-italic">
+        <div class="p-mv-lower__heading">
+          <h2 class="p-mv-lower__heading-head u-font-italic">
             NEWS
           </h2>
           <br>
-          <p class="c-mv-lower__heading-foot">
+          <p class="p-mv-lower__heading-foot">
             ニュース
           </p>
         </div>
       </div>
 
-      <!-----------
-              Breadcrumb
-            ------------->
+      <!--パンくずリスト-->
       <div class="c-breadcrumb u-mt-12">
         <div class="l-inner">
           <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -42,10 +40,12 @@
           </ul>
         </div>
       </div>
+      <!--/パンくずリスト-->
 
-      <section class="l-archive">
+      <section class="p-single l-archive">
         <div class="l-archive__inner l-inner">
-          <main class="l-archive__main p-single">
+          <!--メインエリア-->
+          <main class="p-single__main l-archive__main">
             <div class="p-single__meta">
               <span class="p-single__cat">カテゴリ</span>
               <time class="p-single__time" datetime="2021.01.01">2021.01.01</time>
@@ -86,7 +86,11 @@
               </div>
             </article>
           </main>
+          <!--/メインエリア-->
+
+          <!--サイドバー-->
           <aside class="l-archive__sidebar">
+            <!--新着記事-->
             <article class="c-sidebar-new">
               <h2 class="c-sidebar-title">新着記事</h2>
               <a href="" class="c-sidebar-new__item">
@@ -150,8 +154,9 @@
                 </div>
               </a>
             </article>
-          
-          
+            <!--/新着記事-->
+        
+            <!--カテゴリー-->
             <article class="c-sidebar-cats">
               <h2 class="c-sidebar-title">カテゴリ</h2>
               <ul class="c-sidebar-cats__list">
@@ -181,7 +186,9 @@
                 </li>
               </ul>
             </article>
+            <!--カテゴリー-->
           </aside>
+          <!--/サイドバー-->
         </div>
       </section>
 

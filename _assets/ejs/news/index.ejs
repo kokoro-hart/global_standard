@@ -3,27 +3,25 @@
   <%- include('../common/_header', {pageId:pageId }) %>
 
     <%# console.log(jsonData) %>
-    <div class="c-mv-lower c-mv-lower--bg-news">
-      <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+    <div class="p-mv-lower p-mv-lower--bg-news">
+      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
         <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
-      <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
         <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
-      <div class="c-mv-lower__heading">
-        <h2 class="c-mv-lower__heading-head u-font-italic">
+      <div class="p-mv-lower__heading">
+        <h2 class="p-mv-lower__heading-head u-font-italic">
           NEWS
         </h2>
         <br>
-        <p class="c-mv-lower__heading-foot">
+        <p class="p-mv-lower__heading-foot">
           お知らせ
         </p>
       </div>
     </div>
     
-    <!-----------
-              Breadcrumb
-            ------------->
+    <!--パンくずリスト-->
     <div class="c-breadcrumb u-mt-12">
       <div class="l-inner">
         <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -38,171 +36,180 @@
         </ul>
       </div>
     </div>
-    <section class="l-archive">
+    <!--/パンくずリスト-->
+
+    <section class="p-news l-archive">
       <div class="l-archive__inner l-inner">
+        <!--メインエリア-->
         <main class="p-news-main l-archive__main">
           <h2 class="p-news-main__title">ニュース</h2>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="single.html" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
-                  <span class="p-news-main__item-new">NEW</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
+                  <span class="p-news-main-item__new">NEW</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>              
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>              
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">営業時間</span>
-                  <span class="p-news-main__item-new">NEW</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">営業時間</span>
+                  <span class="p-news-main-item__new">NEW</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">お盆期間中の営業について</h2>
+              <h2 class="p-news-main-item__title">お盆期間中の営業について</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">その他</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">その他</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
-          <a href="" class="p-news-main__item">
-            <div class="p-news-main__item-thumbnail">
-              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main__item-img">
+          <a href="" class="p-news-main-item">
+            <div class="p-news-main-item__thumbnail">
+              <img src="/img/common/icatch-news.jpeg" alt="" class="p-news-main-item__img">
             </div>
-            <div class="p-news-main__item-body">
-              <div class="p-news-main__item-meta">
-                <div class="p-news-main__item-cats">
-                  <span class="p-news-main__item-cat">カテゴリ</span>
+            <div class="p-news-main-item__body">
+              <div class="p-news-main-item__meta">
+                <div class="p-news-main-item__cats">
+                  <span class="p-news-main-item__cat">カテゴリ</span>
                 </div>
-                <time class="p-news-main__item-time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
               </div>
-              <h2 class="p-news-main__item-title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
+              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
             </div>
           </a>
 
+          <!--ページネーション-->
           <div class="p-news-main__pagination c-pagination">
             <a href="" class="prev page-numbers">
               <svg class="c-svg c-pagination__svg" width="8" height="14">
                 <use xlink:href="/img/svg/sprite.min.svg#pagination-prev" />
               </svg>
             </a>
-            <span class="page-numbers current">1</span>
-            <span class="page-numbers">2</span>
-            <span class="page-numbers">3</span>
+            <a href="" class="page-numbers current">1</a>
+            <a href="" class="page-numbers">2</a>
+            <a href="" class="page-numbers">3</a>
             <a href="" class="next page-numbers">
               <svg class="c-svg c-pagination__svg" width="8" height="14">
                 <use xlink:href="/img/svg/sprite.min.svg#pagination-next" />
               </svg>
             </a>
           </div>
-        </main>
+          <!--/ページネーション-->
 
+        </main>
+        <!--/メインエリア-->
+
+        <!--サイドバー-->
         <aside class="p-news-sidebar l-archive__sidebar">
+          <!--新着記事-->
           <article class="c-sidebar-new">
             <h2 class="c-sidebar-title">新着記事</h2>
             <a href="" class="c-sidebar-new__item">
@@ -266,8 +273,9 @@
               </div>
             </a>
           </article>
+          <!--新着記事-->
 
-
+          <!--カテゴリー-->
           <article class="c-sidebar-cats">
             <h2 class="c-sidebar-title">カテゴリ</h2>
             <ul class="c-sidebar-cats__list">
@@ -297,7 +305,9 @@
               </li>
             </ul>
           </article>
+          <!--カテゴリー-->
         </aside>
+        <!--/サイドバー-->
       </div>
     </section>
 

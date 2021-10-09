@@ -1,11 +1,16 @@
 @use "foundation/global";
 
+// Project 投稿固定ページ (prefix: p-single)
+//--------------------------------------------------------------------------
+
 .p-single {
+
   &__meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &__cat {
     border: 1px solid global.$color-accent-red;
     padding: 6px 11px;
@@ -14,38 +19,47 @@
     @include global.fz(14);
     @include global.lh(1.71);
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 8px 24px;
     }
   }
+
   &__time {
     color: global.$color-text-gray;
     @include global.fz(14);
     @include global.lh(1.71);
     white-space: nowrap;
   }
+
   &__title {
     margin-top: 8px;
     @include global.fz(24);
     @include global.lh(1.33);
     font-weight: 700;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 20px;
     }
   }
+
   &__thumbnail {
     margin-top: 24px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 41px;
     }
   }
+
   &__img {
     height: 55.73333vw;
     object-fit: cover;
     @include global.mq(md) {
+      //min-width 768px〜
       height: 37.10938vw;
       max-height: 475px;
     }
   }
+
   &__content {
     h2,
     h3,
@@ -55,15 +69,15 @@
       margin-top: 40px;
     }
     h2 {
-      background-color: global.$color-pagination-bg;
       border-left: 6px solid global.$color-main;
       padding: 6px 10px 6px 20px;
+      background-color: global.$color-pagination-bg;
       @include global.fz(20);
       @include global.lh(1.6);
     }
     h3 {
-      padding-bottom: 5px;
       border-bottom: 1px solid global.$color-main;
+      padding-bottom: 5px;
       @include global.fz(18);
       @include global.lh(1.77);
     }
@@ -88,10 +102,10 @@
     }
     .wp-block-quote {
       position: relative;
-      margin-top: 40px;
-      background-color: global.$color-pagination-bg;
       border-left: 4px solid global.$color-main;
       padding: 32px 28px;
+      margin-top: 40px;
+      background-color: global.$color-pagination-bg;
       @include global.fz(14);
       @include global.lh(1.7);
 
@@ -110,18 +124,20 @@
       }
     }
   }
+
   &__post-links {
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
   }
+
   &__post-link {
     a {
       display: inline-block;
       border: 1px solid global.$color-main;
       border-radius: 4px;
       padding: 5px 15px;
-      transition: background-color 0.3s color 0.3s ease-out;
+      transition: background-color 0.3s, color 0.3s ease-out;
       color: global.$color-main;
       @include global.fz(14);
       @include global.lh(1.7);

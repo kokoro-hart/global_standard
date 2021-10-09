@@ -1,5 +1,8 @@
 @use "foundation/global";
 
+// Component サイドバー
+//--------------------------------------------------------------------------
+
 //サイドバータイトル
 .c-sidebar-title {
   color: global.$color-text-black;
@@ -8,52 +11,63 @@
   font-weight: 700;
 }
 
-//記事一覧
+//サイドバー記事一覧
 .c-sidebar-new {
   padding-top: 100px;
   @include global.mq(md) {
+    //min-width 768px〜
     padding-top: 0;
   }
+
   &__item {
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 16px;
     }
   }
+
   &__item-thumbnail {
     width: calc(37.61% - 12px / 2);
     @include global.mq(md) {
+      //min-width 768px〜
       width: calc(35% - 10px / 2);
     }
   }
+
   &__item-img {
     height: 24vw;
     object-fit: cover;
     @include global.mq(md) {
+      //min-width 768px〜
       height: 7.8125vw;
       max-height: 100px;
     }
   }
+
   &__item-body {
     width: calc(62.39% - 12px / 2);
     @include global.mq(md) {
+      //min-width 768px〜
       width: calc(65% - 10px / 2);
     }
   }
+
   &__item-meta {
     display: flex;
     justify-content: space-between;
   }
   &__item-cat {
+    border: 1px solid global.$color-accent-red;
+    padding: 3px 11px;
     @include global.fz(12);
     @include global.lh(1.66);
-    padding: 3px 11px;
-    border: 1px solid global.$color-accent-red;
     color: global.$color-accent-red;
     white-space: nowrap;
   }
+
   &__item-time {
     margin-left: 12px;
     color: global.$color-text-gray;
@@ -61,6 +75,7 @@
     @include global.lh(1.7);
     white-space: nowrap;
   }
+
   &__item-title {
     margin-top: 6px;
     color: global.$color-text-black;
@@ -70,29 +85,34 @@
   }
 }
 
-//カテゴリーリスト
+//サイドバーカテゴリーリスト
 .c-sidebar-cats {
-  padding-top: 100px;
+  padding-top: 60px;
   @include global.mq(md) {
+    //min-width 768px〜
     padding-top: 80px;
   }
+
   &__list {
     margin-top: 16px;
   }
+
   &__item {
     position: relative;
-    padding: 16px 40px;
     border-top: 1px solid global.$color-border;
+    padding: 16px 40px;
     &:last-of-type {
       border-bottom: 1px solid global.$color-border;
     }
   }
+
   &__link {
     display: block;
     color: global.$color-text-black;
     @include global.fz(16);
     font-weight: 700;
   }
+
   &__svg {
     position: absolute;
     top: 50%;

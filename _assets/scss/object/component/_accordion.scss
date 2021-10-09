@@ -1,25 +1,32 @@
 @use "foundation/global";
 
+// Component アコーディオンメニュー
+//--------------------------------------------------------------------------
+
 .c-accordion {
   max-width: 688px;
   width: 100%;
+
   &__dt {
     width: 100%;
     padding: 13px 0;
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 31px 0;
     }
   }
+
   &__title {
     position: relative;
     padding: 13px 65px 13px 0;
-    color: global.$color-text-black;
     border-bottom: 1px solid global.$color-border;
+    color: global.$color-text-black;
     @include global.fz(16, 20);
     @include global.lh(1.5,1.45);
     font-weight: 700;
     transition: color 0.3s ease-out;
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 31px 65px 31px 0;
     }
     &::after {
@@ -32,6 +39,7 @@
       background-color: global.$color-text-black;
       transition: background-color 0.3s, transform 0.3s ease-out;
       @include global.mq(md) {
+        //min-width 768px〜
         top: 46px;
       }
     }
@@ -46,6 +54,7 @@
       transform: rotate(90deg);
       transition: background-color 0.3s, transform 0.3s ease-out;
       @include global.mq(md) {
+        //min-width 768px〜
         top: 46px;
       }
     }
@@ -62,6 +71,7 @@
       }
     }
   }
+  
   &__content {
     @include global.fz(14);
     @include global.lh(0);
@@ -72,19 +82,22 @@
     transition: 
     opacity 0.2s ease, 
     line-height 0.2s linear,
-    padding 0.2s ease,
+    padding-top 0.2s ease,
     visibility 0.2s linear;
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 0 60px 0 40px;
     }
     
 
     &.is-open {
-      @include global.lh(1.7);
-      padding-top: 18px;
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
+      padding-top: 18px;
+      @include global.lh(1.7);
+      
       @include global.mq(md) {
+        //min-width 768px〜
         padding: 30px 60px 0 40px;
       }
     }

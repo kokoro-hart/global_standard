@@ -3,27 +3,25 @@
   <%- include('../common/_header', {pageId:pageId }) %>
 
     <%# console.log(jsonData) %>
-      <div class="c-mv-lower c-mv-lower--bg-about">
-        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+      <div class="p-mv-lower p-mv-lower--bg-about">
+        <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
           <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
         </svg>
-        <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+        <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
           <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
         </svg>
-        <div class="c-mv-lower__heading">
-          <h2 class="c-mv-lower__heading-head u-font-italic">
+        <div class="p-mv-lower__heading">
+          <h2 class="p-mv-lower__heading-head u-font-italic">
             DOWNLOAD
           </h2>
           <br>
-          <p class="c-mv-lower__heading-foot">
+          <p class="p-mv-lower__heading-foot">
             資料ダウンロード
           </p>
         </div>
       </div>
 
-      <!-----------
-              Breadcrumb
-            ------------->
+      <!--パンくずリスト-->
       <div class="c-breadcrumb u-mt-12">
         <div class="l-inner">
           <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -38,9 +36,11 @@
           </ul>
         </div>
       </div>
+      <!--パンくずリスト-->
 
       <section class="p-download">
         <div class="p-download__inner l-inner">
+          <!--研修プログラム-->
           <div class="p-download-document">
             <h2 class="p-download-document__title">
               世界で活躍できるグローバルな人材を育てる３つの研修プログラムをご用意しております。
@@ -58,7 +58,9 @@
               英語に苦手意識のある方でもご安心ください。 ビジネスで必要なコミュニケーションが取れるようになるまで実績豊富な講師陣がサポートいたします。 まずはこちらの資料をごらんください。
             </p>
           </div>
+          <!--/研修プログラム-->
 
+          <!--フォーム（送信完了）-->
           <div class="p-download-form">
             <h2 class="p-download-form__title">
               資料請求いただき
@@ -73,6 +75,7 @@
               また、ご入力いただいたメールアドレスの方へもダウンロードリンクを送付しておりますので、ご確認いただけますと幸いです。
             </p>
           </div>
+          <!--/フォーム（送信完了）-->
         </div>
       </section>
 

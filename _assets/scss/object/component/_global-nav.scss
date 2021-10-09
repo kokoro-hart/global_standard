@@ -1,14 +1,19 @@
 @use "foundation/global";
-//グローバルナビゲーション
+
+// Component グローバルナビゲーション
+//--------------------------------------------------------------------------
+
 .c-global-nav {
   $this: &;
   display: flex;
   align-items: center;
   height: 100%;
-  //mq〜797px
-  @include global.mq(xl, max) {
+
+  //スマホ時の記述が多いためmax-widthを使用
+  @include global.mq(xl, max) { //max-width 〜1280px
     position: fixed;
     top: 60px;
+    left: 0;
     visibility: hidden;
     overflow: auto;
     display: flex;
@@ -18,6 +23,9 @@
     background-color: global.$color-main;
     transition: height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
+
+
+  // ul
   &__list {
     display: flex;
     align-items: center;
@@ -25,28 +33,34 @@
     width: 100%;
     margin-top: 40px;
     white-space: nowrap;
-    //mq 798px〜
-    @include global.mq(xl) {
+
+    @include global.mq(xl) {//min-width 1280〜
       margin-top: 0;
       flex-direction: row;
     }
   }
+
+
+  // li
   &__item {
     position: relative;
+    margin-bottom: 40px;
     @include global.fz(16, 14);
     @include global.lh(1.5);
     color: global.$color-text-white;
-    //mq 798〜
-    @include global.mq(xl) {
+
+    @include global.mq(xl) {//min-width 1280〜
       width: 100%;
+      margin-bottom: 0;
       color: global.$color-text-black;
     }
-    &:nth-last-child(n + 4) {//最後から4番目以降
-      margin: 0 0 40px 0;
-      //mq 798〜
-      @include global.mq(xl) {
+
+    //li 最後の3つ以外
+    &:nth-last-child(n + 4) {
+
+      @include global.mq(xl) {//min-width 1280〜
         padding-right: 30px;
-        margin: 0 16px 0 0;
+        margin-right: 16px;
         &::after {
           content: "／";
           position: absolute;
@@ -56,26 +70,36 @@
         }
       }
     }
-    &:nth-last-child(-n + 2) {//最後から2番目まで
+
+    //li 最後の2つ
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 32px;
+
+      @include global.mq(xl) {//min-width 1280〜
+        margin-bottom: 0;
+      }
+
+      // a 
       #{$this}__link {
-        display: block;
         max-width: 100%;
         width: 295px;
         height: 68px;
+        margin: auto;
         padding: 22px 15px;
-        margin: 40px auto 0;
-        color: global.$color-text-white;
         border: 1px solid global.$color-text-white;
+        color: global.$color-text-white;
         white-space: nowrap;
         @include global.fz(16, 14);
         @include global.lh(1.5);
         text-align: center;
         transition: background-color 0.3s, color 0.3s ease-out;
-        @include global.mq(xl) {
-          color: global.$color-main;
+
+        @include global.mq(xl) {//min-width 1280〜
           border: 1px solid global.$color-main;
           width: 176px;
-          margin: 0 0 0 32px;
+          margin-left: 32px;
+          color: global.$color-main;
+
           &:hover {
             color: global.$color-text-white;
             background-color: global.$color-main;
@@ -83,16 +107,21 @@
         }
       }
     }
-    &:last-child {//最後
+
+    //li 最後
+    &:last-child {
+
+      // a
       #{$this}__link {
-        margin: 40px auto 0;
         background-color: global.$color-text-white;
         color: global.$color-main;
-        @include global.mq(xl) {
-          margin: 0 0 0 10px;
+
+        @include global.mq(xl) {//min-width 1280〜
+          border: 1px solid global.$color-main;
+          margin-left: 10px;
           background-color: global.$color-main;
           color: global.$color-text-white;
-          border: 1px solid global.$color-main;
+
           &:hover {
             background-color: global.$color-main-dark;
           }
@@ -100,6 +129,8 @@
       }
     }
   }
+
+
   &__link {
     display: block;
   }
@@ -107,6 +138,7 @@
 
 //ドロワーアクティブ時
 .c-global-nav {
+
   &.is-active {
     visibility: visible;
     height: calc(100vh - global.$header-height-sp);

@@ -4,27 +4,25 @@
 
     <%# console.log(jsonData) %>
       <main class="p-service">
-        <div class="c-mv-lower c-mv-lower--bg-service">
-          <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--sp u-hidden-md-up">
+        <div class="p-mv-lower p-mv-lower--bg-service">
+          <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
             <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
           </svg>
-          <svg class="c-svg c-mv-lower__svg c-mv-lower__svg--pc u-hidden-md-down">
+          <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
             <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
           </svg>
-          <div class="c-mv-lower__heading">
-            <h2 class="c-mv-lower__heading-head u-font-italic">
+          <div class="p-mv-lower__heading">
+            <h2 class="p-mv-lower__heading-head u-font-italic">
               SERVICE
             </h2>
             <br>
-            <p class="c-mv-lower__heading-foot">
+            <p class="p-mv-lower__heading-foot">
               サービス
             </p>
           </div>
         </div>
 
-        <!-----------
-          Breadcrumb
-        ------------->
+        <!--パンくずリスト-->
         <div class="c-breadcrumb u-mt-12">
           <div class="l-inner">
             <ul class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -41,11 +39,9 @@
             </ul>
           </div>
         </div>
+        <!--/パンくずリスト-->
 
-        <!------------
-          SERVICE詳細
-        -------------->
-        <!--.p-service-detail-->
+        <!--サービスの詳細-->
         <section class="p-service-details l-section">
           <div class="l-inner">
             <p class="p-service-detail__intro">
@@ -54,7 +50,7 @@
               ３つの研修プログラム
             </p>
           </div>
-          <!--.p-service-detail-->
+          <!--ビジネス英語研修-->
           <article class="p-service-detail">
             <div class="p-service-detail__inner">
               <div class="p-service-detail__item">
@@ -64,7 +60,7 @@
                     <img src="/img/common/img-service-detail01.jpeg" class="p-service-detail__img" alt="service-detail01.jpeg">
                   </picture>
                 </figure>
-                <div class="p-service-detail__content">
+                <div class="p-service-detail__contents">
                   <span class="p-service-detail__number u-font-italic">01</span>
                   <div class="p-service-detail__title">
                     <h2 class="p-service-detail__title-head">ビジネス英語研修</h2>
@@ -89,7 +85,7 @@
                     </div>
                   </dl>
                   <div class="p-service-detail__link-wrapper">
-                    <a href="" class="c-button-square">
+                    <a href="/contact/" class="c-button-square">
                       お申し込みはこちら
                       <svg class="c-svg c-button-square__svg" width="18" height="12">
                         <use xlink:href="/img/svg/sprite.min.svg#icon-arrow02" />
@@ -100,8 +96,9 @@
               </div>
             </div>
           </article>
-          <!--.p-service-detail-->
-          <!--.p-service-detail-->
+          <!--/ビジネス英語研修-->
+
+          <!--異文化コミュニケーション-->
           <article class="p-service-detail l-skew">
             <div class="p-service-detail__inner">
               <div class="p-service-detail__item">
@@ -112,7 +109,7 @@
                     <img src="/img/common/img-service-detail02.jpeg" class="p-service-detail__img" alt="service-detail02.jpeg">
                   </picture>
                 </figure>
-                <div class="p-service-detail__content">
+                <div class="p-service-detail__contents">
                   <span class="p-service-detail__number u-font-italic">02</span>
                   <div class="p-service-detail__title">
                     <h2 class="p-service-detail__title-head">
@@ -142,7 +139,7 @@
                     </div>
                   </dl>
                   <div class="p-service-detail__link-wrapper">
-                    <a href="" class="c-button-square">
+                    <a href="/contact/" class="c-button-square">
                       お申し込みはこちら
                       <svg class="c-svg c-button-square__svg" width="18" height="12">
                         <use xlink:href="/img/svg/sprite.min.svg#icon-arrow02" />
@@ -153,8 +150,9 @@
               </div>
             </div>
           </article>
-          <!--.p-service-detail-->
-          <!--.p-service-detail-->
+          <!--/異文化コミュニケーション-->
+
+          <!--ビジネス学習プログラム-->
           <article class="p-service-detail">
             <div class="p-service-detail__inner">
               <div class="p-service-detail__item">
@@ -164,7 +162,7 @@
                     <img src="/img/common/img-service-detail03.jpeg" class="p-service-detail__img" alt="service-detail03.jpeg">
                   </picture>
                 </figure>
-                <div class="p-service-detail__content">
+                <div class="p-service-detail__contents">
                   <span class="p-service-detail__number u-font-italic">03</span>
                   <div class="p-service-detail__title">
                     <h2 class="p-service-detail__title-head">
@@ -194,7 +192,7 @@
                     </div>
                   </dl>
                   <div class="p-service-detail__link-wrapper">
-                    <a href="" class="c-button-square">
+                    <a href="/contact/" class="c-button-square">
                       お申し込みはこちら
                       <svg class="c-svg c-button-square__svg" width="18" height="12">
                         <use xlink:href="/img/svg/sprite.min.svg#icon-arrow02" />
@@ -205,13 +203,12 @@
               </div>
             </div>
           </article>
-          <!--.p-service-detail-->
+          <!--/ビジネス学習プログラム-->
+          
         </section>
-        <!--/.p-service-detail-->
+        <!--/サービスの詳細-->
 
-        <!----------------
-          SERVICE導入の流れ
-        ------------------>
+        <!--導入の流れ-->
         <section class="p-service-flow l-section">
           <div class="l-inner">
             <h2 class="p-service-flow__title">導入の流れ</h2>
@@ -267,15 +264,14 @@
                       ※キャンセルのご連絡は2日前までにお願いいたします
                     </p>
                   </div>
-                </li>
+                </li>        
               </ol>
             </article>
           </div>
         </section>
+        <!--/導入の流れ-->
 
-        <!------------------
-          SERVICE良くある質問
-        -------------------->
+        <!--良くある質問-->
         <section class="p-service-faq">
           <div class="l-inner">
             <h2 class="p-service-faq__title">良くある質問</h2>
@@ -325,6 +321,7 @@
             <!--アコーディオンメニュー-->
           </div>
         </section>
+        <!--/良くある質問-->
       
       </main>
 

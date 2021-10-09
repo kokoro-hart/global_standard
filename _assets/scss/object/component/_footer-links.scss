@@ -1,16 +1,28 @@
 @use "foundation/global";
 
+// Component フッターリンク
+// 資料ダウンロード お問い合わせ
+//--------------------------------------------------------------------------
+
 .c-footer-links {
   $this: &;
   width: 100%;
   @include global.mq(md) {
+    //min-width 768px〜
     display: flex;
   }
+
   &__item {
     position: relative;
     width: 100%;
     padding: 45px 40px 26px;
     background: no-repeat center center / cover;
+    @include global.mq(md) {
+      //min-width 768px〜
+      width: 50%;
+      padding: 56px 40px 50px;
+    } 
+
     &::before {
       content: "";
       position: absolute;
@@ -21,6 +33,8 @@
       background-color: global.$color-main;
       opacity: 0.8;
     }
+    
+
     &:nth-of-type(1) {
       background-image: url(../img/webp/img-download.webp);
       @include global.browser('ie11') {//IE11の場合
@@ -33,6 +47,7 @@
         background-color: global.$color-main-bright;
       }
     }
+
     &:nth-of-type(2) {
       background-image: url(../img/webp/img-contact.webp);
       @include global.browser('ie11') {//IE11の場合
@@ -45,10 +60,8 @@
         background-color: global.$color-main;
       }
     }
-    @include global.mq(md) {
-      width: 50%;
-      padding: 56px 40px 50px;
-    } 
+
+    
   }
   &__item-inner {
     position: relative;
@@ -56,6 +69,7 @@
     z-index: 1;
     text-align: center;
   }
+  
   &__title-head {
     color: global.$color-text-white;
     @include global.fz(40);
@@ -63,17 +77,21 @@
     font-family: global.$font-family-en;
     font-weight: 500;
     @include global.mq(md) {
+      //min-width 768px〜
       font-size: 4.6875vw;
     }
     @include global.mq(lg) {
+      //min-width 992px〜
       font-size: 60px;
     }
   }
+
   &__title-foot {
     color: global.$color-text-white;
     @include global.fz(16);
     @include global.lh(1.5);
   }
+
   &__button {
     display: inline-block;
     position: relative;
@@ -88,6 +106,12 @@
     font-family: global.$font-family-en;
     font-weight: 500;
     transition: color 0.3s ease-out;
+
+    @include global.mq(md) {
+      //min-width 768px〜
+      padding: 34px 15px;
+      border-width: 3px;
+    }
 
     &::after {
       content: "";
@@ -109,11 +133,6 @@
         width: 100%;
       }
     }
-
-    @include global.mq(md) {
-      padding: 34px 15px;
-      border-width: 3px;
-    }
   }
   &__svg {
     position: absolute;
@@ -122,6 +141,7 @@
     transform: translateY(-50%);
     transition: transform 0.3s ease-out;
     @include global.mq(md) {
+      //min-width 768px〜
       right: 31px;
     }
   }

@@ -1,10 +1,10 @@
 @use "foundation/global";
 
-/* layout インナー
-  -------------------------------------------------------------- */
+// Layout インナー
+//--------------------------------------------------------------------------
   
 .l-inner {
-  max-width: 1180px;
+  max-width: global.$layout-width-inner;
   width: 100%;
   height: inherit;
   margin: 0 auto;

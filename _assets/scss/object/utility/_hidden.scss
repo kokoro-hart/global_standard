@@ -1,5 +1,8 @@
 @use "foundation/global";
 
+// Utility 非表示
+//--------------------------------------------------------------------------
+
 // <p class="u-hidden-md-up">md値より広い幅で非表示</p>
 // <p class="u-hidden-lg-down">lg値より狭い幅で非表示</p>
 @each $bp in map-keys(global.$screen) {

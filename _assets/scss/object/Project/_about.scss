@@ -1,89 +1,104 @@
 @use "foundation/global";
 
-// 私たちについて prefix => .p-about
-//---------------------------------
+// Project 当社についてページ (prefix: p-about)
+//--------------------------------------------------------------------------
 
-//---------------------------------
 // メッセージ（MISSION VISION）
-//---------------------------------
+//--------------------------------------------------------------------------
 .p-about-message {
   &__item {
     width: 100%;
     &:not(:first-child) {
       margin-top: 60px;
       @include global.mq(md) {
+        //min-width 768px〜
         margin-top: 120px;
       }
     }
   }
+
   &__title {
     width: 100vw;
     height: 281px;
     padding: 20px 20px 0;
     margin: 0 calc(50% - 50vw);
     color: global.$color-text-white;
+    background: no-repeat center center / cover;
     @include global.mq(md) {
+      //min-width 768px〜
       width: 100%;
       height: 353px;
       margin: 0;
     }
   }
+
   &__title--bg-01 {
-    background: url(../img/webp/img-company01_sp.webp) no-repeat center center / cover;
+    background-image: url(../img/webp/img-company01_sp.webp);
 
     @include global.browser("ie11") {
       //IE11の場合
-      background: url(../img/common/img-company01_sp.jpeg) no-repeat center center / cover;
+      background-image: url(../img/common/img-company01_sp.jpeg);
     }
     @include global.browser("safari") {
       //safariの場合
-      background: url(../img/common/img-company01_sp.jpeg) no-repeat center center / cover;
+      background-image: url(../img/common/img-company01_sp.jpeg);
     }
+
     @include global.mq(md) {
+      //min-width 768px〜
       background-image: url(../img/webp/img-company01_pc.webp);
 
       @include global.browser("ie11") {
         //IE11の場合
-        background: url(../img/common/img-company01_sp.jpeg) no-repeat center center / cover;
+        background-image: url(../img/common/img-company01_sp.jpeg);
       }
       @include global.browser("safari") {
         //safariの場合
-        background: url(../img/common/img-company01_sp.jpeg) no-repeat center center / cover;
+        background-image: url(../img/common/img-company01_sp.jpeg);
       }
     }
   }
+
   &__title--bg-02 {
-    background: url(../img/webp/img-company02_sp.webp) no-repeat center center / cover;
+    background-image: url(../img/webp/img-company02_sp.webp);
 
     @include global.browser("ie11") {
       //IE11の場合
-      background: url(../img/common/img-company02_sp.jpeg) no-repeat center center / cover;
+      background-image: url(../img/common/img-company02_sp.jpeg);
     }
     @include global.browser("safari") {
       //safariの場合
-      background: url(../img/common/img-company02_sp.jpeg) no-repeat center center / cover;
+      background-image: url(../img/common/img-company02_sp.jpeg);
     }
+
     @include global.mq(md) {
+      //min-width 768px〜
       background-image: url(../img/webp/img-company02_pc.webp);
-      @include global.browser("ie11") {//IE11の場合
-        background: url(../img/common/img-company02_sp.jpeg) no-repeat center center / cover;
+
+      @include global.browser("ie11") {
+        //IE11の場合
+        background-image: url(../img/common/img-company02_sp.jpeg);
       }
-      @include global.browser("safari") {//safariの場合
-        background: url(../img/common/img-company02_sp.jpeg) no-repeat center center / cover;
+      @include global.browser("safari") {
+        //safariの場合
+        background-image: url(../img/common/img-company02_sp.jpeg);
       }
     }
   }
+
   &__title-head {
     @include global.fz(52, 100);
     @include global.lh(1.2);
     font-family: global.$font-family-en;
     font-weight: 500;
   }
+
   &__title-foot {
     @include global.fz(16, 24);
     @include global.lh(1.5);
     font-weight: 700;
   }
+
   &__text {
     width: 100%;
     margin-top: -40px;
@@ -91,11 +106,13 @@
     box-shadow: 0 3px 12px rgba(global.$color-text-black, 0.16);
     background-color: global.$color-text-white;
     @include global.mq(md) {
+      //min-width 768px〜
       max-width: 688px;
       margin: -60px auto 0;
       padding: 30px 40px;
     }
   }
+
   &__text-head {
     @include global.fz(20, 24);
     @include global.lh(1.5);
@@ -103,6 +120,7 @@
     font-weight: 700;
     text-align: center;
   }
+
   &__text-foot {
     margin-top: 16px;
     @include global.fz(14);
@@ -110,66 +128,85 @@
     color: global.$color-text-black;
     font-weight: 500;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 28px;
     }
   }
 }
 
-//-----------
 // 会社概要
-//-----------
+//--------------------------------------------------------------------------
 .p-about-company {
-  background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
   color: global.$color-text-black;
+  background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
+  @include global.browser("ie11") {
+    //IE11の場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+  @include global.browser("safari") {
+    //safariの場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+
   &__contents {
     width: 100%;
     padding: 40px 20px;
     background-color: global.$color-text-white;
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 60px 40px 80px;
     }
   }
+
   &__title {
     @include global.fz(24);
     @include global.lh(1.5);
     font-weight: 700;
     text-align: center;
   }
+
   &__dl {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 41px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 61px;
     }
   }
+
   &__dt,
   &__dd {
+    border-top: 1px solid global.$color-main;
     padding: 16px 0;
     @include global.fz(14, 16);
     @include global.lh(1.43, 1.5);
     font-weight: 500;
-    border-top: 1px solid global.$color-main;
     &:last-of-type {
       border-bottom: 1px solid global.$color-main;
     }
     @include global.mq(md) {
+      //min-width 768px〜
       padding: 24px 0;
     }
   }
+
   &__dt {
-    width: 33.9%;
     display: flex;
     align-items: center;
+    width: 33.9%;
     @include global.mq(sm) {
+      //min-width 576px〜
       padding-left: 12px;
     }
     @include global.mq(md) {
+      //min-width 768px〜
       width: 20.07%;
       padding-left: 32px;
     }
   }
+
   &__dd {
     width: 66.1%;
     padding-left: 24px;
@@ -178,28 +215,32 @@
       border-color: global.$color-border-thin;
     }
     @include global.mq(md) {
+      //min-width 768px〜
       width: 70.93%;
       padding-left: 36px;
     }
   }
 }
 
-//-----------
 // 役員紹介
-//-----------
+//--------------------------------------------------------------------------
 .p-about-officer {
   margin-bottom: 100px;
   background: linear-gradient(transparent 46.5%, global.$color-main-thin 46.5%);
   color: global.$color-text-black;
+
   @include global.mq(md) {
+    //min-width 768px〜
     background: linear-gradient(transparent 62%, global.$color-main-thin 62%);
   }
+
   &__title {
     @include global.fz(24);
     @include global.lh(1.45);
     font-weight: 700;
     text-align: center;
   }
+
   &__items {
     width: 100%;
     margin-top: 41px;
@@ -208,78 +249,96 @@
       margin: 60px auto 0;
     }
   }
-  &__item {
-    width: 100%;
-    &:not(:first-child) {
-      margin-top: 60px;
-    }
-    @include global.mq(md) {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      align-items: flex-start;
-    }
+}
+
+//役員紹介アイテム
+.p-about-officer-item {
+  width: 100%;
+  &:not(:first-child) {
+    margin-top: 60px;
   }
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
   &__avatar {
     margin: 0 48px;
     text-align: center;
     @include global.mq(md) {
+      //min-width 768px〜
       margin: 0;
       width: calc(37.79% - 5.81% / 2);
     }
   }
+
   &__img {
     width: auto;
     vertical-align: top;
     @include global.mq(md) {
+      //min-width 768px〜
       width: 100%;
     }
   }
+
   &__info {
     margin-top: 18px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 0;
       width: calc(62.21% - 5.81% / 2);
     }
   }
+
   &__profile {
     display: flex;
     align-items: center;
   }
+
   &__director {
     @include global.fz(14);
     @include global.lh(1.42);
     font-weight: 700;
   }
+
   &__name {
     margin-left: 20px;
     @include global.fz(20);
     @include global.lh(1.45);
   }
+
   &__career {
     margin-top: 16px;
     @include global.fz(14);
     @include global.lh(1.7);
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 28px;
     }
   }
+
   &__sns-list {
     display: flex;
-    align-items: center;
     margin-top: 18px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 28px;
     }
   }
+
   &__sns-item {
     &:not(:first-child) {
       margin-left: 30px;
     }
   }
+  
   &__sns-link {
     display: inline-block;
   }
+  
   &__sns-svg {
     color: global.$color-text-black;
     height: 28px;

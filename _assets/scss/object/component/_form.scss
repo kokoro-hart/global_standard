@@ -1,26 +1,35 @@
 @use "foundation/global";
 
+// Component フォーム
+//--------------------------------------------------------------------------
+
 .c-form {
+
   &__row {
     &:not(:first-child) {
       margin-top: 20px;
       @include global.mq(md) {
+        //min-width 768px〜
         margin-top: 32px;
       }
     }
   }
+
   &__dd {
     margin-top: 8px;
     @include global.mq(md) {
+      //min-width 768px〜
       margin-top: 12px;
     }
   }
+
   &__label {
     position: relative;
     color: global.$color-text-black;
     @include global.fz(14,18);
     @include global.lh(1.2);
     font-weight: 700;
+
     &--required {
       &::after {
         content: "必須";
@@ -39,6 +48,7 @@
       }
     }
   }
+
   &__input {
     box-shadow: none;
     border: 1px solid global.$color-border;
@@ -57,6 +67,7 @@
       color: global.$color-case-nav-dark;
     }
   }
+
   &__select {
     position: relative;
     appearance: none;
@@ -67,19 +78,24 @@
       height: 6px;
     }
   }
+
   &__select:invalid {
   color: global.$color-case-nav-dark;
   }
+
   &__textarea {
     height: 140px;
     @include global.mq(md) {
+      //min-width 768px〜
       height: 240px;
     }
   }
+
   &__privacy {
     margin-top: 40px;
     text-align: center;
   }
+
   &__privacy-label {
     position: relative;
     @include global.fz(14, 16);
@@ -87,15 +103,18 @@
     font-weight: 500;
     padding-left: 38px;
     @include global.mq(md) {
+      //min-width 768px〜
       padding-left: 42px;
     }
   }
+
   &__privacy-checkbox {
     position: absolute;
     right: 0;
     opacity: 0;
     pointer-events: none;
   }
+
   &__privacy-part {
     &::before {
       content: "";
@@ -111,11 +130,13 @@
       background: global.$color-text-white;
       cursor: pointer;
       @include global.mq(md) {
+        //min-width 768px〜
         width: 32px;
         height: 32px;
       }
     } 
   }
+
   &__privacy-checkbox:checked + .c-form__privacy-part::after {
     content: "";
     display: block;
@@ -130,13 +151,16 @@
     border-bottom: 4px solid global.$color-text-black;
     border-left: 4px solid global.$color-text-black;
     @include global.mq(md) {
+      //min-width 768px〜
       width: 28px;
     }
   }
+
   &__privacy-link {
     text-decoration: underline;
     font-weight: 700;
   }
+  
   &__submit-wrapper {
     margin-top: 40px;
     text-align: center;
