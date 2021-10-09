@@ -8,9 +8,9 @@
 // import '@modules/slick-carousel';
 
 
-// -----------------------------
-//   360vw以下はリサイズする
-// -----------------------------
+// ------------------------------------
+//   ビューポート360px以下はリサイズして表示
+// ------------------------------------
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
@@ -31,7 +31,8 @@
 // ----------------------------
 const jsDrawerButton = document.getElementById('js-drawer');
 const body = document.body;
-const spGlobalNav = document.getElementById('js-global-nav')
+const spGlobalNav = document.getElementById('js-global-nav');
+
 jsDrawerButton.addEventListener('click', function () {
   body.classList.toggle('is-drawerActive')
   if (jsDrawerButton.getAttribute('aria-expanded') == 'false') {
@@ -51,9 +52,8 @@ jsDrawerButton.addEventListener('click', function () {
 //  アコーディオンメニュー
 // ----------------------------
 const accordionTitle = document.querySelectorAll('.js-accordion-title');
-//forEachでtitleを一つ一つtitleEachに入れている
+
 accordionTitle.forEach(titleEach => {
-  //nextElementSiblingはjQueryのnext()みたいなもの
   let content = titleEach.nextElementSibling
   titleEach.addEventListener('click', () => {
     titleEach.classList.toggle('is-active')
@@ -69,4 +69,26 @@ accordionTitle.forEach(titleEach => {
       content.classList.remove('is-open');
     };
   })
+});
+
+// ----------------------------
+//  ページ内リンク
+// ----------------------------
+window.addEventListener('DOMContentLoaded', () => {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
+
+  anchorLinksArr.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.hash;
+      const targetElement = document.querySelector(targetId);
+      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top - 60;
+
+      window.scrollTo({
+        top: targetOffsetTop,
+        behavior: "smooth"
+      });
+    });
+  });
 });
