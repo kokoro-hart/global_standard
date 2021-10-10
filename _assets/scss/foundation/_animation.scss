@@ -1,0 +1,63 @@
+@use "global";
+
+// テキストアニメーション
+//--------------------------------------------------------------------------
+
+.is-mask {
+  position: relative;
+  overflow: hidden;
+  transition: color 0s 0.5s, background-color 0s 0.5s;
+  background-color: transparent;
+  color: transparent;
+}
+
+#js-fv-trigger,
+.js-trigger {
+  &.is-active {
+    .is-mask {
+      color: global.$color-main;
+      background-color: global.$color-text-white;
+      &::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: global.$color-main;
+        transform: translate(101%, 0);
+        animation: mask-bg 1.2s cubic-bezier(0.8, 0, 0.170, 1);
+      }
+      @keyframes mask-bg {
+        0% {
+          transform: translate( 101%, 0)
+        }
+        40%, 60% {
+          transform: translate(0, 0%)
+        }
+        100% {
+          transform: translate( -100%, 0)
+        }
+      }
+    }
+    .is-mask-white {
+      @extend .is-mask;
+      color: global.$color-text-white;
+      background-color: global.$color-main;
+      &::after {
+        background-color: global.$color-text-white;
+      }
+    }
+  }
+}
+
+// .lazyload {
+//   opacity: 0;
+// }
+
+// .is-lazyloaded {
+//   opacity: 1;
+//   transition: opacity .8s ease-out;
+// }

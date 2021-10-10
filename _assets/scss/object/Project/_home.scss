@@ -17,6 +17,7 @@
   }
   @include global.mq(xl) {
     //min-width 1280px〜
+    max-height: calc(100vh - global.$header-height-pc);
     margin-top: global.$header-height-pc;
   }
 
@@ -42,18 +43,10 @@
     }
   }
 
-  &__title-head {
-    @include global.mq(md) {
-      //min-width 768px〜
-      display: inline-block;
-      background-color: global.$color-text-white;
-    }
-  }
-
   &__title {
     display: inline-block;
-    background-color: global.$color-text-white;
-    color: global.$color-main;
+    background-color: transparent;
+    color: transparent;
     font-size: 10.66667vw;
     @include global.lh(1.2);
     font-family: global.$font-family-en;
@@ -77,8 +70,8 @@
   &__lead {
     display: inline-block;
     margin-top: 16px;
-    background-color: global.$color-main;
-    color: global.$color-text-white;
+    background-color: transparent;
+    color: transparent;
     font-size: 4.26667vw;
     @include global.lh(1.5);
     font-weight: 700;
@@ -118,50 +111,48 @@
 
     &:nth-of-type(1) {
       transform: translateX(0);
-      animation: slide 30s 0s infinite;
+      animation: slide 30s 0s cubic-bezier(0.8, 0, 0.17, 1) infinite;
     }
     &:nth-of-type(2) {
-      animation: slide 30s 6s infinite;
+      animation: slide 30s 6s cubic-bezier(0.8, 0, 0.17, 1) infinite;
     }
     &:nth-of-type(3) {
-      animation: slide 30s 12s infinite;
+      animation: slide 30s 12s cubic-bezier(0.8, 0, 0.17, 1) infinite;
     }
     &:nth-of-type(4) {
-      animation: slide 30s 18s infinite;
+      animation: slide 30s 18s cubic-bezier(0.8, 0, 0.17, 1) infinite;
     }
     &:nth-of-type(5) {
-      animation: slide 30s 24s infinite;
+      animation: slide 30s 24s cubic-bezier(0.8, 0, 0.17, 1) infinite;
     }
-  }
-  &__img {
-    width: 100%;
-    object-fit: cover;
   }
   @keyframes slide {
     0% {
       transform: translateX(100%);
+      opacity: 1;
     }
     3% {
       transform: translateX(0%);
+      opacity: 1;
     }
     20% {
       transform: translateX(0%);
+      opacity: 1;
     }
-    30% {
-      transform: translateX(0%);
-    }
-    40% {
+    23% {
       transform: translateX(-100%);
-    }
-    70% {
-      z-index: -1;
     }
     99.999% {
       transform: translateX(-100%);
     }
     100% {
       transform: translateX(100%);
+      opacity: 1;
     }
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -355,7 +346,6 @@
 
   &__title-inside {
     display: inline-block;
-    background-color: global.$color-text-white;
     &:not(:first-child) {
       margin-top: 8px;
     }
