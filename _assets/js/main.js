@@ -5,8 +5,14 @@
 
 //SVGスプライトをIEで使用するためのライブラリ
 import '@modules/svgxuse';
+
 //ブラウザ判定のためライブラリ
 import './lib/b_browser_switcher.js';
 
-
 import './common'
+
+//ドロワーメニュー
+import './modules/drawer'
+
+//アコーディオンメニュー
+import './modules/accordion'
