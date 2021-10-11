@@ -5,12 +5,24 @@
 
 // import $ from "@modules/jquery";
 
-// import '@modules/slick-carousel';
+//IE対応のためのPolyfill
+
+//Picturefill
+import '@modules/picturefill';
+
+//object-fit-images
+import '@modules/object-fit-images';
+
+//IntersectionObserver
+import '@modules/intersection-observer';
+
+//smooth
+import '@modules/smoothscroll-polyfill';
 
 
-// ------------------------------------
-//   ビューポート360px以下はリサイズして表示
-// ------------------------------------
+
+
+//ビューポート幅360px以下はリサイズして表示
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
@@ -26,54 +38,44 @@
   switchViewport();
 })();
 
-// ----------------------------
-//  ハンバーガーメニュー
-// ----------------------------
-const jsDrawerButton = document.getElementById('js-drawer');
-const body = document.body;
-const spGlobalNav = document.getElementById('js-global-nav');
+//クラス付与
+const fvTrigger = document.getElementById('js-fv-trigger');
+function fvAnimation() {
+  fvTrigger.classList.add('is-active');
+}
+if (fvTrigger !== null) {
+  window.setTimeout(function () {
+    fvAnimation();
+  }, 500);
+}
 
-jsDrawerButton.addEventListener('click', function () {
-  body.classList.toggle('is-drawerActive')
-  if (jsDrawerButton.getAttribute('aria-expanded') == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-    this.classList.add('is-active');
-    spGlobalNav.setAttribute('area-hidden', 'false');
-    spGlobalNav.classList.add('is-active');
-  } else {
-    this.setAttribute('aria-expanded', 'false');
-    this.classList.remove('is-active');
-    spGlobalNav.setAttribute('area-hidden', 'true');
-    spGlobalNav.classList.remove('is-active');
-  };
+//画像遅延読み込み
+const lazy = document.querySelectorAll('.lazyload');
+const lazyObserver = new IntersectionObserver(inViewport, {
+  threshold: [0]
 });
 
-// ----------------------------
-//  アコーディオンメニュー
-// ----------------------------
-const accordionTitle = document.querySelectorAll('.js-accordion-title');
-
-accordionTitle.forEach(titleEach => {
-  let content = titleEach.nextElementSibling
-  titleEach.addEventListener('click', () => {
-    titleEach.classList.toggle('is-active')
-    content.classList.toggle('is-open')
-    
-    if (content.getAttribute('aria-expanded') == 'false') {
-      content.setAttribute('aria-expanded', 'true');
-      content.setAttribute('area-hidden', 'false');
-      content.classList.add('is-open');
-    } else {
-      content.setAttribute('aria-expanded', 'false')
-      content.setAttribute('area-hidden', 'true');
-      content.classList.remove('is-open');
-    };
-  })
+Array.from(lazy).forEach(element => {
+  lazyObserver.observe(element);
 });
 
-// ----------------------------
-//  ページ内リンク
-// ----------------------------
+function inViewport(entries, observer) {
+  entries.forEach(entry => {
+
+    if (entry.intersectionRatio > 0) {
+      const imgElement = entry.target;
+      imgElement.src = imgElement.dataset.src;
+
+      imgElement.addEventListener('load', () => {
+        imgElement.classList.add('is-lazyloaded');
+      });
+
+      lazyObserver.unobserve(entry.target);
+    }
+  });
+}
+
+//ページ内リンク
 window.addEventListener('DOMContentLoaded', () => {
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
@@ -92,3 +94,22 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// タッチデバイスの場合:hover無効化
+const touch = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+if (touch) {
+  try {
+    for (let si in document.styleSheets) {
+      const styleSheet = document.styleSheets[si];
+      if (!styleSheet.rules) continue;
+
+      for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+        if (!styleSheet.rules[ri].selectorText) continue;
+
+        if (styleSheet.rules[ri].selectorText.match(':hover')) {
+          styleSheet.deleteRule(ri);
+        }
+      }
+    }
+  } catch (ex) { }
+}
