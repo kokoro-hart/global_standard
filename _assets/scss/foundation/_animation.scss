@@ -11,8 +11,7 @@
   color: transparent;
 }
 
-#js-fv-trigger,
-.js-trigger {
+#js-fv-trigger {
   &.is-active {
     .is-mask {
       color: global.$color-main;
@@ -52,12 +51,3 @@
     }
   }
 }
-
-// .lazyload {
-//   opacity: 0;
-// }
-
-// .is-lazyloaded {
-//   opacity: 1;
-//   transition: opacity .8s ease-out;
-// }
