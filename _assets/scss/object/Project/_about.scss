@@ -35,7 +35,7 @@
   &__title--bg-01 {
     background-image: url(../img/webp/img-company01_sp.webp);
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background-image: url(../img/common/img-company01_sp.jpeg);
     }
@@ -48,7 +48,7 @@
       //min-width 768px〜
       background-image: url(../img/webp/img-company01_pc.webp);
 
-      @include global.browser("ie11") {
+      @include global.browser("ie") {
         //IE11の場合
         background-image: url(../img/common/img-company01_sp.jpeg);
       }
@@ -62,7 +62,7 @@
   &__title--bg-02 {
     background-image: url(../img/webp/img-company02_sp.webp);
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background-image: url(../img/common/img-company02_sp.jpeg);
     }
@@ -75,7 +75,7 @@
       //min-width 768px〜
       background-image: url(../img/webp/img-company02_pc.webp);
 
-      @include global.browser("ie11") {
+      @include global.browser("ie") {
         //IE11の場合
         background-image: url(../img/common/img-company02_sp.jpeg);
       }
@@ -139,7 +139,7 @@
 .p-about-company {
   color: global.$color-text-black;
   background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
-  @include global.browser("ie11") {
+  @include global.browser("ie") {
     //IE11の場合
     background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
   }

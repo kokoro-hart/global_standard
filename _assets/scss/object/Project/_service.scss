@@ -17,10 +17,10 @@
 .p-service-detail {
   $this: &;
   width: 100%;
-  margin-top: 60px;
+  padding-top: 60px;
   @include global.mq(md) {
     //min-width 768px〜
-    margin-top: 138px;
+    padding-top: 138px;
   }
   
   &:nth-of-type(odd) {
@@ -33,6 +33,7 @@
   }
 
   &:nth-of-type(2n) {
+    padding-top: 0;
     margin: 69px 0 80px;
     background: linear-gradient(transparent 0%, global.$color-main-thin 0%);
     @include global.mq(md) {
@@ -219,7 +220,7 @@
   $this: &;
   background: no-repeat center center / cover;
   background-image: url(../img/webp/bg-case.webp);
-  @include global.browser('ie11') {
+  @include global.browser('ie') {
     //IE11の場合
     background-image: url(../img/common/bg-case.jpeg);
   }

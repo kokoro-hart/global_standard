@@ -17,7 +17,7 @@
   }
   @include global.mq(xl) {
     //min-width 1280px〜
-    max-height: calc(100vh - global.$header-height-pc);
+    max-height: calc(105vh - global.$header-height-pc);
     margin-top: global.$header-height-pc;
   }
 
@@ -31,7 +31,7 @@
     left: 0;
     @include global.mq(md) {
       //min-width 768px〜
-      bottom: 60px;
+      bottom: 7vh;
     }
   }
 
@@ -226,7 +226,7 @@
     z-index: -2;
     background: url(../img/webp/bg-company.webp) no-repeat center center / cover;
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;
     }
@@ -345,6 +345,7 @@
   }
 
   &__title-inside {
+    background-color: global.$color-text-white;
     display: inline-block;
     &:not(:first-child) {
       margin-top: 8px;
@@ -365,7 +366,7 @@
   z-index: 1;
   width: 100%;
   background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
-  @include global.browser("ie11") {
+  @include global.browser("ie") {
     //IE11の場合
     background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
   }

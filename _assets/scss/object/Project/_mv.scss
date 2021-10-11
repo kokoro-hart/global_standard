@@ -68,7 +68,7 @@
 .p-mv-lower--bg-about {
   background-image: url(../img/webp/mv-company_sp.webp);
 
-  @include global.browser("ie11") {
+  @include global.browser("ie") {
     //IE11の場合
     background-image: url(../img/common/mv-company_sp.jpeg);
   }
@@ -81,7 +81,7 @@
     //min-width768px〜
     background-image: url(../img/webp/mv-company_pc.webp);
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background-image: url(../img/common/mv-company_pc.jpeg);
     }
@@ -96,7 +96,7 @@
 .p-mv-lower--bg-service {
   background-image: url(../img/webp/mv-service_sp.webp);
 
-  @include global.browser("ie11") {
+  @include global.browser("ie") {
     //IE11の場合
     background-image: url(../img/common/mv-service_sp.jpeg);
   }
@@ -109,7 +109,7 @@
     //min-width768px〜
     background-image: url(../img/webp/mv-service_pc.webp);
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background-image: url(../img/common/mv-service_pc.jpeg);
     }
@@ -124,7 +124,7 @@
 .p-mv-lower--bg-news {
   background-image: url(../img/webp/mv-news_sp.webp);
 
-  @include global.browser("ie11") {
+  @include global.browser("ie") {
     //IE11の場合
     background-image: url(../img/common/mv-news_sp.jpeg);
   }
@@ -137,7 +137,7 @@
     //min-width768px〜
     background-image: url(../img/webp/mv-news_pc.webp);
 
-    @include global.browser("ie11") {
+    @include global.browser("ie") {
       //IE11の場合
       background-image: url(../img/common/mv-news_pc.jpeg);
     }
