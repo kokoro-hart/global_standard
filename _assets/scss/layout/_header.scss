@@ -30,29 +30,20 @@
   }
 }
 
-//ヘッダーロゴ
+//ロゴ
 .l-header-logo {
   padding-left: 20px;
-
+  color: global.$color-main;
+  @include global.fz(28, 40);
+  @include global.lh(1);
+  font-weight: 700;
+  font-family: global.$font-family-logo;
+  font-style: italic;
   @include global.mq(xl) {//min-width 1280px〜
     padding-left: 40px;
   }
-
   //ロゴリンク
   &__link {
     display: block;
-  }
-
-  //ロゴsvg
-  &__svg {
-    width: 200px;
-    height: 37px;
-    color: global.$color-main;
-
-    @include global.mq(lg) {//min-width 992px〜
-      max-width: 282px;
-      width: 100%;
-      height: 53px;
-    }
   }
 }

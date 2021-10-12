@@ -47,21 +47,15 @@
 .l-footer-logo {
   display: block;
   margin: 0 auto;
+  color: global.$color-text-white;
+  @include global.fz(40, 52);
+  @include global.lh(1);
+  font-weight: 700;
+  font-family: global.$font-family-logo;
+  font-style: italic;
   text-align: center;
 
   &__link {
     display: inline-block;
-  }
-
-  &__svg {
-    max-width: 282px;
-    height: 53px;
-    width: 100%;
-    color: global.$color-text-white;
-    @include global.mq(md) {
-      //min-width 768px〜
-      max-width: 368px;
-      height: 68px;
-    }
   }
 }
