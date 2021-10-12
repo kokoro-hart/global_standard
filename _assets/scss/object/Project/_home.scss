@@ -459,13 +459,21 @@
     margin-top: 10px;
   }
 
-  &__category {
+  &__cats {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 29px);
+  }
+
+  &__cat {
     padding: 6px 16px;
     border: 1px solid global.$color-text-white;
+    white-space: nowrap;
     @include global.lh(1.4);
   }
 
   &__arrow {
+    margin-top: 2px;
     color: global.$color-text-white;
     transition: color 0.3s, transform 0.3s ease-out;
   }
