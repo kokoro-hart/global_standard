@@ -7,7 +7,10 @@
 import '@modules/svgxuse';
 
 //ブラウザ判定のためライブラリ
-import './lib/b_browser_switcher.js';
+import './lib/b_browser_switcher';
+
+//line-clampをIEで使用するためのライブラリ
+import './lib/clamp';
 
 import './common'
 
