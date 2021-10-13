@@ -7,12 +7,14 @@
   width: 100%;
   padding: 60px 0 100px;
   @include global.mq(md) {
+    //min-width 768px〜
     padding: 80px 0 160px;
   }
 
   //アーカイブインナー
   &__inner {
-    @include global.mq(md) {
+    @include global.mq(lg) {
+      //min-width 992px〜
       display: flex;
       justify-content: space-between;
     }
@@ -21,10 +23,8 @@
   //メインエリア
   &__main {
     width: 100%;
-    @include global.mq(md) {
-      width: calc(67.91% - 25px / 2);
-    }
     @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(70.91% - 40px / 2);
     }
   }
@@ -32,10 +32,8 @@
   //サイドバー
   &__sidebar {
     width: 100%;
-    @include global.mq(md) {
-      width: calc(32.09% - 25px / 2);
-    }
     @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(29.09% - 40px / 2);
     }
   }
