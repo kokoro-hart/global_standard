@@ -15,8 +15,8 @@
 .c-sidebar-new {
   $this: &;
   padding-top: 100px;
-  @include global.mq(md) {
-    //min-width 768px〜
+  @include global.mq(lg) {
+    //min-width 992px〜
     padding-top: 0;
   }
 
@@ -41,8 +41,8 @@
   &__item-thumbnail {
     overflow: hidden;
     width: calc(37.61% - 12px / 2);
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(35% - 10px / 2);
     }
   }
@@ -51,8 +51,8 @@
     height: 24vw;
     object-fit: cover;
     transition: transform 0.3s ease-out;
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       height: 7.8125vw;
       max-height: 100px;
     }
@@ -60,8 +60,8 @@
 
   &__item-body {
     width: calc(62.39% - 12px / 2);
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(65% - 10px / 2);
     }
   }
@@ -70,17 +70,47 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__item-cats {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: -5px;
+    color: global.$color-accent-red;
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+    @include global.mq(lg) {
+      //min-width 992px〜
+      margin-left: -5px;
+      margin-top: -5px;
+    }
+  }
+
   &__item-cat {
     border: 1px solid global.$color-accent-red;
     padding: 3px 11px;
-    @include global.fz(12);
-    @include global.lh(1.66);
-    color: global.$color-accent-red;
-    white-space: nowrap;
+    @include global.fz(12, 14);
+    @include global.lh(1.66, 1.71);
+    margin-left: 5px;
+    margin-top: 5px;
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-left: 10px;
+      margin-top: 10px;
+      padding: 6px 24px;
+    }
+    @include global.mq(lg) {
+      //min-width 992px〜
+      padding: 3px 11px;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
   }
 
   &__item-time {
-    margin-left: 12px;
     color: global.$color-text-gray;
     @include global.fz(14);
     @include global.lh(1.7);
@@ -88,12 +118,29 @@
   }
 
   &__item-title {
+    display: -webkit-box;
+    overflow: hidden;
     margin-top: 6px;
     color: global.$color-text-black;
-    @include global.fz(14);
-    @include global.lh(1.42);
+    font-size: 14px;
+    line-height: 1.42;
     font-weight: 700;
     transition: opacity 0.3s ease-out;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-line-clamp: 2;
+    }
+    @include global.mq(lg) {
+      //min-width 992px
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 1.42;
+    }
   }
 }
 

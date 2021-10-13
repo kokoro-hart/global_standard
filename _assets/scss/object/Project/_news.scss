@@ -43,8 +43,8 @@
   &__thumbnail {
     overflow: hidden;
     width: calc(37.61% - 12px / 2);
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(34.21% - 20px / 2);
     }
   }
@@ -53,8 +53,8 @@
     height: 24vw;
     object-fit: cover;
     transition: transform 0.3s ease-out;
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       height: 12.1875vw;
       max-height: 156px;
     }
@@ -62,8 +62,8 @@
 
   &__body {
     width: calc(62.39% - 12px / 2);
-    @include global.mq(md) {
-      //min-width 768px〜
+    @include global.mq(lg) {
+      //min-width 992px〜
       width: calc(65.79% - 20px / 2);
       margin-top: 12px;
     }
@@ -77,7 +77,15 @@
   &__cats {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: -5px;
     color: global.$color-accent-red;
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-left: -10px;
+      margin-top: -10px;
+    }
   }
 
   &__cat {
@@ -85,33 +93,38 @@
     padding: 3px 11px;
     @include global.fz(12, 14);
     @include global.lh(1.66, 1.71);
+    margin-left: 5px;
+    margin-top: 5px;
     @include global.mq(md) {
       //min-width 768px〜
+      margin-left: 10px;
+      margin-top: 10px;
       padding: 6px 24px;
     }
   }
 
-  &__new {
-    margin-left: 8px;
-    @include global.fz(14, 16);
-    @include global.lh(1.7, 1.5);
-  }
 
   &__time {
     color: global.$color-text-gray;
     @include global.fz(14);
     @include global.lh(1.7);
+    white-space: nowrap;
   }
 
   &__title {
+    display: -webkit-box;
+    overflow: hidden;
     margin-top: 6px;
     color: global.$color-text-black;
     @include global.fz(14, 16);
     @include global.lh(1.42, 1.75);
     font-weight: 700;
     transition: opacity 0.3s ease-out;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     @include global.mq(md) {
       //min-width 768px〜
+      -webkit-line-clamp: 2;
       margin-top: 12px;
     }
   }
