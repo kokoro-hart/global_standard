@@ -37,9 +37,17 @@
             if(have_posts()) :
             while(have_posts()) : the_post();
           ?>
-          <a href="single.html" class="p-news-main-item">
+          <a href="<?php the_permalink(); ?>" class="p-news-main-item">
             <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
+              <?php
+                if(has_post_thumbnail()) {
+                  the_post_thumbnail('medium' , array(
+                    'class' => 'p-news-main-item__img lazyload'
+                  ));
+                } else {
+                  echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">';
+                }
+              ?>
             </div>
             <div class="p-news-main-item__body">
               <div class="p-news-main-item__meta">
