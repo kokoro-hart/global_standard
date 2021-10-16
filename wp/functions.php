@@ -29,18 +29,25 @@ add_action('wp_enqueue_scripts', 'my_script_init');
 
 
 //タイトルの分岐
-function wp_document_title_parts( $title ) {
+function wp_document_title_parts( $title )
+{
   if ( is_home() || is_front_page() ) {
     unset( $title['tagline'] ); // キャッチフレーズを出力しない
   } else if ( is_category() ) {
-    $title['title'] = $title['title'] . 'カテゴリーの記事一覧';
-  } else if ( is_tag() ) {
-    $title['title'] = $title['title'] . 'タグの記事一覧';
-  } else if ( is_archive() ) {
-    $title['title'] = $title['title'] . 'の記事一覧';
+    $title['title'] = $title['title'];
   }
   return $title;
 }
 add_filter( 'document_title_parts', 'wp_document_title_parts', 10, 1 );
 
 add_action('after_setup_theme', 'my_setup');
+
+
+//カテゴリータイトル
+add_filter('get_the_archive_title', function($title)
+{
+  if(is_category()) {
+    $title = single_cat_title( '', false );
+  }
+  return $title;
+});
