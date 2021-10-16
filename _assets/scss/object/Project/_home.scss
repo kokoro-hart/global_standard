@@ -91,6 +91,7 @@
     height: 59vw;
   }
   &__items {
+    display: flex;
     margin-left: 20px;
     position: relative;
     overflow: hidden;
@@ -103,7 +104,6 @@
   }
   &__item {
     display: block;
-    float: left;
     width: 100%;
     transform: translateX(100%);
     position: absolute;
