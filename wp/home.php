@@ -33,6 +33,10 @@
         <!--メインエリア-->
         <main class="p-news-main l-archive__main">
           <h2 class="p-news-main__title">ニュース</h2>
+          <?php
+            if(have_posts()) :
+            while(have_posts()) : the_post();
+          ?>
           <a href="single.html" class="p-news-main-item">
             <div class="p-news-main-item__thumbnail">
               <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
@@ -40,158 +44,39 @@
             <div class="p-news-main-item__body">
               <div class="p-news-main-item__meta">
                 <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                  <span class="p-news-main-item__cat">カテゴリ</span>
+                  <?php $category = get_the_category();?>
+                  <?php if($category[0]) : ?>
+                  <span class="p-news-main-item__cat"><?php echo $category[0]->cat_name; ?></span>
+                  <?php endif; ?>
                 </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
+                <time class="p-news-main-item__time" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.n.j'); ?></time>
               </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自</h2>
+              <h2 class="p-news-main-item__title"><?php the_title(); ?></h2>
             </div>
           </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">営業時間</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">お盆期間中の営業について</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">その他</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
-          <a href="" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
-              <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">
-            </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
-                  <span class="p-news-main-item__cat">カテゴリ</span>
-                </div>
-                <time class="p-news-main-item__time" datetime="2021.60.08">2021.60.08</time>
-              </div>
-              <h2 class="p-news-main-item__title">常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自…</h2>
-            </div>
-          </a>
+
+          <?php
+            endwhile;
+            endif;
+          ?>
+          
           <!--ページネーション-->
-          <div class="p-news-main__pagination c-pagination">
-            <a href="" class="prev page-numbers">
-              <svg class="c-svg c-pagination__svg" width="8" height="14">
-                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#pagination-prev" />
-              </svg>
-            </a>
-            <a href="" class="page-numbers current">1</a>
-            <a href="" class="page-numbers">2</a>
-            <a href="" class="page-numbers">3</a>
-            <a href="" class="next page-numbers">
-              <svg class="c-svg c-pagination__svg" width="8" height="14">
-                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#pagination-next" />
-              </svg>
-            </a>
-          </div>
+          <?php if(paginate_links()): ?>
+            <div class="p-news-main__pagination c-pagination">
+              <?php
+              echo 
+              paginate_links(array(
+                'end_size' => 1,
+                'mid_size' => 1,
+                'prev_next' => true,
+                'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" class="c-svg c-pagination__svg" width="8" height="14"><path d="M7.163.317a1.081 1.081 0 00-1.524 0L.314 5.659a1.076 1.076 0 00-.033 1.485l5.247 5.263a1.076 1.076 0 101.524-1.518l-4.46-4.527 4.571-4.527a1.065 1.065 0 000-1.518z" fill="#888"/></svg>',
+                'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" class="c-svg c-pagination__svg" width="8" height="14"><path d="m14.732 10.3a1.081 1.081 0 0 1 1.524 0l5.325 5.342a1.076 1.076 0 0 1 .033 1.485l-5.247 5.264a1.076 1.076 0 1 1 -1.524-1.518l4.46-4.527-4.571-4.527a1.065 1.065 0 0 1 0-1.519z" transform="translate(-14.414 -9.983)" fill="#888"/></svg>',
+              ));
+              ?>
+            </div>
+          <?php endif;?>
           <!--/ページネーション-->
+
         </main>
         <!--/メインエリア-->
 
