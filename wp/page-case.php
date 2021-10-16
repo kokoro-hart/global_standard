@@ -287,7 +287,7 @@
             </div>
           </article>
           <div class="p-case__link-wrapper">
-            <a href="/service#english-detail" class="c-button-square p-case-summary__button">
+            <a href="<?php echo esc_url(home_url('/service#english-detail')); ?>" class="c-button-square p-case-summary__button">
               ビジネス英語研修の詳細
               <svg class="c-svg c-button-square__svg" width="18" height="12">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -478,7 +478,7 @@
             </div>
           </article>
           <div class="p-case__link-wrapper">
-            <a href="/service#communication-detail" class="c-button-square p-case-summary__button">
+            <a href="<?php echo esc_url(home_url('/service#communication-detail')); ?>" class="c-button-square p-case-summary__button">
               異文化コミュニケーションの詳細
               <svg class="c-svg c-button-square__svg" width="18" height="12">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -612,7 +612,7 @@
             </div>
           </article>
           <div class="p-case__link-wrapper">
-            <a href="/service#abroad-detail" class="c-button-square p-case-summary__button">
+            <a href="<?php echo esc_url(home_url('/service#abroad-detail')); ?>" class="c-button-square p-case-summary__button">
               ビジネス学習プログラムの詳細
               <svg class="c-svg c-button-square__svg" width="18" height="12">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />

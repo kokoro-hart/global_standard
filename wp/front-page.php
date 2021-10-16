@@ -1,6 +1,6 @@
     
     <?php get_header(); ?>
-    
+
     <main class="p-home">
       <!--メインビジュアル-->
       <section class="p-home-mv">
@@ -62,7 +62,7 @@
               <h2 class="c-section-title__head u-font-italic">ABOUT US</h2>
               <p class="c-section-title__foot">当社について</p>
             </div>
-            <a href="/about/" class="c-button-more u-hidden-md-down">
+            <a href="<?php echo esc_url(home_url('/about')); ?>" class="c-button-more u-hidden-md-down">
               <span class="c-button-more__text u-font-italic u-color-white">View more</span>
               <span class="c-button-more__arrow c-button-more__arrow--color-white"></span>
               <span class="c-button-more__circle c-button-more__circle--border"></span>
@@ -84,7 +84,7 @@
                 <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-company.jpeg" class="p-home-about__img lazyload" width="1362" height="852" alt="about画像">
               </picture>
               <div class="p-home-about__link-wrapper u-hidden-md-up">
-                <a href="/about/" class="c-button-more">
+                <a href="<?php echo esc_url(home_url('/about')); ?>" class="c-button-more">
                   <span class="c-button-more__text u-font-italic u-color-white">View more</span>
                   <span class="c-button-more__arrow c-button-more__arrow--color-white"></span>
                   <span class="c-button-more__circle c-button-more__circle--border"></span>
@@ -104,7 +104,7 @@
               <h2 class="c-section-title__head">SERVICE</h2>
               <p class="c-section-title__foot">サービス</p>
             </div>
-            <a href="/service/" class="c-button-more u-hidden-md-down">
+            <a href="<?php echo esc_url(home_url('/service')); ?>" class="c-button-more u-hidden-md-down">
               <span class="c-button-more__text u-font-italic u-color-black">View more</span>
               <span class="c-button-more__arrow c-button-more__arrow--color-black"></span>
               <span class="c-button-more__circle"></span>
@@ -192,7 +192,7 @@
               </li>
             </ul>
             <div class="p-home-service__link-wrapper u-hidden-md-up">
-              <a href="/service/" class="c-button-more">
+              <a href="<?php echo esc_url(home_url('/service')); ?>" class="c-button-more">
                 <span class="c-button-more__text u-font-italic">View more</span>
                 <span class="c-button-more__arrow"></span>
                 <span class="c-button-more__circle"></span>
@@ -210,7 +210,7 @@
               <h2 class="c-section-title__head u-color-white">CASE STUDY</h2>
               <p class="c-section-title__foot u-color-white">導入事例</p>
             </div>
-            <a href="/case/" class="c-button-more u-hidden-md-down">
+            <a href="<?php echo esc_url(home_url('/case')); ?>" class="c-button-more u-hidden-md-down">
               <span class="c-button-more__text u-font-italic u-color-white">View more</span>
               <span class="c-button-more__arrow c-button-more__arrow--color-white"></span>
               <span class="c-button-more__circle c-button-more__circle--border"></span>
@@ -303,7 +303,7 @@
             </a>
           </div>
           <div class="p-home-case__link-wrapper u-hidden-md-up">
-            <a href="/case/" class="c-button-more">
+            <a href="<?php echo esc_url(home_url('/case')); ?>" class="c-button-more">
               <span class="c-button-more__text u-font-italic u-color-white">View more</span>
               <span class="c-button-more__arrow c-button-more__arrow--color-white"></span>
               <span class="c-button-more__circle c-button-more__circle--border"></span>
@@ -320,7 +320,7 @@
               <h2 class="c-section-title__head u-font-italic">NEWS</h2>
               <p class="c-section-title__foot">新着情報</p>
             </div>
-            <a href="/news/" class="c-button-more u-hidden-md-down">
+            <a href="<?php echo esc_url(home_url('/news')); ?>" class="c-button-more u-hidden-md-down">
               <span class="c-button-more__text u-font-italic u-color-black">View more</span>
               <span class="c-button-more__arrow c-button-more__arrow--color-black"></span>
               <span class="c-button-more__circle"></span>
@@ -350,7 +350,7 @@
             </a>
           </div>
           <div class="p-home-news__link-wrapper u-hidden-md-up">
-            <a href="/news/" class="c-button-more">
+            <a href="<?php echo esc_url(home_url('/news')); ?>" class="c-button-more">
               <span class="c-button-more__text u-font-italic">View more</span>
               <span class="c-button-more__arrow"></span>
               <span class="c-button-more__circle"></span>

@@ -24,44 +24,44 @@
     <header class="l-header">
       <div class="l-header__inner">
         <h1 class="l-header-logo">
-          <a href="/" class="l-header-logo__link">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="l-header-logo__link">
             Global Standard
           </a>
         </h1>
         <nav class="c-global-nav" id="js-global-nav" area-hidden="true">
           <ul class="c-global-nav__list">
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/')); ?>">
                 トップ
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/about/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/about')); ?>">
                 当社について
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/service/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/service')); ?>">
                 サービス
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/case/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/case')); ?>">
                 導入事例
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/news/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/news')); ?>">
                 お知らせ
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/download/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/download')); ?>">
                 資料ダウンロード
               </a>
             </li>
             <li class="c-global-nav__item">
-              <a class="c-global-nav__link" href="/contact/">
+              <a class="c-global-nav__link" href="<?php echo esc_url(home_url('/contact')); ?>">
                 お問い合わせ
               </a>
             </li>

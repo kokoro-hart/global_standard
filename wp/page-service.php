@@ -79,7 +79,7 @@
                   </div>
                 </dl>
                 <div class="p-service-detail__link-wrapper">
-                  <a href="/contact/" class="c-button-square">
+                  <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-button-square">
                     お申し込みはこちら
                     <svg class="c-svg c-button-square__svg" width="18" height="12">
                       <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -131,7 +131,7 @@
                   </div>
                 </dl>
                 <div class="p-service-detail__link-wrapper">
-                  <a href="/contact/" class="c-button-square">
+                  <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-button-square">
                     お申し込みはこちら
                     <svg class="c-svg c-button-square__svg" width="18" height="12">
                       <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -183,7 +183,7 @@
                   </div>
                 </dl>
                 <div class="p-service-detail__link-wrapper">
-                  <a href="/contact/" class="c-button-square">
+                  <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-button-square">
                     お申し込みはこちら
                     <svg class="c-svg c-button-square__svg" width="18" height="12">
                       <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />

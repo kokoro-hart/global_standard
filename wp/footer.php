@@ -5,7 +5,7 @@
         <div class="c-footer-links__item-inner">
           <h2 class="c-footer-links__title-head u-font-italic">DOWNLOAD</h2>
           <p class="c-footer-links__title-foot">資料ダウンロード</p>
-          <a href="/download/" class="c-footer-links__button u-font-italic">
+          <a href="<?php echo esc_url(home_url('/download')); ?>" class="c-footer-links__button u-font-italic">
             View more
             <svg class="c-svg c-footer-links__svg" width="20" height="13.5">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -17,7 +17,7 @@
         <div class="c-footer-links__item-inner">
           <h2 class="c-footer-links__title-head u-font-italic">CONTACT</h2>
           <p class="c-footer-links__title-foot">お問い合わせ</p>
-          <a href="/contact/" class="c-footer-links__button u-font-italic">
+          <a href="<?php echo esc_url(home_url('/contact')); ?>" class="c-footer-links__button u-font-italic">
             View more
             <svg class="c-svg c-footer-links__svg" width="20" height="13.5">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
@@ -30,7 +30,7 @@
     <footer class="l-footer">
       <div class="l-footer__inner">
         <h1 class="l-footer-logo">
-          <a class="l-footer-logo__link" href="/">
+          <a class="l-footer-logo__link" href="<?php echo esc_url(home_url('/')); ?>">
             Global Standard
           </a>
         </h1>
