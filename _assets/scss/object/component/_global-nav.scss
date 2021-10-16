@@ -10,7 +10,8 @@
   height: 100%;
 
   //スマホ時の記述が多いためmax-widthを使用
-  @include global.mq(xl, max) { //max-width 〜1280px
+  @include global.mq(xl, max) {
+    //max-width 〜1280px
     position: fixed;
     top: 60px;
     left: 0;
@@ -24,7 +25,6 @@
     transition: height 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-
   // ul
   &__list {
     display: flex;
@@ -34,12 +34,12 @@
     margin: 40px 0;
     white-space: nowrap;
 
-    @include global.mq(xl) {//min-width 1280〜
+    @include global.mq(xl) {
+      //min-width 1280〜
       margin: 0;
       flex-direction: row;
     }
   }
-
 
   // li
   &__item {
@@ -49,7 +49,8 @@
     @include global.lh(1.5);
     color: global.$color-text-white;
 
-    @include global.mq(xl) {//min-width 1280〜
+    @include global.mq(xl) {
+      //min-width 1280〜
       width: 100%;
       margin-bottom: 0;
       color: global.$color-text-black;
@@ -57,8 +58,8 @@
 
     //li 最後の3つ以外
     &:nth-last-child(n + 4) {
-
-      @include global.mq(xl) {//min-width 1280〜
+      @include global.mq(xl) {
+        //min-width 1280〜
         padding-right: 30px;
         margin-right: 16px;
         &::after {
@@ -75,11 +76,12 @@
     &:nth-last-child(-n + 2) {
       margin-bottom: 32px;
 
-      @include global.mq(xl) {//min-width 1280〜
+      @include global.mq(xl) {
+        //min-width 1280〜
         margin-bottom: 0;
       }
 
-      // a 
+      // a
       #{$this}__link {
         max-width: 100%;
         width: 295px;
@@ -94,7 +96,8 @@
         text-align: center;
         transition: background-color 0.3s, color 0.3s ease-out;
 
-        @include global.mq(xl) {//min-width 1280〜
+        @include global.mq(xl) {
+          //min-width 1280〜
           border: 1px solid global.$color-main;
           width: 176px;
           margin-left: 32px;
@@ -110,13 +113,13 @@
 
     //li 最後
     &:last-child {
-
       // a
       #{$this}__link {
         background-color: global.$color-text-white;
         color: global.$color-main;
 
-        @include global.mq(xl) {//min-width 1280〜
+        @include global.mq(xl) {
+          //min-width 1280〜
           border: 1px solid global.$color-main;
           margin-left: 10px;
           background-color: global.$color-main;
@@ -130,7 +133,6 @@
     }
   }
 
-
   &__link {
     display: block;
   }
@@ -138,7 +140,6 @@
 
 //ドロワーアクティブ時
 .c-global-nav {
-
   &.is-active {
     visibility: visible;
     height: calc(100vh - global.$header-height-sp);
