@@ -326,29 +326,31 @@
               <span class="c-button-more__circle"></span>
             </a>
           </div>
+          <!--新着記事3つ-->
           <div class="p-home-news__items">
-            <a href="" class="p-home-news__item">
+            <?php
+              $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 3,
+                'orderby' => 'date',
+                'order' => 'DESC',
+              );
+              $new_posts = get_posts($args);
+              foreach($new_posts as $post) : setup_postdata($post);
+            ?>
+            <a href="<?php the_permalink(); ?>" class="p-home-news__item">
               <div class="p-home-news__info">
-                <span class="p-home-news__info-category">営業時間</span>
-                <span class="p-home-news__info-time" datetime="2021.07.20">2021.07.20</span>
+                <?php $category = get_the_category();?>
+                <?php if($category[0]) : ?>
+                  <span class="p-home-news__info-category"><?php echo $category[0]->cat_name; ?></span>
+                <?php endif; ?>
+                <span class="p-home-news__info-time" datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></span>
               </div>
-              <h3 class="p-home-news__title">お盆期間中の営業について</h3>
+              <h3 class="p-home-news__title"><?php the_title(); ?></h3>
             </a>
-            <a href="" class="p-home-news__item">
-              <div class="p-home-news__info">
-                <span class="p-home-news__info-category">その他</span>
-                <span class="p-home-news__info-time" datetime="2021.07.20">2021.06.01</span>
-              </div>
-              <h3 class="p-home-news__title">新型コロナウイルス対策ご協力のお願い</h3>
-            </a>
-            <a href="" class="p-home-news__item">
-              <div class="p-home-news__info">
-                <span class="p-home-news__info-category">その他</span>
-                <span class="p-home-news__info-time" datetime="2021.07.20">2021.05.01</span>
-              </div>
-              <h3 class="p-home-news__title">オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について</h3>
-            </a>
+            <?php endforeach; wp_reset_postdata(); ?>
           </div>
+          <!--/新着記事3つ-->
           <div class="p-home-news__link-wrapper u-hidden-md-up">
             <a href="<?php echo esc_url(home_url('/news')); ?>" class="c-button-more">
               <span class="c-button-more__text u-font-italic">View more</span>
