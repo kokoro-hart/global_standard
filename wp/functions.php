@@ -51,3 +51,19 @@ add_filter('get_the_archive_title', function($title)
   }
   return $title;
 });
+
+add_action('init', function() {
+  register_post_type('case', [
+    'label' => '導入事例',
+    'public' => true,
+    'menu_position' => 5,
+    'supports' => ['thumbnail','title','editor','custom-fields'],
+    'has_archive' => true,
+    'show_in_rest' =>true,//RESTAPIを含めてグーテンベルクを有効にする
+  ]);
+  register_taxonomy('training', 'case',[
+    'label' => '研修内容',
+    'hierarchical' => true,//trueだとカテゴリー、falseだとタグになる
+    'show_in_rest' => true,
+  ]);
+});
