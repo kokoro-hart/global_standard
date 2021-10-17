@@ -216,92 +216,42 @@
               <span class="c-button-more__circle c-button-more__circle--border"></span>
             </a>
           </div>
+          <?php
+            $args = array(
+              'post_type' => 'case',//導入事例の投稿タイプ
+              'posts_per_page' => 6,
+            );
+            $news_query = new WP_Query( $args );
+            if ( $news_query->have_posts() ): 
+          ?>
           <div class="p-home-case__cards">
-            <a href="/case/#english" class="p-home-case-card">
+            <?php while ( $news_query->have_posts() ): $news_query->the_post();  ?>
+            <?php $slug = $post->post_name; //投稿のスラッグを取得 ?>
+            <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case-card">
               <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case01.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
+                <?php
+                  if(has_post_thumbnail()) {
+                    the_post_thumbnail('medium', array(
+                      'class' => 'p-home-case-card__img lazyload'
+                    ));
+                  } else {
+                    echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload';
+                  }
+                ?>
               </p>
-              <h3 class="p-home-case-card__title">AAA株式会社　様</h3>
+              <h3 class="p-home-case-card__title"><?php the_title(); ?>　様</h3>
               <div class="p-home-case-card__links">
                 <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">ビジネス英語研修</div>
+                  <div class="p-home-case-card__cat"><?php echo esc_html( get_the_terms( get_the_ID(), 'training' )[0]->name );//研修内容を出力 ?></div>
                 </div>
                 <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
                   <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
                 </svg>
               </div>
             </a>
-            <a href="/case/#communication" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case02.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
-              </p>
-              <h3 class="p-home-case-card__title">合同会社BBB　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">異文化コミニュケーション</div>
-                </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
-                </svg>
-              </div>
-            </a>
-            <a href="/case/#abroad" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case05.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
-              </p>
-              <h3 class="p-home-case-card__title">株式会社CCC　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">ビジネス学習プログラム</div>
-                </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
-                </svg>
-              </div>
-            </a>
-            <a href="/case/#communication" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case06.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
-              </p>
-              <h3 class="p-home-case-card__title">DDD株式会社　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">異文化コミニュケーション</div>
-                </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
-                </svg>
-              </div>
-            </a>
-            <a href="/case/#english" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case08.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
-              </p>
-              <h3 class="p-home-case-card__title">EEE株式会社　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">ビジネス学習プログラム</div>
-                </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
-                </svg>
-              </div>
-            </a>
-            <a href="/case/#english" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-case09.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload">
-              </p>
-              <h3 class="p-home-case-card__title">FFF株式会社　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat">ビジネス英語研修</div>
-                </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
-                </svg>
-              </div>
-            </a>
+            <?php endwhile; ?>
           </div>
+          <?php endif; wp_reset_postdata();?>
           <div class="p-home-case__link-wrapper u-hidden-md-up">
             <a href="<?php echo esc_url(home_url('/case')); ?>" class="c-button-more">
               <span class="c-button-more__text u-font-italic u-color-white">View more</span>
