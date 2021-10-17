@@ -2,6 +2,7 @@
     <?php get_header(); ?>
 
     <main class="p-service">
+      <!--メインビジュアル-->
       <div class="p-mv-lower p-mv-lower--bg-service">
         <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
           <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
@@ -19,6 +20,8 @@
           </p>
         </div>
       </div>
+      <!--/メインビジュアル-->
+
       <!--パンくずリスト-->
       <div class="c-breadcrumb u-mt-12">
         <div class="l-inner">
@@ -30,6 +33,7 @@
         </div>
       </div>
       <!--/パンくずリスト-->
+
       <!--サービスの詳細-->
       <section class="p-service-details l-section">
         <div class="l-inner">
@@ -40,7 +44,7 @@
           </p>
         </div>
         <!--ビジネス英語研修-->
-        <article id="english-detail" class="p-service-detail">
+        <article id="english" class="p-service-detail">
           <div class="p-service-detail__inner">
             <div class="p-service-detail__item">
               <figure class="p-service-detail__figure">
@@ -87,7 +91,7 @@
         </article>
         <!--/ビジネス英語研修-->
         <!--異文化コミュニケーション-->
-        <article id="communication-detail" class="p-service-detail l-skew">
+        <article id="culture" class="p-service-detail l-skew">
           <div class="p-service-detail__inner">
             <div class="p-service-detail__item">
               <figure class="p-service-detail__figure">
@@ -139,7 +143,7 @@
         </article>
         <!--/異文化コミュニケーション-->
         <!--ビジネス留学プログラム-->
-        <article id="abroad-detail" class="p-service-detail">
+        <article id="abroad" class="p-service-detail">
           <div class="p-service-detail__inner">
             <div class="p-service-detail__item">
               <figure class="p-service-detail__figure">
@@ -192,6 +196,7 @@
         <!--/ビジネス留学プログラム-->
       </section>
       <!--/サービスの詳細-->
+
       <!--導入の流れ-->
       <section class="p-service-flow l-section">
         <div class="l-inner">
@@ -254,52 +259,43 @@
         </div>
       </section>
       <!--/導入の流れ-->
+
       <!--良くある質問-->
       <section class="p-service-faq">
         <div class="l-inner">
           <h2 class="p-service-faq__title">良くある質問</h2>
           <!--アコーディオンメニュー-->
           <dl class="p-service-faq__accordion c-accordion" role="tablist">
+            <?php
+              $args = array(
+                'posts_per_page' => 6,
+                'post_type' => 'faq',
+                'orderby' => 'date',
+                'order' => 'DESC'
+              );
+              $my_posts = get_posts( $args );
+              if ( $my_posts ) :
+
+              foreach ( $my_posts as $post ) :
+              setup_postdata( $post );
+            ?>
             <div class="c-accordion__row">
-              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion01">
-                どんな教材を使うのでしょうか？
+              <?php if ( get_field('q')) :  ?>
+              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion">
+                <?php the_field('q'); ?>
               </dt>
-              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion01" aria-expanded="false" aria-hidden="false">
-                録音しても構いません。語学学習において、言語に触れている時間が長いほど早く上達します。ぜひご自宅での復習にお役立てください。 ただし、原則として第三者への配布は禁止しておりますので、ご了承ください。
+              <?php endif; ?>
+              <?php if ( get_field('a')) :  ?>
+              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion" aria-expanded="false" aria-hidden="false">
+                <?php the_field('a'); ?>
               </dd>
+              <?php endif; ?>
             </div>
-            <div class="c-accordion__row">
-              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion02">
-                講師はどんな人が担当しているのでしょうか？
-              </dt>
-              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion02" aria-expanded="false" aria-hidden="false">
-                録音しても構いません。語学学習において、言語に触れている時間が長いほど早く上達します。ぜひご自宅での復習にお役立てください。 ただし、原則として第三者への配布は禁止しておりますので、ご了承ください。
-              </dd>
-            </div>
-            <div class="c-accordion__row">
-              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion03">
-                講師が合わないと感じた場合、変更してもらえるのでしょうか？
-              </dt>
-              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion03" aria-expanded="false" aria-hidden="false">
-                録音しても構いません。語学学習において、言語に触れている時間が長いほど早く上達します。ぜひご自宅での復習にお役立てください。 ただし、原則として第三者への配布は禁止しておりますので、ご了承ください。
-              </dd>
-            </div>
-            <div class="c-accordion__row">
-              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion04">
-                講義当日のキャンセルは可能でしょうか？
-              </dt>
-              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion04" aria-expanded="false" aria-hidden="false">
-                録音しても構いません。語学学習において、言語に触れている時間が長いほど早く上達します。ぜひご自宅での復習にお役立てください。 ただし、原則として第三者への配布は禁止しておりますので、ご了承ください。
-              </dd>
-            </div>
-            <div class="c-accordion__row">
-              <dt class="c-accordion__title js-accordion-title" tabindex="0" role="tab" aria-controls="accordion04">
-                途中退会した場合、返金は可能でしょうか？
-              </dt>
-              <dd class="c-accordion__content" role="tabpanel" aria-labelledby="accordion01" aria-expanded="false" aria-hidden="false">
-                録音しても構いません。語学学習において、言語に触れている時間が長いほど早く上達します。ぜひご自宅での復習にお役立てください。 ただし、原則として第三者への配布は禁止しておりますので、ご了承ください。
-              </dd>
-            </div>
+            <?php
+              endforeach;
+              endif;
+              wp_reset_postdata();
+            ?>
           </dl>
           <!--アコーディオンメニュー-->
         </div>
