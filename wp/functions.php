@@ -28,6 +28,7 @@ wp_enqueue_script('my', get_template_directory_uri() . '/js/bundle.js', array(),
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
+
 //タイトルの分岐
 function wp_document_title_parts( $title )
 {
@@ -43,7 +44,8 @@ add_filter( 'document_title_parts', 'wp_document_title_parts', 10, 1 );
 add_action('after_setup_theme', 'my_setup');
 
 
-//カテゴリータイトル
+
+//タイトルフィルターフック
 add_filter('get_the_archive_title', function($title)
 {
   if(is_category()) {
@@ -52,18 +54,35 @@ add_filter('get_the_archive_title', function($title)
   return $title;
 });
 
+
+
 add_action('init', function() {
+  //カスタム投稿タイプ
+
+  //導入事例
   register_post_type('case', [
     'label' => '導入事例',
     'public' => true,
     'menu_position' => 5,
     'supports' => ['thumbnail','title','editor','custom-fields'],
     'has_archive' => true,
-    'show_in_rest' =>true,//RESTAPIを含めてグーテンベルクを有効にする
+    'show_in_rest' =>true,
   ]);
+  //良くある質問
+  register_post_type('faq', [
+    'label' => '良くある質問',
+    'public' => true,
+    'menu_position' => 5,
+    'supports' => ['thumbnail','title','editor','custom-fields'],
+    'has_archive' => true,
+    'show_in_rest' =>true,
+  ]);
+
+
+  //カスタム分類
   register_taxonomy('training', 'case',[
     'label' => '研修内容',
-    'hierarchical' => true,//trueだとカテゴリー、falseだとタグになる
+    'hierarchical' => true,
     'show_in_rest' => true,
   ]);
 });
