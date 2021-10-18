@@ -158,28 +158,26 @@
   }
 
   &__item {
-    position: relative;
     border-top: 1px solid global.$color-border;
-    padding: 16px 40px;
     &:last-of-type {
       border-bottom: 1px solid global.$color-border;
-    }
-    &:hover {
-      #{$this}__svg {
-        transform: translate(2px, -50%);
-      }
-      #{$this}__link {
-        color: global.$color-main;
-      }
     }
   }
 
   &__link {
     display: block;
+    position: relative;
+    padding: 16px 40px;
     color: global.$color-text-black;
     @include global.fz(16);
     font-weight: 700;
     transition: color 0.3s ease-out;
+    &:hover {
+      color: global.$color-main;
+      #{$this}__svg {
+        transform: translate(2px, -50%);
+      }
+    }
   }
 
   &__svg {
