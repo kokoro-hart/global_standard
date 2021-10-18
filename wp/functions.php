@@ -8,7 +8,7 @@ function my_setup()
   add_theme_support('title-tag'); // タイトルタグ自動生成
   add_theme_support(
     'html5',
-    array( //HTML5でマークアップ
+    array( 
       'search-form',
       'comment-form',
       'comment-list',
@@ -18,8 +18,15 @@ function my_setup()
   );
 }
 
+//フォーム設置ページのみContactForm7のcss、jsを読み込み
+add_action( 'wp', function() {
+  if ( is_page( 'contact' ) || is_page('download') ) return;
+  add_filter( 'wpcf7_load_js', '__return_false' );
+  add_filter( 'wpcf7_load_css', '__return_false' );
+});
 
-//css js
+
+//css jsの読み込み
 function my_script_init()
 {
 wp_enqueue_style('my', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all');
@@ -80,9 +87,13 @@ add_action('init', function() {
 
 
   //カスタム分類
+
+  //研修内容
   register_taxonomy('training', 'case',[
     'label' => '研修内容',
     'hierarchical' => true,
     'show_in_rest' => true,
   ]);
 });
+
+
