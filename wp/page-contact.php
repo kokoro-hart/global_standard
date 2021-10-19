@@ -3,10 +3,10 @@
 
     <div class="p-mv-lower p-mv-lower--bg-about">
       <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
-        <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
       <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
-        <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
       <div class="p-mv-lower__heading">
         <h2 class="p-mv-lower__heading-head u-font-italic">
@@ -39,81 +39,7 @@
             <h2 class="p-contact-form__title">お問い合わせ</h2>
             <!--コンタクトフォーム-->
             <div class="p-contact-form__items c-form">
-              <form action="">
-                <dl class="c-form__dl">
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label" for="your-company">会社名</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <input class="c-form__input" id="your-company" type="text" placeholder="例）〇〇株式会社" autocomplete="organization">
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-name">お名前</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <input class="c-form__input" id="your-name" type="text" placeholder="例）鈴木　一郎" autocomplete="name" required>
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-ruby">お名前（フリガナ）</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <input class="c-form__input" id="your-ruby" type="text" placeholder="例）スズキ イチロウ" autocomplete="off" required>
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-tel">電話番号</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <input class="c-form__input" id="your-tel" type="text" placeholder="例）0312345678" autocomplete="tel" required>
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-email">メールアドレス</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <input class="c-form__input" id="your-email" type="email" placeholder="例）info@example.com" autocomplete="email" required>
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-select">ご用件</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <select id="your-select" class="c-form__input c-form__select" required>
-                        <option value="" selected>ご選択ください</option>
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                      </select>
-                    </dd>
-                  </div>
-                  <div class="c-form__row">
-                    <dt class="c-form__dt">
-                      <label class="c-form__label c-form__label--required" for="your-textarea">ご用件の詳細</label>
-                    </dt>
-                    <dd class="c-form__dd">
-                      <textarea class="c-form__input c-form__textarea" id="your-textarea" placeholder="ご自由にご記入ください。" required></textarea>
-                    </dd>
-                  </div>
-                </dl>
-                <div class="c-form__privacy">
-                  <label class="c-form__privacy-label">
-                    <input class="c-form__privacy-checkbox" type="checkbox" value="プライバシーポリシーの同意">
-                    <span class="c-form__privacy-part"></span>
-                    <a href="" class="c-form__privacy-link">個人情報保護方針</a> に同意します。
-                  </label>
-                </div>
-                <div class="c-form__submit-wrapper">
-                  <input type="submit" class="c-button-square c-button-square--submit p-contact__submit" value="送信">
-                </div>
-              </form>
+              <?php the_content(); ?>
             </div>
             <!--/コンタクトフォーム-->
           </div>
