@@ -104,8 +104,7 @@
                 <span class="p-service-detail__number u-font-italic">02</span>
                 <div class="p-service-detail__title">
                   <h2 class="p-service-detail__title-head">
-                    異文化<br class="u-hidden-md-up">
-                    コミュニケーション
+                    異文化<br class="u-hidden-md-up">コミュニケーション
                   </h2>
                   <p class="p-service-detail__title-foot u-font-italic">
                     Cross-cultural communication
@@ -156,8 +155,7 @@
                 <span class="p-service-detail__number u-font-italic">03</span>
                 <div class="p-service-detail__title">
                   <h2 class="p-service-detail__title-head">
-                    ビジネス留学<br class="u-hidden-md-up">
-                    プログラム
+                    ビジネス留学<br class="u-hidden-md-up">プログラム
                   </h2>
                   <p class="p-service-detail__title-foot u-font-italic">
                     Business study abroad program
