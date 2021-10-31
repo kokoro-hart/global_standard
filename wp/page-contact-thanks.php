@@ -39,7 +39,7 @@
             2日以内に担当者からメールにてご連絡いたしますので、しばらくお待ちいただけますと幸いです。
             <br>
             <br>
-            → <a href="/" class="p-contact__intro-link">トップへ戻る</a>
+            → <a href="<?php echo esc_url(home_url('/')); ?>" class="p-contact__intro-link">トップへ戻る</a>
           </p>
         </div>
       </div>
