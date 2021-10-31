@@ -54,60 +54,7 @@
         <div class="p-download-form">
           <h2 class="p-download-form__title">資料ダウンロード</h2>
           <div class="p-download-form__items c-form">
-            <form action="">
-              <dl class="c-form__dl">
-                <div class="c-form__row">
-                  <dt class="c-form__dt">
-                    <label class="c-form__label" for="your-company">会社名</label>
-                  </dt>
-                  <dd class="c-form__dd">
-                    <input class="c-form__input" name="" id="your-company" type="text" placeholder="例）〇〇株式会社" autocomplete="organization">
-                  </dd>
-                </div>
-                <div class="c-form__row">
-                  <dt class="c-form__dt">
-                    <label class="c-form__label" for="your-department">部署</label>
-                  </dt>
-                  <dd class="c-form__dd">
-                    <input class="c-form__input" name="" id="your-department" type="text" placeholder="例）人事部" autocomplete="off">
-                  </dd>
-                </div>
-                <div class="c-form__row">
-                  <dt class="c-form__dt">
-                    <label class="c-form__label c-form__label--required" for="your-name">お名前</label>
-                  </dt>
-                  <dd class="c-form__dd">
-                    <input class="c-form__input" name="" id="your-name" type="text" placeholder="例）鈴木一郎" autocomplete="name" required>
-                  </dd>
-                </div>
-                <div class="c-form__row">
-                  <dt class="c-form__dt">
-                    <label class="c-form__label c-form__label--required" for="your-ruby">お名前（フリガナ）</label>
-                  </dt>
-                  <dd class="c-form__dd">
-                    <input class="c-form__input" name="" id="your-ruby" type="text" placeholder="例）スズキ イチロウ" autocomplete="off" required>
-                  </dd>
-                </div>
-                <div class="c-form__row">
-                  <dt class="c-form__dt">
-                    <label class="c-form__label c-form__label--required" for="your-email">メールアドレス</label>
-                  </dt>
-                  <dd class="c-form__dd">
-                    <input class="c-form__input" name="" id="your-email" type="email" placeholder="例）info@example.com" autocomplete="email" required>
-                  </dd>
-                </div>
-              </dl>
-              <div class="c-form__privacy">
-                <label class="c-form__privacy-label">
-                  <input class="c-form__privacy-checkbox" type="checkbox" value="プライバシーポリシーの同意">
-                  <span class="c-form__privacy-part"></span>
-                  <a href="" class="c-form__privacy-link">個人情報保護方針</a> に同意します。
-                </label>
-              </div>
-              <div class="c-form__submit-wrapper">
-                <input type="submit" class="c-button-square c-button-square--submit" value="資料をダウンロードする">
-              </div>
-            </form>
+            <?php the_content(); ?>
           </div>
         </div>
         <!--/資料フォーム-->
