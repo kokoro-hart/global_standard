@@ -231,7 +231,7 @@
               <p class="p-home-case-card__img-wrapper">
                 <?php
                   if(has_post_thumbnail()) {
-                    the_post_thumbnail('medium', array(
+                    the_post_thumbnail('small', array(
                       'class' => 'p-home-case-card__img lazyload'
                     ));
                   } else {
