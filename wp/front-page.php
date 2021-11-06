@@ -221,11 +221,11 @@
               'post_type' => 'case',//導入事例の投稿タイプ
               'posts_per_page' => 6,
             );
-            $news_query = new WP_Query( $args );
-            if ( $news_query->have_posts() ): 
+            $case_query = new WP_Query( $args );
+            if ( $case_query->have_posts() ): 
           ?>
           <div class="p-home-case__cards">
-            <?php while ( $news_query->have_posts() ): $news_query->the_post();  ?>
+            <?php while ( $case_query->have_posts() ): $case_query->the_post();  ?>
             <?php $slug = $post->post_name; //投稿のスラッグを取得 ?>
             <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case-card">
               <p class="p-home-case-card__img-wrapper">
