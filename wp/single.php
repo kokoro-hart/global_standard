@@ -68,14 +68,14 @@
           <div class="p-single__post-links">
             <?php if ($prev_post) : ?>
               <div class="p-single__post-link">
-                <?php previous_post_link('%link','< 前の記事へ'); ?>
+                <?php previous_post_link('%link','&lt 前の記事へ'); ?>
               </div>
             <?php endif; ?>
 
             <?php if ($next_post) : ?>
               <div class="p-single__post-link">
                 <?php
-                  next_post_link('%link', '次の記事へ >');
+                  next_post_link('%link', '次の記事へ &gt');
                 ?>
               </div>
             <?php endif; ?>
