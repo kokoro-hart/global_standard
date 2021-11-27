@@ -96,4 +96,16 @@ add_action('init', function() {
   ]);
 });
 
+//lazyload対象のアイキャッチはsrcをdata-srcに置き換える
+function my_post_image_html( $html, $post_id, $post_image_id ) {
 
+  //遅延読み込み対象の画像のみ
+  if(strpos($html, 'lazyload') === false) {
+      return $html;
+  }
+
+  //srcをdata-srcに置換する
+  $html = str_replace('src="', 'data-src="', $html);
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
