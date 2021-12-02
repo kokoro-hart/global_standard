@@ -4,96 +4,82 @@
 //--------------------------------------------------------------------------
 
 //下層ページのメインビジュアル
-.p-mv-lower {
+.p-lower-mv {
   position: relative;
   width: 100%;
   height: 250px;
   margin-top: global.$header-height-sp;
-  background: no-repeat center center / cover;
   @include global.mq(xl) {
     //min-width 1280px〜
     margin-top: global.$header-height-pc;
   }
+}
+.p-lower-mv__svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: global.$color-main;
+}
 
-  &__svg {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    color: global.$color-main;
-  }
+.p-lower-mv__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
 
-  &__svg--sp {
-    width: 165px;
-  }
+.p-lower-mv__img {
+  width: 100%;
+  height: 100%;
+  @include global.object-fit(cover, center);
+}
 
-  &__svg--pc {
-    width: 365px;
-  }
+.p-lower-mv__svg--sp {
+  width: 165px;
+}
 
-  &__heading {
-    transform: translateY(-50%);
-    position: absolute;
-    top: 50%;
-    left: 21px;
-    @include global.mq(md) {
-      //min-width 768px〜
-      left: 17%;
-    }
-  }
+.p-lower-mv__svg--pc {
+  width: 365px;
+}
 
-  &__heading-head {
-    display: inline-block;
-    color: global.$color-main;
-    @include global.fz(32, 60);
-    @include global.lh(1.2);
-    font-weight: 500;
-    background-color: global.$color-text-white;
-    font-family: global.$font-family-en;
-  }
-
-  &__heading-foot {
-    display: inline-block;
-    margin-top: 8px;
-    color: global.$color-main;
-    @include global.fz(16, 20);
-    @include global.lh(1.5, 1.45);
-    font-weight: 700;
-    background-color: global.$color-text-white;
+.p-lower-mv__title {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 21px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    left: 17%;
   }
 }
 
-//aboutページ 導入事例ページの背景
-.p-mv-lower--bg-about {
-  background-image: url(../img/webp/mv-company_sp.webp);
+.p-lower-mv__title-en {
+  display: inline-block;
+  color: global.$color-main;
+  @include global.fz(32, 60);
+  @include global.lh(1.2);
+  font-weight: 500;
+  background-color: global.$color-text-white;
+  font-family: global.$font-family-en;
+}
 
-  @include global.browser("ie") {
-    //IE11の場合
-    background-image: url(../img/common/mv-company_sp.jpeg);
-  }
-  @include global.browser("safari") {
-    //safariの場合
-    background-image: url(../img/common/mv-company_sp.jpeg);
-  }
-
-  @include global.mq(md) {
-    //min-width768px〜
-    background-image: url(../img/webp/mv-company_pc.webp);
-
-    @include global.browser("ie") {
-      //IE11の場合
-      background-image: url(../img/common/mv-company_pc.jpeg);
-    }
-    @include global.browser("safari") {
-      //safariの場合
-      background-image: url(../img/common/mv-company_pc.jpeg);
-    }
-  }
+.p-lower-mv__title-ja {
+  display: inline-block;
+  margin-top: 8px;
+  color: global.$color-main;
+  @include global.fz(16, 20);
+  @include global.lh(1.5, 1.45);
+  font-weight: 700;
+  background-color: global.$color-text-white;
 }
 
 //serviceページの背景
-.p-mv-lower--bg-service {
+.p-lower-mv--bg-service {
   background-image: url(../img/webp/mv-service_sp.webp);
 
   @include global.browser("ie") {
@@ -121,7 +107,7 @@
 }
 
 //newsページの背景
-.p-mv-lower--bg-news {
+.p-lower-mv--bg-news {
   background-image: url(../img/webp/mv-news_sp.webp);
 
   @include global.browser("ie") {

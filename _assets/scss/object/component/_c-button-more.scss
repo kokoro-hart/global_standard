@@ -1,0 +1,114 @@
+@use "foundation/global";
+
+// Component ボタン View more
+//--------------------------------------------------------------------------
+.c-button-more {
+  $this: &;
+  position: relative;
+  display: inline-block;
+  text-align: right;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    &:hover {
+      #{$this}__arrow {
+        right: -15.2%;
+        width: 142px;
+      }
+    }
+  }
+}
+
+//テキスト
+.c-button-more__text {
+  color: global.$color-main;
+  @include global.fz(20, 32);
+  @include global.lh(1.2);
+  font-weight: 500;
+  font-family: global.$font-family-en;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: inline-block;
+    transform: translateY(-3px);
+    padding-right: 142px;
+  }
+}
+
+//矢印
+.c-button-more__arrow {
+  position: relative;
+  display: inline-block;
+  width: 64.5px;
+  height: 2px;
+  margin-right: 21px;
+  margin-left: 8px;
+  background-color: global.$color-main;
+  vertical-align: middle;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    width: 95px;
+    transition: width 0.3s, right 0.3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2.2px;
+    right: 4px;
+    transform: rotate(-55deg);
+    height: 14px;
+    width: 2px;
+    background-color: global.$color-main;
+
+    @include global.mq(md) {
+      //min-width 768px〜
+      bottom: -3.2px;
+      right: 6px;
+      height: 18px;
+    }
+  }
+}
+.c-button-more__arrow--color-white {
+  background-color: global.$color-text-white;
+  &::after {
+    background-color: global.$color-text-white;
+  }
+}
+
+.c-button-more__arrow--color-black {
+  background-color: global.$color-text-black;
+  &::after {
+    background-color: global.$color-text-black;
+  }
+}
+
+//丸
+.c-button-more__circle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: global.$color-accent-yellow;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 51px;
+    height: 51px;
+  }
+}
+
+.c-button-more__circle--border {
+  z-index: 1;
+  border: 2px solid global.$color-accent-yellow;
+  background-color: transparent;
+}

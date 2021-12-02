@@ -1,0 +1,55 @@
+@use "foundation/global";
+
+// Project 導入事例カード
+//--------------------------------------------------------------------------
+
+.p-card-case__img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: calc(251 / 335 * 100%);
+}
+
+.p-card-case__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include global.object-fit(cover,center);
+}
+
+.p-card-case__title {
+  margin-top: 10px;
+  @include global.fz(16);
+  @include global.lh(1.5);
+  font-weight: 700;
+}
+
+.p-card-case__links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.p-card-case__cats {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 29px);
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.p-card-case__cat {
+  border: 1px solid global.$color-text-white;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 6px 16px;
+  white-space: nowrap;
+  @include global.lh(1.4);
+}
+
+.p-card-case__arrow {
+  margin-top: 2px;
+  color: global.$color-text-white;
+  transition: color 0.3s, transform 0.3s ease-out;
+}

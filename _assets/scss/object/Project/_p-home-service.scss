@@ -1,0 +1,62 @@
+@use "foundation/global";
+
+// Project トップページ サービス
+//--------------------------------------------------------------------------
+.p-home-service {
+  margin-bottom: 60px;
+  background: linear-gradient(transparent 50%, global.$color-main-thin 50%);
+}
+
+.p-home-service__contents {
+  width: 100%;
+  padding-top: 55px;
+  margin-top: 10px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 30px;
+  }
+}
+
+.p-home-service__cards {
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  //内容が増えたときにレイアウトが崩れないように空の要素を追加
+  @include global.mq(md) {
+    //min-width 768px〜
+    &::after {
+      content: "";
+      width: calc(33.333% - 12.72% / 3);
+    }
+  }
+}
+
+.p-home-service__card {
+  width: 100%;
+  padding-left: 15px;
+  @include global.mq(md, max) {
+    //max-width 768px〜
+    &:not(:first-child) {
+      margin-top: 74px;
+    }
+  }
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: calc(33.333% - 12.72% / 3);
+    &:nth-child(3n + 2) {
+      margin-top: 60px;
+    }
+    &:nth-child(3n) {
+      margin-top: 120px;
+    }
+  }
+}
+
+.p-home-service__link-wrapper {
+  margin-top: 32px;
+  text-align: right;
+}

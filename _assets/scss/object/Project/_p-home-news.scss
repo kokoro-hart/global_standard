@@ -1,0 +1,81 @@
+@use "foundation/global";
+
+// Project トップページ お知らせ
+//--------------------------------------------------------------------------
+.p-home-news {
+  width: 100%;
+  margin-bottom: 100px;
+  background: linear-gradient(transparent 25%, global.$color-main-thin 25%);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 60px;
+    margin-bottom: 40px;
+    background: linear-gradient(transparent 57%, global.$color-main-thin 57%);
+  }
+}
+
+.p-home-news__items {
+  max-width: 768px;
+  width: 100%;
+  padding: 40px 20px;
+  margin: 60px auto 0;
+  background-color: global.$color-text-white;
+  box-shadow: 0 3px 6px rgba(global.$color-text-black, 0.16);
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 60px 40px 40px 40px;
+    margin-top: 81px;
+  }
+}
+
+.p-home-news__item {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid global.$color-border;
+  padding-bottom: 33px;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease-out;
+  &:hover {
+    border-color: global.$color-text-black;
+  }
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-bottom: 20px;
+  }
+}
+
+.p-home-news__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-home-news__info-category {
+  border: 1px solid global.$color-accent-red;
+  padding: 3px 20px;
+  color: global.$color-accent-red;
+  @include global.fz(12, 14);
+  @include global.lh(2, 1.4);
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 6px 24px;
+  }
+}
+
+.p-home-news__info-time {
+  color: global.$color-text-gray;
+  @include global.lh(1.4);
+}
+
+.p-home-news__title {
+  margin-top: 12px;
+  color: global.$color-text-black;
+  @include global.fz(14, 16);
+  @include global.lh(1.4, 1.75);
+  font-weight: 700;
+}
+
+.p-home-news__link-wrapper {
+  margin-top: 32px;
+  text-align: right;
+}

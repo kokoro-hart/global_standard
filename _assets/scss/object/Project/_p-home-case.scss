@@ -1,0 +1,74 @@
+@use "foundation/global";
+
+// Project トップページ 導入事例
+//--------------------------------------------------------------------------
+
+.p-home-case {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
+  @include global.browser("ie") {
+    //IE11の場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+  @include global.browser("safari") {
+    //safariの場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+}
+
+.p-home-case__cards {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    &::after {
+      content: "";
+      width: calc(33.333% - 12.73% / 3);
+    }
+  }
+}
+
+.p-home-case__card {
+  $this: &;
+  display: inline-block;
+  width: 100%;
+  color: global.$color-text-white;
+  margin-top: 52px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 70px;
+    width: calc(50% - 7.4% / 2);
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(33.333% - 12.73% / 3);
+  }
+
+  &:hover {
+    #{$this}__arrow {
+      color: global.$color-accent-yellow;
+      transform: translateX(5px);
+    }
+    @include global.mq(md) {
+      //min-width 768px〜
+      #{$this}__arrow {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.p-home-case__link-wrapper {
+  margin-top: 58px;
+  text-align: right;
+}

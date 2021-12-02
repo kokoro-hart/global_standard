@@ -1,0 +1,50 @@
+@use "foundation/global";
+
+// Project サービス　カード
+//--------------------------------------------------------------------------
+
+.p-card-service__head {
+  position: relative;
+  width: 100%;
+}
+
+.p-card-service__number {
+  position: absolute;
+  top: -60px;
+  right: 0;
+}
+
+.p-card-service__title {
+  position: absolute;
+  bottom: 34px;
+  left: -15px;
+  color: global.$color-main;
+  font-weight: 700;
+  @include global.fz(28);
+  @include global.lh(1.4);
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    left: -30px;
+    font-size: 2.82258vw;
+    white-space: nowrap;
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    font-size: 28px;
+  }
+}
+
+.p-card-service__title-inside {
+  background-color: global.$color-text-white;
+  display: inline-block;
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.p-card-service__text {
+  margin-top: 12px;
+  @include global.fz(14);
+  @include global.lh(1.7);
+}

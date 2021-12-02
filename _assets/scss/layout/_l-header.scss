@@ -1,0 +1,18 @@
+@use "foundation/global";
+
+// Layout ヘッダー
+//--------------------------------------------------------------------------
+
+.l-header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: global.$header-height-sp;
+  background-color: global.$color-text-white;
+
+  @include global.mq(xl) {//min-width 1280px〜
+    height: global.$header-height-pc;
+  }
+}
+

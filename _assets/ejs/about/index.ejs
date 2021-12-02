@@ -3,20 +3,27 @@
   <%- include('../common/_header', {pageId:pageId }) %>
 
     <%# console.log(jsonData) %>
-      <main class="p-about">
-        <div class="p-mv-lower p-mv-lower--bg-about">
-          <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
+      <main>
+        <div class="p-lower-mv">
+          <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
             <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
           </svg>
-          <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
+          <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
             <use xlink:href="/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
           </svg>
-          <div class="p-mv-lower__heading">
-            <h2 class="p-mv-lower__heading-head u-font-italic">
+          <picture class="p-lower-mv__picture">
+            <source class="p-lower-mv__img" srcset="/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
+            <source class="p-lower-mv__img" srcset="/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
+            <source class="p-lower-mv__img" srcset="/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
+            <img src="/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async"
+              alt="当社についてメインビジュアル">
+          </picture>
+          <div class="p-lower-mv__title">
+            <h2 class="p-lower-mv__title-en u-font-italic">
               ABOUT US
             </h2>
             <br>
-            <p class="p-mv-lower__heading-foot">
+            <p class="p-lower-mv__title-ja">
               当社について
             </p>
           </div>
@@ -38,7 +45,6 @@
             </ul>
           </div>
         </div>
-
 
         <!--MISSION VISION-->
         <section class="p-about-message l-section">
@@ -121,41 +127,41 @@
         <div class="p-about-officer l-section l-skew">
           <div class="l-inner">
             <h2 class="p-about-officer__title">役員紹介</h2>
-            <ul class="p-about-officer__items">
-              <li class="p-about-officer-item">
-                <p class="p-about-officer-item__avatar">
-                  <picture class="p-about-officer-item__picture">
-                    <source class="p-about-officer-item__img" srcset="/img/webp/img-directors01.webp" type="image/webp" width="480" height="640" />
-                    <img data-src="/img/common/img-directors01.jpeg" class="p-about-officer-item__img lazyload" alt="役員の写真" width="480" height="640">
+            <ul class="p-about-officer__list">
+              <li class="p-about-officer__item p-officer-item">
+                <p class="p-officer-item__avatar">
+                  <picture class="p-officer-item__picture">
+                    <source class="p-officer-item__img" srcset="/img/webp/img-directors01.webp" type="image/webp" />
+                    <img data-src="/img/common/img-directors01.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
                   </picture>
                 </p>
-                <div class="p-about-officer-item__info">
-                  <div class="p-about-officer-item__profile">
-                    <p class="p-about-officer-item__director">代表取締役社長</p>
-                    <h3 class="p-about-officer-item__name">波瑠　慶太</h3>
+                <div class="p-officer-item__info">
+                  <div class="p-officer-item__profile">
+                    <p class="p-officer-item__director">代表取締役社長</p>
+                    <h3 class="p-officer-item__name">波瑠　慶太</h3>
                   </div>
-                  <p class="p-about-officer-item__career">
+                  <p class="p-officer-item__career">
                     20年間外資系企業に勤務し、世界17カ国でビジネスを展開。 様々な文化に触れ、コミュニケーションスキルを磨き、同時にその必要性を実感する。
                     自身も講師を務め、実体験から得られた知見を皆様に還元し、グローバルなビジネス展開をサポートいたします。
                   </p>
-                  <ul class="p-about-officer-item__sns-list">
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg " width="28" height="28">
+                  <ul class="p-officer-item__sns">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-twitter" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-facebook" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-instagram" />
                         </svg>
                       </a>
@@ -164,40 +170,40 @@
                 </div>
               </li>
 
-              <li class="p-about-officer-item">
-                <p class="p-about-officer-item__avatar">
-                  <picture class="p-about-officer-item__picture">
-                    <source class="p-about-officer-item__img" srcset="/img/webp/img-directors02.webp" type="image/webp"/>
-                    <img data-src="/img/common/img-directors02.jpeg" class="p-about-officer-item__img lazyload" alt="役員の写真">
+              <li class="p-about-officer__item p-officer-item">
+                <p class="p-officer-item__avatar">
+                  <picture class="p-officer-item__picture">
+                    <source class="p-officer-item__img" srcset="/img/webp/img-directors02.webp" type="image/webp"/>
+                    <img data-src="/img/common/img-directors02.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
                   </picture>
                 </p>
-                <div class="p-about-officer-item__info">
-                  <div class="p-about-officer-item__profile">
-                    <p class="p-about-officer-item__director">取締役</p>
-                    <h3 class="p-about-officer-item__name">ジャック・スミス</h3>
+                <div class="p-officer-item__info">
+                  <div class="p-officer-item__profile">
+                    <p class="p-officer-item__director">取締役</p>
+                    <h3 class="p-officer-item__name">ジャック・スミス</h3>
                   </div>
-                  <p class="p-about-officer-item__career">
+                  <p class="p-officer-item__career">
                     オーストラリア出身。 英会話の講師として13年のキャリアがあります。 翻訳業務も担当しており、外国映画の日本版DVDの字幕やテレビ番組の英語をヒヤリングなども行なっております。
                     皆様に「より気持ちの伝わる英会話」を習得していただくサポートをいたします。
                   </p>
-                  <ul class="p-about-officer-item__sns-list">
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg " width="28" height="28">
+                  <ul class="p-officer-item__sns">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-twitter" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-facebook" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-instagram" />
                         </svg>
                       </a>
@@ -206,39 +212,39 @@
                 </div>
               </li>
 
-              <li class="p-about-officer-item">
-                <p class="p-about-officer-item__avatar">
-                  <picture class="p-about-officer-item__picture">
-                    <source class="p-about-officer-item__img" srcset="/img/webp/img-directors03.webp" type="image/webp"/>
-                    <img data-src="/img/common/img-directors03.jpeg" class="p-about-officer-item__img lazyload" alt="役員の写真">
+              <li class="p-about-officer__item p-officer-item">
+                <p class="p-officer-item__avatar">
+                  <picture class="p-officer-item__picture">
+                    <source class="p-officer-item__img" srcset="/img/webp/img-directors03.webp" type="image/webp"/>
+                    <img data-src="/img/common/img-directors03.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
                   </picture>
                 </p>
-                <div class="p-about-officer-item__info">
-                  <div class="p-about-officer-item__profile">
-                    <p class="p-about-officer-item__director">取締役</p>
-                    <h3 class="p-about-officer-item__name">メアリー・ジャクソン</h3>
+                <div class="p-officer-item__info">
+                  <div class="p-officer-item__profile">
+                    <p class="p-officer-item__director">取締役</p>
+                    <h3 class="p-officer-item__name">メアリー・ジャクソン</h3>
                   </div>
-                  <p class="p-about-officer-item__career">
+                  <p class="p-officer-item__career">
                     アメリカ出身。 メジャーリーグ球団「ニューヨークヤンキース」の通訳担当として7年間チームに在籍。 数多くの契約交渉の経験を活かし、国際ビジネスにおけるコミュニケーションのマナーから応用までお伝えいたします。
                   </p>
-                  <ul class="p-about-officer-item__sns-list">
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg " width="28" height="28">
+                  <ul class="p-officer-item__sns">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-twitter" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-facebook" />
                         </svg>
                       </a>
                     </li>
-                    <li class="p-about-officer-item__sns-item">
-                      <a href="" class="p-about-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
-                        <svg class="c-svg p-about-officer-item__sns-svg" width="28" height="28">
+                    <li class="p-officer-item__sns-item">
+                      <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
                           <use xlink:href="/img/svg/sprite.min.svg#icon-instagram" />
                         </svg>
                       </a>

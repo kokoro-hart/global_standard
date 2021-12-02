@@ -1,0 +1,86 @@
+@use "foundation/global";
+
+// Project メインビジュアル
+//--------------------------------------------------------------------------
+
+.p-mv {
+  position: relative;
+  overflow: hidden;
+  margin-top: global.$header-height-sp;
+  margin-left: 20px;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: 45px;
+  }
+
+  @include global.mq(xl) {
+    //min-width 1280px〜
+    max-height: calc(105vh - global.$header-height-pc);
+    min-height: 650px;
+    margin-top: global.$header-height-pc;
+  }
+}
+
+.p-mv__inner {
+  width: 100%;
+}
+
+.p-mv__contents {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    bottom: 7vh;
+  }
+}
+
+.p-mv__title-wrapper {
+  width: 74.66667vw;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 46.875vw;
+  }
+}
+
+.p-mv__title {
+  display: inline-block;
+  background-color: transparent;
+  color: transparent;
+  font-size: 10.66667vw;
+  @include global.lh(1.2);
+  font-family: global.$font-family-en;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    font-size: 4.6875vw;
+  }
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+  &:nth-of-type(2) {
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-top: 0;
+      padding-left: 10px;
+    }
+  }
+}
+
+.p-mv__lead {
+  display: inline-block;
+  margin-top: 16px;
+  background-color: transparent;
+  color: transparent;
+  font-size: 4.26667vw;
+  @include global.lh(1.5);
+  font-weight: 700;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    font-size: 1.5625vw;
+  }
+}

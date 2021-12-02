@@ -11,17 +11,18 @@
 
 /* Layout (prefix: l- )
    ----------------------------------------------------------------- */
-@use "layout/inner";
-@use "layout/section";
-@use "layout/skew";
-@use "layout/archive";
-@use "layout/header";
+@use "layout/l-inner";
+@use "layout/l-section";
+@use "layout/l-skew";
+@use "layout/l-archive";
+@use "layout/l-header";
 @use "layout/footer";
 
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
-@use "object/component/global-nav";
-@use "object/component/button";
+@use "object/component/c-button-drawer";
+@use "object/component/c-button-more";
+@use "object/component/c-button-square";
 @use "object/component/title";
 @use "object/component/accordion";
 @use "object/component/breadcrumb";
@@ -32,9 +33,22 @@
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
-@use "object/Project/mv";
-@use "object/Project/home";
+@use "object/Project/p-header";
+@use "object/Project/p-global-nav";
+@use "object/Project/p-mv";
+@use "object/Project/p-mv-slider";
+@use "object/Project/p-home-about";
+@use "object/Project/p-home-service";
+@use "object/Project/p-home-case";
+@use "object/Project/p-home-news";
+@use "object/Project/p-card-service";
+@use "object/Project/p-card-case";
+@use "object/Project/p-lower-mv";
 @use "object/Project/about";
+@use "object/Project/p-about-message";
+@use "object/Project/p-about-company";
+@use "object/Project/p-about-officer";
+@use "object/Project/p-officer-item";
 @use "object/Project/service";
 @use "object/Project/case";
 @use "object/Project/news";

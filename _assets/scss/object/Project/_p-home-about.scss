@@ -1,0 +1,97 @@
+@use "foundation/global";
+
+// Project トップページ 当社について
+//--------------------------------------------------------------------------
+
+.p-home-about {
+  background: linear-gradient(transparent 19%, global.$color-main-thin 19%);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 30px;
+    margin-bottom: 125px;
+    background: linear-gradient(transparent 40.5%, global.$color-main-thin 40.5%);
+  }
+}
+
+.p-home-about__contents {
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.p-home-about__text {
+  margin-top: 56px;
+  color: global.$color-text-black;
+  @include global.fz(14);
+  @include global.lh(1.7);
+  font-weight: 500;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: calc(36.27% - 40px / 2);
+    margin: 0;
+  }
+}
+
+.p-home-about__img-wrapper {
+  position: relative;
+  margin-top: 30px;
+  padding: 10.66667vw 0 32vw;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: calc(63.73% - 40px / 2);
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.p-home-about__link-wrapper {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.p-home-about__bg-wrapper {
+  @include global.mq(md) {
+    //min-width 768px〜
+    position: relative;
+    padding-top: 85px;
+  }
+}
+
+.p-home-about__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  width: 78.66667vw;
+  height: 96.53333vw;
+  z-index: -2;
+  background: url(../img/webp/bg-company.webp) no-repeat center center / cover;
+
+  @include global.browser("ie") {
+    //IE11の場合
+    background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;
+  }
+
+  @include global.browser("safari") {
+    //safariの場合
+    background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;
+  }
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: block;
+    right: 0;
+    max-height: 800px;
+    width: 44%;
+    height: 70.3125vw;
+  }
+  @include global.mq(lg) {
+    //min-width 922px〜
+    width: 40%;
+  }
+}

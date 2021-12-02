@@ -1,0 +1,89 @@
+@use "foundation/global";
+
+// Project 当社について 会社概要
+//--------------------------------------------------------------------------
+.p-about-company {
+  color: global.$color-text-black;
+  background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
+  @include global.browser("ie") {
+    //IE11の場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+  @include global.browser("safari") {
+    //safariの場合
+    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
+  }
+}
+
+.p-about-company__contents {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: global.$color-text-white;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 60px 40px 80px;
+  }
+}
+
+.p-about-company__title {
+  @include global.fz(24);
+  @include global.lh(1.5);
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-about-company__dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 41px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 61px;
+  }
+}
+
+.p-about-company__dt,
+.p-about-company__dd {
+  border-top: 1px solid global.$color-main;
+  padding: 16px 0;
+  @include global.fz(14, 16);
+  @include global.lh(1.43, 1.5);
+  font-weight: 500;
+  &:last-of-type {
+    border-bottom: 1px solid global.$color-main;
+  }
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 24px 0;
+  }
+}
+
+.p-about-company__dt {
+  display: flex;
+  align-items: center;
+  width: 33.9%;
+  @include global.mq(sm) {
+    //min-width 576px〜
+    padding-left: 12px;
+  }
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 20.07%;
+    padding-left: 32px;
+  }
+}
+
+.p-about-company__dd {
+  width: 66.1%;
+  padding-left: 24px;
+  border-color: global.$color-border-thin;
+  &:last-of-type {
+    border-color: global.$color-border-thin;
+  }
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 70.93%;
+    padding-left: 36px;
+  }
+}

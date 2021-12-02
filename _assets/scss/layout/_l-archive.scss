@@ -1,0 +1,40 @@
+@use "foundation/global";
+
+// Layout アーカイブページ
+//--------------------------------------------------------------------------
+
+.l-archive {
+  width: 100%;
+  padding: 60px 0 100px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 80px 0 160px;
+  }
+}
+
+//アーカイブインナー
+.l-archive__inner {
+  @include global.mq(lg) {
+    //min-width 992px〜
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//メインエリア
+.l-archive__main {
+  width: 100%;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(70.91% - 40px / 2);
+  }
+}
+
+//サイドバー
+.l-archive__sidebar {
+  width: 100%;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(29.09% - 40px / 2);
+  }
+}

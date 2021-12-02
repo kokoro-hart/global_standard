@@ -1,0 +1,96 @@
+@use "foundation/global";
+
+// Project 当社についてページ (prefix: p-about)
+//--------------------------------------------------------------------------
+
+.p-officer-item {
+  width: 100%;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}
+
+.p-officer-item__avatar {
+  margin: 0 48px;
+  text-align: center;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin: 0;
+    width: calc(37.79% - 5.81% / 2);
+  }
+}
+
+.p-officer-item__img {
+  width: auto;
+  vertical-align: top;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 100%;
+  }
+}
+
+.p-officer-item__info {
+  margin-top: 18px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 0;
+    width: calc(62.21% - 5.81% / 2);
+  }
+}
+
+.p-officer-item__profile {
+  display: flex;
+  align-items: center;
+}
+
+.p-officer-item__director {
+  @include global.fz(14);
+  @include global.lh(1.42);
+  font-weight: 700;
+}
+
+.p-officer-item__name {
+  margin-left: 20px;
+  @include global.fz(20);
+  @include global.lh(1.45);
+}
+
+.p-officer-item__career {
+  margin-top: 16px;
+  @include global.fz(14);
+  @include global.lh(1.7);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 28px;
+  }
+}
+
+.p-officer-item__sns {
+  display: flex;
+  margin-top: 18px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 28px;
+  }
+}
+
+.p-officer-item__sns-item {
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.p-officer-item__sns-link {
+  display: inline-block;
+}
+
+.p-officer-item__sns-svg {
+  color: global.$color-text-black;
+  height: 28px;
+  width: 28px;
+}

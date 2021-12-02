@@ -9,10 +9,11 @@
   @include global.mq(md) {
     padding: 120px 0;
   }
-  &__head {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+}
+
+.l-section__head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
