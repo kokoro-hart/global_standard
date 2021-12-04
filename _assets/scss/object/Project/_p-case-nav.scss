@@ -1,0 +1,44 @@
+@use "foundation/global";
+
+// Project 導入事例ナビゲーション
+//--------------------------------------------------------------------------
+
+.p-case-nav {
+  margin: 0 20px;
+}
+
+.p-case-nav__list {
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+  }
+}
+
+.p-case-nav__item {
+  &:not(:first-child) {
+    margin-top: 20px;
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin-top: 0;
+      margin-left: 16px;
+    }
+  }
+}
+
+.p-case-nav__link {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  background: global.$color-case-nav;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.3s ease-out;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 208px;
+    max-width: 100%;
+  }
+  &:hover {
+    background-color: global.$color-case-nav-dark;
+  }
+}

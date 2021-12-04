@@ -1,0 +1,113 @@
+@use "foundation/global";
+
+// Project サイドバー アイテム
+//--------------------------------------------------------------------------
+.p-sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.p-sidebar-item__thumbnail {
+  overflow: hidden;
+  width: calc(37.61% - 12px / 2);
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(35% - 10px / 2);
+  }
+}
+
+.p-sidebar-item__img {
+  height: 24vw;
+  @include global.object-fit(cover, center);
+  @include global.mq(lg) {
+    //min-width 992px〜
+    height: 7.8125vw;
+    max-height: 100px;
+  }
+}
+
+.p-sidebar-item__body {
+  width: calc(62.39% - 12px / 2);
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(65% - 10px / 2);
+  }
+}
+
+.p-sidebar-item__meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-sidebar-item__cats {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-top: -5px;
+  color: global.$color-accent-red;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    margin-left: -5px;
+    margin-top: -5px;
+  }
+}
+
+.p-sidebar-item__cat {
+  border: 1px solid global.$color-accent-red;
+  padding: 3px 11px;
+  @include global.fz(12, 14);
+  @include global.lh(1.66, 1.71);
+  margin-left: 5px;
+  margin-top: 5px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 6px 24px;
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    padding: 3px 11px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+}
+
+.p-sidebar-item__time {
+  color: global.$color-text-gray;
+  @include global.fz(14);
+  @include global.lh(1.7);
+  white-space: nowrap;
+}
+
+.p-sidebar-item__title {
+  margin-top: 6px;
+  color: global.$color-text-black;
+  font-size: 14px;
+  line-height: 1.42;
+  font-weight: 700;
+  @include global.line-clamp(3);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.75;
+    @include global.line-clamp(2);
+  }
+  @include global.mq(lg) {
+    //min-width 992px
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}

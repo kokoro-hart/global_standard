@@ -1,0 +1,106 @@
+@use "foundation/global";
+
+// Project お知らせアイテム
+//--------------------------------------------------------------------------
+
+.p-news-item {
+  $this: &;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover {
+    #{$this}__img {
+      transform: scale(1.1, 1.1);
+    }
+
+    #{$this}__title {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-news-item__thumbnail {
+  overflow: hidden;
+  width: calc(37.61% - 12px / 2);
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(34.21% - 20px / 2);
+  }
+}
+
+.p-news-item__img {
+  height: 24vw;
+  @include global.object-fit(cover, center);
+  transition: transform 0.3s ease-out;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    height: 12.1875vw;
+    max-height: 156px;
+  }
+}
+
+.p-news-item__body {
+  width: calc(62.39% - 12px / 2);
+  @include global.mq(lg) {
+    //min-width 992px〜
+    width: calc(65.79% - 20px / 2);
+    margin-top: 12px;
+  }
+}
+
+.p-news-item__meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-news-item__cats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-top: -5px;
+  color: global.$color-accent-red;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.p-news-item__cat {
+  border: 1px solid global.$color-accent-red;
+  padding: 3px 11px;
+  @include global.fz(12, 14);
+  @include global.lh(1.66, 1.71);
+  margin-left: 5px;
+  margin-top: 5px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 6px 24px;
+  }
+}
+
+.p-news-item__time {
+  color: global.$color-text-gray;
+  @include global.fz(14);
+  @include global.lh(1.7);
+  white-space: nowrap;
+}
+
+.p-news-item__title {
+  margin-top: 6px;
+  color: global.$color-text-black;
+  @include global.fz(14, 16);
+  @include global.lh(1.42, 1.75);
+  @include global.line-clamp(3);
+  font-weight: 700;
+  transition: opacity 0.3s ease-out;
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 12px;
+    @include global.line-clamp(2);
+  }
+}

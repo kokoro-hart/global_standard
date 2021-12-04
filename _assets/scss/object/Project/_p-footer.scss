@@ -1,0 +1,60 @@
+@use "foundation/global";
+
+// Project フッター
+//--------------------------------------------------------------------------
+.p-footer {
+  width: 100%;
+  padding: 65px 0 13px;
+  background-color: global.$color-text-black;
+  color: global.$color-text-white;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 120px 0 20px;
+  }
+}
+
+.p-footer__inner {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.p-footer__logo {
+  display: block;
+  margin: 0 auto;
+  color: global.$color-text-white;
+  @include global.fz(40, 52);
+  @include global.lh(1);
+  font-weight: 700;
+  font-family: global.$font-family-logo;
+  font-style: italic;
+  text-align: center;
+}
+
+.p-footer__logo-link {
+  display: inline-block;
+}
+
+.p-footer__info {
+  text-align: center;
+}
+
+.p-footer__text {
+  display: inline-block;
+  margin-top: 32px;
+  @include global.fz(14);
+  @include global.lh(1.7);
+  font-weight: 500;
+  text-align-last: left;
+}
+
+.p-footer__copyright {
+  margin-top: 34px;
+  text-align: center;
+  @include global.fz(12, 14);
+  @include global.lh(2, 1.7);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 74px;
+  }
+}
+

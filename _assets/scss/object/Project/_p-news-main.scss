@@ -1,0 +1,27 @@
+@use "foundation/global";
+
+// Project お知らせメインエリア
+//--------------------------------------------------------------------------
+
+.p-news-main__title {
+  color: global.$color-text-black;
+  @include global.fz(20, 32);
+  @include global.lh(2, 1.25);
+  font-weight: 700;
+}
+
+.p-news-main__pagination {
+  margin-top: 40px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 60px;
+  }
+}
+
+.p-news-main__item {
+  margin-top: 20px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 40px;
+  }
+}

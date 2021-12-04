@@ -1,0 +1,50 @@
+@use "foundation/global";
+
+// Project サイドバー カテゴリ一覧
+//--------------------------------------------------------------------------
+
+.p-sidebar-cats {
+  padding-top: 60px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding-top: 80px;
+  }
+}
+
+.p-sidebar-cats__list {
+  margin-top: 16px;
+}
+
+.p-sidebar-cats__item {
+  border-top: 1px solid global.$color-border;
+  &:last-of-type {
+    border-bottom: 1px solid global.$color-border;
+  }
+}
+
+.p-sidebar-cats__link {
+  display: block;
+  position: relative;
+  padding: 16px 40px;
+  color: global.$color-text-black;
+  @include global.fz(16);
+  font-weight: 700;
+  transition: color 0.3s ease-out;
+  &:hover {
+    color: global.$color-main;
+    .p-sidebar-cats__svg {
+      transform: translate(2px, -50%);
+    }
+  }
+}
+
+.p-sidebar-cats__svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  color: global.$color-main;
+  width: 10px;
+  height: 16px;
+  transition: transform 0.3s ease-out;
+}

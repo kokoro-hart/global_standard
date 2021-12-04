@@ -1,0 +1,129 @@
+@use "foundation/global";
+
+// Project 導入事例アイテム
+//--------------------------------------------------------------------------
+
+.p-case-item {
+  box-shadow: 0 3px 12px rgba(global.$color-text-black, 0.16);
+  border-radius: 12px;
+  background-color: global.$color-text-white;
+}
+
+.p-case-item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+  padding: 9px 20px;
+  background-color: global.$color-main;
+  color: global.$color-text-white;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    padding: 20px 40px;
+    position: relative;
+  }
+}
+
+.p-case-item__heading {
+  font-weight: 700;
+}
+
+.p-case-item__business {
+  @include global.fz(12, 14);
+  @include global.lh(1.2);
+}
+
+.p-case-item__name {
+  margin-top: 3px;
+  @include global.fz(16, 24);
+  @include global.lh(1.2);
+}
+
+.p-case-item__mr {
+  margin-left: 12px;
+  @include global.fz(14, 16);
+  @include global.lh(1.2);
+
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-left: 16px;
+  }
+}
+
+.p-case-item__logo {
+  width: 90px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(global.$color-text-black, 0.16);
+  border-radius: 12px;
+
+  @include global.mq(lg) {
+    //min-width 992px〜
+    max-width: 160px;
+    width: 10vw;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @include global.mq(xl) {
+    //min-width 1280px〜
+    width: 160px;
+  }
+}
+
+.p-case-item__body {
+  padding: 20px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 40px;
+  }
+}
+
+.p-case-item__title {
+  border-bottom: 1px solid global.$color-border;
+  padding-bottom: 10px;
+  @include global.fz(16);
+  @include global.lh(1.5);
+  font-weight: 700;
+  &--course-name {
+    margin-left: 10px;
+  }
+}
+
+.p-case-item__dl {
+  margin-top: 20px;
+}
+
+.p-case-item__row {
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+}
+
+.p-case-item__dt {
+  position: relative;
+  padding-left: 25px;
+  @include global.fz(16, 18);
+  @include global.lh(1.2);
+  font-weight: 700;
+}
+
+.p-case-item__dd {
+  margin-top: 8px;
+  @include global.lh(1.71);
+}
+
+.p-case-item__svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 15px;
+  height: 15px;
+  color: global.$color-accent-red;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 20px;
+    height: 20px;
+  }
+}

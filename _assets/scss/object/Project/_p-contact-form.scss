@@ -1,0 +1,27 @@
+@use "foundation/global";
+
+// Project お問い合わせ  フォーム
+//--------------------------------------------------------------------------
+
+.p-contact-form {
+  margin-top: 60px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 80px;
+  }
+}
+
+.p-contact-form__title {
+  @include global.fz(24);
+  @include global.lh(1.45);
+  font-weight: 700;
+  text-align: center;
+}
+
+.p-contact-form__items {
+  margin-top: 41px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 61px;
+  }
+}

@@ -1,0 +1,36 @@
+@use "foundation/global";
+
+// Project 資料ダウンロードフォーム
+//--------------------------------------------------------------------------
+
+.p-download-form {
+  margin-top: 60px;
+  padding: 40px 20px;
+  border-radius: 12px;
+  background-color: global.$color-main-thin;
+  @include global.mq(md) {
+    //min-width 768px〜
+    width: 50%;
+    margin-top: 0;
+    padding: 40px;
+  }
+}
+
+.p-download-form__title {
+  @include global.fz(24, 32);
+  @include global.lh(1.5);
+}
+
+.p-download-form__items {
+  margin-top: 40px;
+}
+
+.p-download-form__text {
+  margin-top: 40px;
+  @include global.lh(1.7);
+}
+
+.p-download-form__text-link {
+  color: global.$color-main;
+  text-decoration: underline global.$color-main;
+}

@@ -39,10 +39,7 @@
 }
 
 .p-home-case__card {
-  $this: &;
-  display: inline-block;
   width: 100%;
-  color: global.$color-text-white;
   margin-top: 52px;
   @include global.mq(md) {
     //min-width 768px〜
@@ -52,19 +49,6 @@
   @include global.mq(lg) {
     //min-width 992px〜
     width: calc(33.333% - 12.73% / 3);
-  }
-
-  &:hover {
-    #{$this}__arrow {
-      color: global.$color-accent-yellow;
-      transform: translateX(5px);
-    }
-    @include global.mq(md) {
-      //min-width 768px〜
-      #{$this}__arrow {
-        transform: translateX(5px);
-      }
-    }
   }
 }
 

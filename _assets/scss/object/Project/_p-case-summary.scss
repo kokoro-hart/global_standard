@@ -1,0 +1,73 @@
+@use "foundation/global";
+
+// Project 導入事例一覧
+//--------------------------------------------------------------------------
+
+.p-case-summary {
+  padding-top: 60px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding-top: 80px;
+  }
+}
+
+.p-case-summary__title {
+  @include global.fz(24, 28);
+  @include global.lh(1.66, 1.42);
+  font-weight: 700;
+  padding-left: 10px;
+  border-left: 8px solid global.$color-main;
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-case-summary__title-foot {
+  display: block;
+  color: global.$color-main;
+  @include global.fz(14, 16);
+  @include global.lh(1.2);
+  font-family: global.$font-family-en;
+  font-weight: 500;
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+.p-case-summary__items {
+  width: 100%;
+  margin-top: 25px;
+  @include global.mq(lg) {
+    //min-width 922px〜
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+}
+
+.p-case-summary__item {
+  width: 100%;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    margin-top: 66px;
+    width: calc(50% - 80px / 2);
+  }
+  &:not(:first-child) {
+    @include global.mq(lg, max) {
+      //max-width 992px〜
+      margin-top: 54px;
+    }
+  }
+}
+
+.p-case-summary__button {
+  @include global.mq(lg) {
+    //min-width 992px〜
+    max-width: 384px;
+  }
+}

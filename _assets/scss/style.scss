@@ -16,48 +16,71 @@
 @use "layout/l-skew";
 @use "layout/l-archive";
 @use "layout/l-header";
-@use "layout/footer";
 
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
 @use "object/component/c-button-drawer";
 @use "object/component/c-button-more";
 @use "object/component/c-button-square";
-@use "object/component/title";
-@use "object/component/accordion";
-@use "object/component/breadcrumb";
-@use "object/component/pagination";
-@use "object/component/sidebar";
-@use "object/component/form";
-@use "object/component/footer-links";
+@use "object/component/c-section-title";
+@use "object/component/c-breadcrumb";
+@use "object/component/c-pagination";
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
 @use "object/Project/p-header";
 @use "object/Project/p-global-nav";
+
 @use "object/Project/p-mv";
 @use "object/Project/p-mv-slider";
+
 @use "object/Project/p-home-about";
 @use "object/Project/p-home-service";
 @use "object/Project/p-home-case";
 @use "object/Project/p-home-news";
+
 @use "object/Project/p-card-service";
 @use "object/Project/p-card-case";
+
 @use "object/Project/p-lower-mv";
-@use "object/Project/about";
+
 @use "object/Project/p-about-message";
 @use "object/Project/p-about-company";
 @use "object/Project/p-about-officer";
 @use "object/Project/p-officer-item";
-@use "object/Project/service";
-@use "object/Project/case";
-@use "object/Project/news";
-@use "object/Project/single";
-@use "object/Project/download";
-@use "object/Project/contact";
+
+@use "object/Project/p-service-faq";
+@use "object/Project/p-service-details";
+@use "object/Project/p-service-detail";
+@use "object/Project/p-service-flow";
+@use "object/Project/p-accordion";
+
+@use "object/Project/p-case";
+@use "object/Project/p-case-nav";
+@use "object/Project/p-case-item";
+@use "object/Project/p-case-summary";
+
+@use "object/Project/p-news-main";
+@use "object/Project/p-news-item";
+@use "object/Project/p-sidebar";
+@use "object/Project/p-sidebar-new";
+@use "object/Project/p-sidebar-item";
+@use "object/Project/p-sidebar-cats";
+@use "object/Project/p-single";
+
+@use "object/Project/p-download";
+@use "object/Project/p-download-form";
+@use "object/Project/p-download-document";
+
+@use "object/Project/p-contact";
+@use "object/Project/p-contact-form";
+
+@use "object/Project/p-form";
+@use "object/Project/p-footer-links";
+@use "object/Project/p-footer";
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */
-@use "object/utility/hidden";
-@use "object/utility/font";
-@use "object/utility/margin";
+@use "object/utility/u-hidden";
+@use "object/utility/u-font";
+@use "object/utility/u-margin";

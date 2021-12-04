@@ -1,0 +1,10 @@
+@use "foundation/global";
+
+// Project サービス詳細セクション
+//--------------------------------------------------------------------------
+.p-service-details__intro {
+  @include global.fz(20, 28);
+  @include global.lh(1.4);
+  font-weight: 700;
+  text-align: center;
+}

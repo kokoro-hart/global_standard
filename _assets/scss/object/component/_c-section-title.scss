@@ -1,0 +1,27 @@
+@use "foundation/global";
+
+// Component セクションタイトル
+//--------------------------------------------------------------------------
+
+.c-section-title {
+  color: global.$color-main;
+}
+
+.c-section-title__head {
+  font-size: 52px;
+  @include global.lh(1.2);
+  font-family: global.$font-family-en;
+  font-weight: 500;
+  @include global.mq(md) {
+    font-size: 7.815vw;
+  }
+  @include global.mq(lg) {
+    font-size: 100px;
+  }
+}
+
+.c-section-title__foot {
+  @include global.fz(16, 24);
+  @include global.lh(1.5);
+  font-weight: 700;
+}

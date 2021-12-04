@@ -1,0 +1,20 @@
+@use "foundation/global";
+
+// Project サイドバー 新着記事一覧
+//--------------------------------------------------------------------------
+
+.p-sidebar-new {
+  padding-top: 100px;
+  @include global.mq(lg) {
+    //min-width 992px〜
+    padding-top: 0;
+  }
+}
+
+.p-sidebar-new__item {
+  margin-top: 20px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 16px;
+  }
+}

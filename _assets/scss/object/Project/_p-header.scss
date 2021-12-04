@@ -2,6 +2,16 @@
 
 // Project ヘッダー
 //--------------------------------------------------------------------------
+
+.p-header {
+  height: global.$header-height-sp;
+  background-color: global.$color-text-white;
+
+  @include global.mq(xl) {//min-width 1280px〜
+    height: global.$header-height-pc;
+  }
+}
+
 .p-header__inner {
   display: flex;
   justify-content: space-between;

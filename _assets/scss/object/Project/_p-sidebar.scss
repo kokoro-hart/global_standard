@@ -1,0 +1,11 @@
+@use "foundation/global";
+
+// Project サイドバー
+//--------------------------------------------------------------------------
+
+.p-sidebar__title {
+  color: global.$color-text-black;
+  @include global.fz(20);
+  @include global.lh(2);
+  font-weight: 700;
+}

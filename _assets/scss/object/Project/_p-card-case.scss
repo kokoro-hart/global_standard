@@ -3,6 +3,25 @@
 // Project 導入事例カード
 //--------------------------------------------------------------------------
 
+.p-card-case {
+  $this: &;
+  display: inline-block;
+  color: global.$color-text-white;
+
+  &:hover {
+    #{$this}__arrow {
+      color: global.$color-accent-yellow;
+      transform: translateX(5px);
+    }
+    @include global.mq(md) {
+      //min-width 768px〜
+      #{$this}__arrow {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
 .p-card-case__img-wrapper {
   position: relative;
   width: 100%;

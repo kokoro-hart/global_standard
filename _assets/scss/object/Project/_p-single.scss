@@ -1,0 +1,148 @@
+@use "foundation/global";
+
+// Project 投稿固定ページ (prefix: p-single)
+//--------------------------------------------------------------------------
+
+.p-single__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-single__cat {
+  border: 1px solid global.$color-accent-red;
+  padding: 6px 11px;
+  white-space: nowrap;
+  color: global.$color-accent-red;
+  @include global.fz(14);
+  @include global.lh(1.71);
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 8px 24px;
+  }
+}
+
+.p-single__time {
+  color: global.$color-text-gray;
+  @include global.fz(14);
+  @include global.lh(1.71);
+  white-space: nowrap;
+}
+
+.p-single__title {
+  margin-top: 8px;
+  @include global.fz(24);
+  @include global.lh(1.33);
+  font-weight: 700;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 20px;
+  }
+}
+
+.p-single__thumbnail {
+  margin-top: 24px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 41px;
+  }
+}
+
+.p-single__img {
+  height: 55.73333vw;
+  @include global.object-fit(cover, center);
+  @include global.mq(md) {
+    //min-width 768px〜
+    height: 37.10938vw;
+    max-height: 475px;
+  }
+}
+
+.p-single__content {
+  h2,
+  h3,
+  h4 {
+    color: global.$color-main;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+  h2 {
+    border-left: 6px solid global.$color-main;
+    padding: 6px 10px 6px 20px;
+    background-color: global.$color-pagination-bg;
+    @include global.fz(20);
+    @include global.lh(1.6);
+  }
+  h3 {
+    border-bottom: 1px solid global.$color-main;
+    padding-bottom: 5px;
+    @include global.fz(18);
+    @include global.lh(1.77);
+  }
+  h4 {
+    @include global.fz(16);
+    @include global.lh(1.75);
+  }
+  p {
+    margin-top: 20px;
+    @include global.fz(14);
+    @include global.lh(1.7);
+  }
+  ul {
+    margin-top: 40px;
+  }
+  li {
+    @include global.fz(14);
+    @include global.lh(1.7);
+    &:not(:first-child) {
+      margin-top: 17px;
+    }
+  }
+  .wp-block-quote {
+    position: relative;
+    border-left: 4px solid global.$color-main;
+    padding: 32px 28px;
+    margin-top: 40px;
+    background-color: global.$color-pagination-bg;
+    @include global.fz(14);
+    @include global.lh(1.7);
+
+    .p-single__svg {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 60px;
+      height: 45px;
+      color: global.$color-quote-svg;
+    }
+    p {
+      position: relative;
+      margin-top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.p-single__post-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-single__post-link {
+  a {
+    display: inline-block;
+    border: 1px solid global.$color-main;
+    border-radius: 4px;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s ease-out;
+    color: global.$color-main;
+    @include global.fz(14);
+    @include global.lh(1.7);
+
+    &:hover {
+      color: global.$color-text-white;
+      background-color: global.$color-main;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "foundation/global";
+
+// Project 資料ダウンロード
+//--------------------------------------------------------------------------
+
+.p-download {
+  padding: 60px 0 100px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 80px 0 160px;
+  }
+}
+
+.p-download__inner {
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,203 @@
+@use "foundation/global";
+
+// Project サービス詳細
+//--------------------------------------------------------------------------
+.p-service-detail {
+  $this: &;
+  width: 100%;
+  padding-top: 60px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding-top: 138px;
+  }
+
+  &:nth-of-type(2n + 1) {
+    #{$this}__inner {
+      @include global.mq(md) {
+        //min-width 768px〜
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &:nth-of-type(2n) {
+    padding-top: 0;
+    margin: 69px 0 80px;
+    background: linear-gradient(transparent 0%, global.$color-main-thin 0%);
+    @include global.mq(md) {
+      //min-width 768px〜
+      margin: 195px 0 81px;
+      padding: 60px 0 80px;
+    }
+
+    #{$this}__figure {
+      margin-left: 0;
+      margin-right: auto;
+      @include global.mq(md) {
+        //min-width 768px〜
+        margin-right: 0;
+      }
+    }
+
+    #{$this}__number {
+      right: 20px;
+      @include global.mq(md) {
+        //min-width 768px〜
+        right: 30px;
+      }
+      @include global.mq(lg) {
+        //min-width 992px〜
+        right: 30px;
+      }
+    }
+
+    #{$this}__inner {
+      padding-top: 20px;
+    }
+
+    #{$this}__contents {
+      @include global.mq(md) {
+        //min-width 768px〜
+        transform: translateX(-60px);
+      }
+    }
+  }
+}
+
+.p-service-detail__inner {
+  width: 100%;
+  margin: 0 auto;
+  @include global.mq(md) {
+    //min-width 768px〜
+    display: flex;
+    align-items: flex-start;
+    max-width: calc(1180px + 80px);
+    padding: 0 40px;
+  }
+}
+
+.p-service-detail__item {
+  width: 100%;
+  @include global.mq(md) {
+    //min-width 768px〜
+  }
+}
+
+.p-service-detail__figure {
+  width: 50.13333vw;
+  margin-left: auto;
+  @include global.mq(md) {
+    //min-width 768px〜
+    max-width: 560px;
+    width: 47.46%;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+}
+
+.p-service-detail__contents {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(global.$color-text-black, 0.16);
+  margin-top: -40vw;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 42px 20px;
+  background-color: rgba(global.$color-text-white, 0.9);
+  @include global.mq(md) {
+    //min-width 768px〜
+    max-width: 590px;
+    width: 70%;
+    margin: 0;
+    padding: 80px 30px 60px;
+    transform: translateX(30px);
+  }
+  @include global.mq(lg) {
+    //min-width 992px〜
+    padding: 80px 40px 60px;
+    transform: translateX(60px);
+  }
+}
+
+.p-service-detail__number {
+  position: absolute;
+  top: -42px;
+  color: global.$color-main;
+  @include global.fz(68, 100);
+  @include global.lh(1.2);
+  font-family: global.$font-family-en;
+  @include global.mq(md) {
+    //min-width 768px〜
+    top: -61px;
+  }
+}
+
+.p-service-detail__title-head {
+  @include global.fz(28, 40);
+  @include global.lh(1.28, 1.5);
+  font-weight: 700;
+}
+
+.p-service-detail__title-foot {
+  margin-top: 3px;
+  color: global.$color-main;
+  @include global.fz(14, 16);
+  @include global.lh(1.2);
+  font-weight: 500;
+  font-family: global.$font-family-en;
+}
+
+.p-service-detail__text {
+  margin-top: 28px;
+  @include global.fz(14);
+  @include global.lh(1.71);
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 58px;
+  }
+}
+
+.p-service-detail__dl {
+  margin-top: 28px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 58px;
+  }
+}
+
+.p-service-detail__dl-row {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 1px solid global.$color-border-thin;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 31px 0;
+  }
+  &:last-of-type {
+    border-bottom: 1px solid global.$color-border-thin;
+  }
+}
+
+.p-service-detail__dt {
+  width: 75px;
+  @include global.fz(14, 16);
+  @include global.lh(1.2);
+  font-weight: 700;
+}
+
+.p-service-detail__dd {
+  width: calc(100% - 75px);
+  padding-left: 5px;
+  @include global.fz(14);
+  @include global.lh(2);
+}
+
+.p-service-detail__link-wrapper {
+  margin-top: 32px;
+  text-align: center;
+  @include global.mq(md) {
+    //min-width 768px〜
+    margin-top: 58px;
+  }
+}

@@ -1,0 +1,35 @@
+@use "foundation/global";
+
+// Project お問い合わせ
+//--------------------------------------------------------------------------
+
+.p-contact {
+  padding: 60px 0 100px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding: 80px 0 160px;
+  }
+}
+
+.p-contact__inner {
+  max-width: 688px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.p-contact__intro {
+  @include global.fz(14);
+  @include global.lh(1.7);
+}
+
+.p-contact__intro-link {
+  color: global.$color-main;
+  text-decoration: underline global.$color-main;
+}
+
+.p-contact__submit {
+  @include global.mq(md) {
+    //min-width 768px〜
+    max-width: 204px;
+  }
+}
