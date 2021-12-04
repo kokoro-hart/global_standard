@@ -7,7 +7,7 @@
 
 //IE対応のためのPolyfill
 
-//Picturefill
+//picture
 import '@modules/picturefill';
 
 //object-fit-images
@@ -52,6 +52,7 @@ if (fvTrigger !== null) {
 //画像遅延読み込み
 const lazy = document.querySelectorAll('.lazyload');
 const lazyObserver = new IntersectionObserver(inViewport, {
+  rootMargin: '50%',
   threshold: [0]
 });
 
