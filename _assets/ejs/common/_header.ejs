@@ -20,6 +20,7 @@
   <meta property="og:image" content="/img/common/og-image.jpeg">
   <meta property="og:site_name" content="<%= jsonData.siteInfo.siteUrl %> ">
 
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Noto+Sans+JP:wght@500;700&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 </head>
@@ -43,7 +44,7 @@
           </h1>
         <% } %>
 
-        <nav class="p-global-nav" id="js-global-nav" area-hidden="true" area-label="ページ内のメニュー">
+        <nav class="p-global-nav" id="js-global-nav" area-label="ページ内のメニュー">
           <ul class="p-global-nav__list">
             <% for(let page in jsonData.pages){ %>
               <% if (page===pageId) { %>
