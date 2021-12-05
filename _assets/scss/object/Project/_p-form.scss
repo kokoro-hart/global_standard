@@ -153,11 +153,16 @@ input[type="checkbox"] {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 32px;  
-    height: 32px; 
+    width: 28px;  
+    height: 28px; 
     border: 1px solid global.$color-text-black;
     border-radius: 2px;
     background-color: global.$color-text-white;
+
+    @include global.mq(md) {
+      width: 32px;
+      height: 32px;
+    } 
   }
 
   &::after {
@@ -167,12 +172,17 @@ input[type="checkbox"] {
     top: 50%;
     display: block;
     transform: translateY(-50%) rotate(-45deg);
-    width: 24px;
-    height: 16.8px;
+    width: 22px;
+    height: 14.8px;
     margin-top: -0.2em;
     opacity: 0;
     border-bottom: 4px solid global.$color-text-black;
     border-left: 4px solid global.$color-text-black;
+
+    @include global.mq(md) {
+      width: 24px;
+    height: 16.8px;
+    }
   }
 }
 
