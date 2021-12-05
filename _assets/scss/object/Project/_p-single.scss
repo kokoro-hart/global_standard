@@ -124,12 +124,15 @@
 }
 
 .p-single__post-links {
+  position: relative;
+  width: 100%;
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
 }
 
-.p-single__post-link {
+.p-single__post-prev,
+.p-single__post-next {
+  position: absolute;
+  top: 0;
   a {
     display: inline-block;
     border: 1px solid global.$color-main;
@@ -146,4 +149,12 @@
       background-color: global.$color-main;
     }
   }
+}
+
+.p-single__post-prev {
+  right: 0;
+}
+
+.p-single__post-next {
+  left: 0;
 }
