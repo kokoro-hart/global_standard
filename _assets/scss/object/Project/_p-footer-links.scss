@@ -125,7 +125,8 @@
     transition: width 0.3s ease-out;
     z-index: -1;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     color: global.$color-text-black;
     .p-footer-links__svg {
       transform: translateY(-50%) translateX(5px);

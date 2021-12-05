@@ -39,7 +39,8 @@
     transition: width 0.3s ease-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: global.$color-text-white;
     #{$this}__svg {
       transform: translateY(-50%) translateX(5px);
@@ -69,7 +70,8 @@
   transition: background-color 0.3s ease-out;
   background-color: global.$color-text-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: global.$color-text-white;
     background-color: global.$color-main;
   }

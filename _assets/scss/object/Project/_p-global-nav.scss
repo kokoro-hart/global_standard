@@ -104,7 +104,8 @@
         margin-left: 32px;
         color: global.$color-main;
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: global.$color-text-white;
           background-color: global.$color-main;
         }
@@ -126,7 +127,8 @@
         background-color: global.$color-main;
         color: global.$color-text-white;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: global.$color-main-dark;
         }
       }

@@ -140,7 +140,8 @@
     @include global.fz(14);
     @include global.lh(1.7);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: global.$color-text-white;
       background-color: global.$color-main;
     }

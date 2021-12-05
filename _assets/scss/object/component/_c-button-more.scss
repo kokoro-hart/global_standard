@@ -10,7 +10,8 @@
 
   @include global.mq(md) {
     //min-width 768px〜
-    &:hover {
+    &:hover,
+    &:focus {
       #{$this}__arrow {
         right: -15.2%;
         width: 142px;

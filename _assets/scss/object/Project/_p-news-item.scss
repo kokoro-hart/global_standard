@@ -8,7 +8,8 @@
   display: flex;
   justify-content: space-between;
 
-  &:hover {
+  &:hover,
+  &:focus {
     #{$this}__img {
       transform: scale(1.1, 1.1);
     }

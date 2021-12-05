@@ -38,7 +38,8 @@
     width: 208px;
     max-width: 100%;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: global.$color-case-nav-dark;
   }
 }

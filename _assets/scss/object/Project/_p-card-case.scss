@@ -8,7 +8,8 @@
   display: inline-block;
   color: global.$color-text-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     #{$this}__arrow {
       color: global.$color-accent-yellow;
       transform: translateX(5px);
