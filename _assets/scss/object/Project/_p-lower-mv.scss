@@ -8,11 +8,6 @@
   position: relative;
   width: 100%;
   height: 250px;
-  margin-top: global.$header-height-sp;
-  @include global.mq(xl) {
-    //min-width 1280px〜
-    margin-top: global.$header-height-pc;
-  }
 }
 .p-lower-mv__svg {
   display: inline-block;

@@ -4,9 +4,19 @@
 //--------------------------------------------------------------------------
 
 .l-header {
-  position: fixed;
-  top: 0;
-  z-index: 999;
   width: 100%;
 }
 
+.l-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+  padding-right: 20px;
+
+  @include global.mq(xl) {
+    //min-width 1280px〜
+    padding-right: 40px;
+  }
+}

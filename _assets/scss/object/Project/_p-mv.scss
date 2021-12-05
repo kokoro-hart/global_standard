@@ -6,7 +6,6 @@
 .p-mv {
   position: relative;
   overflow: hidden;
-  margin-top: global.$header-height-sp;
   margin-left: 20px;
 
   @include global.mq(md) {
@@ -18,7 +17,6 @@
     //min-width 1280px〜
     max-height: calc(105vh - global.$header-height-pc);
     min-height: 650px;
-    margin-top: global.$header-height-pc;
   }
 }
 
