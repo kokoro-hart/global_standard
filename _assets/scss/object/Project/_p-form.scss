@@ -21,7 +21,6 @@
   }
 }
 
-//項目ラベル
 .p-form__label {
   position: relative;
   color: global.$color-text-black;
@@ -49,7 +48,6 @@
   }
 }
 
-//テキスト（１行）
 .p-form__input {
   box-shadow: none;
   border: 1px solid global.$color-border;
@@ -69,7 +67,6 @@
   }
 }
 
-//セレクトボックス
 .p-form__select {
   position: relative;
   appearance: none;
@@ -85,12 +82,11 @@
   color: global.$color-case-nav-dark;
 }
 
-//テキストエリア
 .p-form__textarea {
-  height: 140px;
+  min-height: 140px;
   @include global.mq(md) {
     //min-width 768px〜
-    height: 240px;
+    min-height: 240px;
   }
 }
 
@@ -113,24 +109,52 @@
   }
 }
 
-//チェックボックス
-.p-form__privacy-checkbox {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
+//送信ボタンwrapper
+.p-form__submit-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
 
-  &::before {
+
+.wpcf7-list-item {
+  margin-left: 0;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+//チェックボックス
+input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+}
+
+.wpcf7-list-item-label {
+  display: inline-block;
+    position: relative;
+  @include global.fz(14, 16);
+  @include global.lh(1.7);
+  font-weight: 500;
+  padding-left: 38px;
+  @include global.mq(md) {
+    //min-width 768px〜
+    padding-left: 42px;
+  }
+
+    &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    width: 100%;
-    height: 100%;
+    transform: translateY(-50%);
+    width: 32px;  
+    height: 32px; 
     border: 1px solid global.$color-text-black;
     border-radius: 2px;
     background-color: global.$color-text-white;
@@ -150,30 +174,10 @@
     border-bottom: 4px solid global.$color-text-black;
     border-left: 4px solid global.$color-text-black;
   }
-
-  @include global.mq(md) {
-    //min-width 768px〜
-    width: 32px;
-    height: 32px;
-  }
 }
 
-.c-form__privacy-checkbox:checked {
+input[type="checkbox"]:checked + .wpcf7-list-item-label {
   &::after {
     opacity: 1;
   }
-}
-
-//個人情報保護方針
-.p-form__privacy-link {
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-//送信ボタンwrapper
-.p-form__submit-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
 }
