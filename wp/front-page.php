@@ -1,51 +1,51 @@
     
     <?php get_header(); ?>
-
-    <main class="p-home">
+    
+    <main>
       <!--メインビジュアル-->
-      <section class="p-home-mv">
-        <div class="p-home-mv__inner">
-          <div class="p-home-mv-slider">
-            <div class="p-home-mv-slider__items">
-              <picture class="p-home-mv-slider__item">
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_pc.jpeg" class="p-home-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像">
+      <section class="p-mv">
+        <div class="p-mv__inner">
+          <div class="p-mv-slider">
+            <div class="p-mv-slider__items">
+              <picture class="p-mv-slider__item">
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
-              <picture class="p-home-mv-slider__item">
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_pc.jpeg" class="p-home-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像">
+              <picture class="p-mv-slider__item">
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
+                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
-              <picture class="p-home-mv-slider__item">
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_pc.jpeg" class="p-home-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像">
+              <picture class="p-mv-slider__item">
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
+                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
-              <picture class="p-home-mv-slider__item">
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_pc.jpeg" class="p-home-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像">
+              <picture class="p-mv-slider__item">
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
+                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
-              <picture class="p-home-mv-slider__item">
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-home-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_pc.jpeg" class="p-home-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像">
+              <picture class="p-mv-slider__item">
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
+                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
             </div>
-            <div id="js-fv-trigger" class="p-home-mv__main">
-              <h2 class="p-home-mv__title-wrapper">
-                <p class="p-home-mv__title u-font-italic is-mask u-hidden-md-up">YOU CAN</p>
-                <p class="p-home-mv__title u-font-italic is-mask u-hidden-md-up">CHANGE</p>
-                <p class="p-home-mv__title u-font-italic is-mask u-hidden-md-down">YOU CAN CHANGE</p>
-                <p class="p-home-mv__title u-font-italic is-mask">THE WORLD</p>
+            <div id="js-fv-trigger" class="p-mv__contents">
+              <h2 class="p-mv__title-wrapper">
+                <p class="p-mv__title u-font-italic is-mask u-hidden-md-up">YOU CAN</p>
+                <p class="p-mv__title u-font-italic is-mask u-hidden-md-up">CHANGE</p>
+                <p class="p-mv__title u-font-italic is-mask u-hidden-md-down">YOU CAN CHANGE</p>
+                <p class="p-mv__title u-font-italic is-mask">THE WORLD</p>
               </h2>
-              <p class="p-home-mv__lead is-mask-white">世界で活躍できるグローバルな人材を育てる</p>
+              <p class="p-mv__lead is-mask-white">世界で活躍できるグローバルな人材を育てる</p>
             </div>
           </div>
         </div>
@@ -112,80 +112,80 @@
           </div>
           <div class="p-home-service__contents">
             <ul class="p-home-service__cards">
-              <li class="p-home-service-card">
-                <div class="p-home-service-card__head">
-                  <svg class="p-home-service-card__number" height="121" width="98" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+              <li class="p-card-service p-home-service__card">
+                <div class="p-card-service__head">
+                  <svg class="p-card-service__number" height="121" width="98" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
                     <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
                         <tspan x="-98.4" y="0">01</tspan>
                       </text><text fill="#023e78" transform="translate(99 94)">
                         <tspan x="-98.4" y="0">01</tspan>
                       </text></g>
                   </svg>
-                  <picture class="p-home-service-card__picture">
-                    <source class="p-home-service-card__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service01.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service01.jpeg" class="p-home-service-card__img lazyload" width="640" height="854" alt="service画像">
+                  <picture class="p-card-service__picture">
+                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service01.webp" type="image/webp" />
+                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service01.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
-                  <h2 class="p-home-service-card__title">
-                    <span class="p-home-service-card__title-inside">
+                  <h2 class="p-card-service__title">
+                    <span class="p-card-service__title-inside">
                       ビジネス英語研修
                     </span>
                   </h2>
                 </div>
-                <p class="p-home-service-card__text">
+                <p class="p-card-service__text">
                   ビジネス英会話はこれからの時代、すべてのビジネスパーソンが学ぶべき必須スキルと考えおります。海外にビジネス展開する際にはもちろんのこと、日本国内でも英会話コミュニケーションができることによってチャンスが掴める場面があります。
                 </p>
               </li>
-              <li class="p-home-service-card">
-                <div class="p-home-service-card__head">
-                  <svg class="p-home-service-card__number" height="121" width="105" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+              <li class="p-card-service p-home-service__card">
+                <div class="p-card-service__head">
+                  <svg class="p-card-service__number" height="121" width="105" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
                     <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
                         <tspan x="-98.4" y="0">02</tspan>
                       </text><text fill="#023e78" transform="translate(99 94)">
                         <tspan x="-98.4" y="0">02</tspan>
                       </text></g>
                   </svg>
-                  <picture class="p-home-service-card__picture">
-                    <source class="p-home-service-card__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service02.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service02.jpeg" class="p-home-service-card__img lazyload" width="640" height="854" alt="service画像">
+                  <picture class="p-card-service__picture">
+                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service02.webp" type="image/webp" />
+                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service02.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
-                  <h2 class="p-home-service-card__title">
-                    <span class="p-home-service-card__title-inside">
+                  <h2 class="p-card-service__title">
+                    <span class="p-card-service__title-inside">
                       異文化
                     </span>
                     <br>
-                    <span class="p-home-service-card__title-inside">
+                    <span class="p-card-service__title-inside">
                       コミュニケーション研修
                     </span>
                   </h2>
                 </div>
-                <p class="p-home-service-card__text">
+                <p class="p-card-service__text">
                   急速にグローバル化が進んでおり、ビジネスの場面に限らず様々な文化的背景を持つ者同士の交流はもはや日常的な光景となりました。
                   言語や文化が異なる相手を理解することで世界が広がり、新たなビジネスチャンスに巡り会うことは少なくありません。
                 </p>
               </li>
-              <li class="p-home-service-card">
-                <div class="p-home-service-card__head"><svg class="p-home-service-card__number" height="121" width="106" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+              <li class="p-card-service p-home-service__card">
+                <div class="p-card-service__head"><svg class="p-card-service__number" height="121" width="106" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
                     <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
                         <tspan x="-98.4" y="0">03</tspan>
                       </text><text fill="#023e78" transform="translate(99 94)">
                         <tspan x="-98.4" y="0">03</tspan>
                       </text></g>
                   </svg>
-                  <picture class="p-home-service-card__picture">
-                    <source class="p-home-service-card__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service03.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service03.jpeg" class="p-home-service-card__img lazyload" width="640" height="854" alt="service画像">
+                  <picture class="p-card-service__picture">
+                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service03.webp" type="image/webp" />
+                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service03.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
-                  <h2 class="p-home-service-card__title">
-                    <span class="p-home-service-card__title-inside">
+                  <h2 class="p-card-service__title">
+                    <span class="p-card-service__title-inside">
                       ビジネス留学
                     </span>
                     <br>
-                    <span class="p-home-service-card__title-inside">
+                    <span class="p-card-service__title-inside">
                       サポートプログラム
                     </span>
                   </h2>
                 </div>
-                <p class="p-home-service-card__text">
+                <p class="p-card-service__text">
                   将来的に海外で働きたい方に向けた講座をご用意しております。一般的には3ヶ月〜1年の期間で基本的な英会話スキルと、海外でのビジネスマナー習得を目指します。
                   通常の語学留学では得られないビジネスの場で通用するコミュニケーションスキル習得に重点をおいておりますので、海外でビジネス展開する際に自信を持って活動することができるようになります。
                 </p>
@@ -227,24 +227,24 @@
           <div class="p-home-case__cards">
             <?php while ( $case_query->have_posts() ): $case_query->the_post();  ?>
             <?php $slug = $post->post_name; //投稿のスラッグを取得 ?>
-            <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case-card">
-              <p class="p-home-case-card__img-wrapper">
+            <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case__card p-card-case lazyload">
+              <p class="p-card-case__img-wrapper">
                 <?php
                   if(has_post_thumbnail()) {
-                    the_post_thumbnail('small', array(
-                      'class' => 'p-home-case-card__img lazyload'
+                    the_post_thumbnail('full', array(
+                      'class' => 'p-card-case__img lazyload'
                     ));
                   } else {
-                    echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-home-case-card__img lazyload';
+                    echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-card-case__img lazyload';
                   }
                 ?>
               </p>
-              <h3 class="p-home-case-card__title"><?php the_title(); ?>　様</h3>
-              <div class="p-home-case-card__links">
-                <div class="p-home-case-card__cats">
-                  <div class="p-home-case-card__cat"><?php echo esc_html( get_the_terms( get_the_ID(), 'training' )[0]->name );//研修内容を出力 ?></div>
+              <h3 class="p-card-case__title"><?php the_title(); ?>　様</h3>
+              <div class="p-card-case__links">
+                <div class="p-card-case__cats">
+                  <div class="p-card-case__cat"><?php echo esc_html( get_the_terms( get_the_ID(), 'training' )[0]->name );//研修内容を出力 ?></div>
                 </div>
-                <svg class="c-svg p-home-case-card__arrow" width="29" height="29">
+                <svg class="c-svg p-card-case__arrow" width="29" height="29">
                   <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
                 </svg>
               </div>
@@ -276,7 +276,6 @@
               <span class="c-button-more__circle"></span>
             </a>
           </div>
-          <!--新着記事3つ-->
           <div class="p-home-news__items">
             <?php
               $args = array(
@@ -300,7 +299,6 @@
             </a>
             <?php endforeach; wp_reset_postdata(); ?>
           </div>
-          <!--/新着記事3つ-->
           <div class="p-home-news__link-wrapper u-hidden-md-up">
             <a href="<?php echo esc_url(home_url('/news')); ?>" class="c-button-more">
               <span class="c-button-more__text u-font-italic">View more</span>

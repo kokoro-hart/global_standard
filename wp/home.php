@@ -1,18 +1,24 @@
     <?php get_header(); ?>
 
-    <div class="p-mv-lower p-mv-lower--bg-news">
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
+    <div class="p-lower-mv">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
-      <div class="p-mv-lower__heading">
-        <h2 class="p-mv-lower__heading-head u-font-italic">
+      <picture class="p-lower-mv__picture">
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-news_sp.webp" media="(max-width: 767px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-news_pc.webp" media="(min-width: 768px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-news_sp.jpeg" media="(max-width: 767px)" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-news_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="お知らせメインビジュアル">
+      </picture>
+      <div class="p-lower-mv__title">
+        <h2 class="p-lower-mv__title-en u-font-italic">
           NEWS
         </h2>
         <br>
-        <p class="p-mv-lower__heading-foot">
+        <p class="p-lower-mv__title-ja">
           お知らせ
         </p>
       </div>
@@ -37,37 +43,35 @@
             if(have_posts()) :
             while(have_posts()) : the_post();
           ?>
-          <a href="<?php the_permalink(); ?>" class="p-news-main-item">
-            <div class="p-news-main-item__thumbnail">
+          <a href="<?php the_permalink(); ?>" class="p-news-main__item p-news-item">
+            <div class="p-news-item__thumbnail">
               <?php
                 if(has_post_thumbnail()) {
-                  the_post_thumbnail('small' , array(
-                    'class' => 'p-news-main-item__img lazyload',
+                  the_post_thumbnail('full' , array(
+                    'class' => 'p-news-item__img lazyload',
                   ));
                 } else {
-                  echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-main-item__img lazyload">';
+                  echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/icatch-news.jpeg" alt="記事の画像" class="p-news-item__img lazyload">';
                 }
               ?>
             </div>
-            <div class="p-news-main-item__body">
-              <div class="p-news-main-item__meta">
-                <div class="p-news-main-item__cats">
+            <div class="p-news-item__body">
+              <div class="p-news-item__meta">
+                <div class="p-news-item__cats">
                   <?php $category = get_the_category();?>
                   <?php if($category[0]) : ?>
-                  <span class="p-news-main-item__cat"><?php echo $category[0]->cat_name; ?></span>
+                  <span class="p-news-item__cat"><?php echo $category[0]->cat_name; ?></span>
                   <?php endif; ?>
                 </div>
-                <time class="p-news-main-item__time" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.n.j'); ?></time>
+                <time class="p-news-item__time" datetime="<?php the_time( 'c' ); ?>"><?php the_time('Y.n.j'); ?></time>
               </div>
-              <h2 class="p-news-main-item__title"><?php the_title(); ?></h2>
+              <h2 class="p-news-item__title"><?php the_title(); ?></h2>
             </div>
           </a>
-
           <?php
             endwhile;
             endif;
           ?>
-          
           <!--ページネーション-->
           <?php if(paginate_links()): ?>
             <div class="p-news-main__pagination c-pagination">
@@ -84,12 +88,11 @@
             </div>
           <?php endif;?>
           <!--/ページネーション-->
-
         </main>
         <!--/メインエリア-->
-
+        <!--サイドバー-->
         <?php get_sidebar(); ?>
-        
+        <!--/サイドバー-->
       </div>
     </section>
     <?php get_footer(); ?>

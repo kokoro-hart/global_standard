@@ -1,20 +1,26 @@
     
     <?php get_header(); ?>
     
-    <div class="p-mv-lower p-mv-lower--bg-news">
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
+    <div class="p-lower-mv">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
-      <div class="p-mv-lower__heading">
-        <h2 class="p-mv-lower__heading-head u-font-italic">
+      <picture class="p-lower-mv__picture">
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-news_sp.webp" media="(max-width: 767px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-news_pc.webp" media="(min-width: 768px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-news_sp.jpeg" media="(max-width: 767px)" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-news_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="お知らせメインビジュアル">
+      </picture>
+      <div class="p-lower-mv__title">
+        <h2 class="p-lower-mv__title-en u-font-italic">
           NEWS
         </h2>
         <br>
-        <p class="p-mv-lower__heading-foot">
-          ニュース
+        <p class="p-lower-mv__title-ja">
+          お知らせ
         </p>
       </div>
     </div>
@@ -60,27 +66,24 @@
             <?php the_content();?>
           </article>
 
-          <!--ページネーション-->
+          <!--ページャー-->
           <?php
             $prev_post = get_previous_post(); // 前の投稿を取得
             $next_post = get_next_post(); // 次の投稿を取得
           ?>
-          <div class="p-single__post-links">
-            <?php if ($prev_post) : ?>
-              <div class="p-single__post-link">
-                <?php previous_post_link('%link','&lt 前の記事へ'); ?>
-              </div>
-            <?php endif; ?>
-
+          <div class="p-single__post-links">            
             <?php if ($next_post) : ?>
-              <div class="p-single__post-link">
-                <?php
-                  next_post_link('%link', '次の記事へ &gt');
-                ?>
+              <div class="p-single__post-next">
+                <?php next_post_link('%link', '&lt 前の記事へ');?>
               </div>
             <?php endif; ?>
+            <?php if ($prev_post) : ?>
+              <div class="p-single__post-prev">
+                <?php previous_post_link('%link','次の記事へ &gt'); ?>
+              </div>
+            <?php endif; ?> 
           </div>
-          <!--ページネーション-->
+          <!--ページャー-->
         </main>
         <!--/メインエリア-->
 

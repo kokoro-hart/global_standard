@@ -1,19 +1,25 @@
 
     <?php get_header(); ?>
 
-    <div class="p-mv-lower p-mv-lower--bg-about">
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--sp u-hidden-md-up">
+    <div class="p-lower-mv">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
-      <svg class="c-svg p-mv-lower__svg p-mv-lower__svg--pc u-hidden-md-down">
+      <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
-      <div class="p-mv-lower__heading">
-        <h2 class="p-mv-lower__heading-head u-font-italic">
+      <picture class="p-lower-mv__picture">
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-download_sp.webp" media="(max-width: 767px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-download_pc.webp" media="(min-width: 768px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_sp.jpeg" media="(max-width: 767px)" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="資料ダウンロードメインビジュアル">
+      </picture>
+      <div class="p-lower-mv__title">
+        <h2 class="p-lower-mv__title-en u-font-italic">
           DOWNLOAD
         </h2>
         <br>
-        <p class="p-mv-lower__heading-foot">
+        <p class="p-lower-mv__title-ja">
           資料ダウンロード
         </p>
       </div>
