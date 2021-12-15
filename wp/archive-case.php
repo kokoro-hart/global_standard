@@ -55,17 +55,17 @@
           <!--導入事例一覧-->
           <?php
             // タクソノミ取得
-            $catargs = array(
+            $tax_args = array(
               'taxonomy' => 'training'//研修内容
             );
-            $catlists = get_categories( $catargs );
-            foreach($catlists as $cat) :
+            $tax_lists = get_categories( $tax_args );
+            foreach($tax_lists as $tax) :
           ?>
-          <section id="<?php echo $cat->slug; //idにスラッグを出力 ?>" class="p-case-summary">
+          <section id="<?php echo $tax->slug; //idにスラッグを出力 ?>" class="p-case-summary">
             <h2 class="p-case-summary__title">
-              <?php echo $cat->name; //研修内容 ?>
+              <?php echo $tax->name; //研修内容 ?>
               <span class="p-case-summary__title-foot u-font-italic">
-                <?php echo $cat->description; //研修内容の説明 ?>
+                <?php echo $tax->description; //研修内容の説明 ?>
               </span>
             </h2>
             <article class="p-case-summary__items">
@@ -73,14 +73,14 @@
                 $args = array(
                   'posts_per_page' => -1,
                   'post_type' => 'case',
-                  'training' => $cat->slug,
+                  'training' => $tax->slug,
                   'orderby' => 'date',
                   'order' => 'DESC'
                 );
-                $my_posts = get_posts( $args );
-                if ( $my_posts ) :
+                $case_posts = get_posts( $args );
+                if ( $case_posts ) :
 
-                foreach ( $my_posts as $post ) :
+                foreach ( $case_posts as $post ) :
                 setup_postdata( $post );
               ?>
               <?php $slug = $post->post_name; //投稿のスラッグを取得 ?>
@@ -100,7 +100,7 @@
                       <?php
                         //企業ロゴ（アイキャッチ画像）
                         if(has_post_thumbnail()) {
-                          the_post_thumbnail('small', array(
+                          the_post_thumbnail('full', array(
                             'class' => 'p-case-item__img lazyload'
                           ));
                         } else {
@@ -113,7 +113,7 @@
                       <h3 class="p-case-item__title">
                         研修コース：
                         <span class="p-case-item__title p-case-item__title--course-name">
-                          <?php echo $cat->name; //研修内容 ?>
+                          <?php echo $tax->name; //研修内容 ?>
                         </span>
                       </h3>
                     <div class="p-case-item__dl">
@@ -166,8 +166,8 @@
               ?>
             </article>
             <div class="p-case__link-wrapper">
-            <a href="<?php echo esc_url(home_url('/service')) .'#'. $cat->slug; //service#slugの形式で出力 ?>" class="c-button-square p-case-summary__button">
-              <?php echo $cat->name; // 研修内容 ?>の詳細
+            <a href="<?php echo esc_url(home_url('/service')) .'#'. $tax->slug; //service#slugの形式で出力 ?>" class="c-button-square p-case-summary__button">
+              <?php echo $tax->name; // 研修内容 ?>の詳細
               <svg class="c-svg c-button-square__svg" width="18" height="12">
                 <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
               </svg>

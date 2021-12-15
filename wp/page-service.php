@@ -267,10 +267,10 @@
                 'orderby' => 'date',
                 'order' => 'DESC'
               );
-              $my_posts = get_posts( $args );
-              if ( $my_posts ) :
+              $faq_posts = get_posts( $args );
+              if ( $faq_posts ) :
 
-              foreach ( $my_posts as $post ) :
+              foreach ( $faq_posts as $post ) :
               setup_postdata( $post );
             ?>
             <div class="p-accordion__row">

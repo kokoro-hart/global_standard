@@ -18,14 +18,6 @@ function my_setup()
   );
 }
 
-//フォーム設置ページのみContactForm7のcss、jsを読み込み
-add_action( 'wp', function() {
-  if ( is_page( 'contact' ) || is_page('download') ) return;
-  add_filter( 'wpcf7_load_js', '__return_false' );
-  add_filter( 'wpcf7_load_css', '__return_false' );
-});
-
-
 //css jsの読み込み
 function my_script_init()
 {
@@ -34,7 +26,12 @@ wp_enqueue_script('my', get_template_directory_uri() . '/js/bundle.js', array(),
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
-
+//フォーム設置ページのみContactForm7のcss、jsを読み込み
+add_action( 'wp', function() {
+  if ( is_page( 'contact' ) || is_page('download') ) return;
+  add_filter( 'wpcf7_load_js', '__return_false' );
+  add_filter( 'wpcf7_load_css', '__return_false' );
+});
 
 //タイトルの分岐
 function wp_document_title_parts( $title )
@@ -50,9 +47,7 @@ add_filter( 'document_title_parts', 'wp_document_title_parts', 10, 1 );
 
 add_action('after_setup_theme', 'my_setup');
 
-
-
-//タイトルフィルターフック
+//カテゴリページのタイトル フィルターフック
 add_filter('get_the_archive_title', function($title)
 {
   if(is_category()) {
@@ -60,6 +55,30 @@ add_filter('get_the_archive_title', function($title)
   }
   return $title;
 });
+
+//lazyload対象のアイキャッチはsrcをdata-srcに置き換える
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+
+  //遅延読み込み対象の画像のみ
+  if(strpos($html, 'lazyload') === false) {
+      return $html;
+  }
+
+  //srcをdata-srcに置換する
+  $html = str_replace('src="', 'data-src="', $html);
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+
+//scriptタグにdefer属性を追加
+function scriptLoader($script, $handle, $src) {
+	if (is_admin()) {
+		return $script;
+	}
+	$script = sprintf('<script src="%s" type="text/javascript" defer=""></script>' . "\n", $src);
+	return $script;
+}
+add_filter('script_loader_tag', 'scriptLoader', 10, 5);
 
 
 
@@ -95,17 +114,3 @@ add_action('init', function() {
     'show_in_rest' => true,
   ]);
 });
-
-//lazyload対象のアイキャッチはsrcをdata-srcに置き換える
-function my_post_image_html( $html, $post_id, $post_image_id ) {
-
-  //遅延読み込み対象の画像のみ
-  if(strpos($html, 'lazyload') === false) {
-      return $html;
-  }
-
-  //srcをdata-srcに置換する
-  $html = str_replace('src="', 'data-src="', $html);
-  return $html;
-}
-add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );

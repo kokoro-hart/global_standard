@@ -47,7 +47,7 @@
             <div class="p-news-item__thumbnail">
               <?php
                 if(has_post_thumbnail()) {
-                  the_post_thumbnail('medium' , array(
+                  the_post_thumbnail('full' , array(
                     'class' => 'p-news-item__img lazyload',
                   ));
                 } else {

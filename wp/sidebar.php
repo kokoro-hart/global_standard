@@ -51,15 +51,15 @@
           'orderby' => 'term_order',
           'order' => 'ASC'
         );
-        $categories = get_categories( $args );
+        $cat_list = get_categories( $args );
       ?>
-      <?php foreach( $categories as $category ) : ?>
+      <?php foreach( $cat_list as $cat ) : ?>
       <li class="p-sidebar-cats__item">
-        <a href="<?php echo get_category_link( $category->term_id ); ?>" class="p-sidebar-cats__link">
+        <a href="<?php echo get_category_link( $cat->term_id ); ?>" class="p-sidebar-cats__link">
           <svg class="c-svg p-sidebar-cats__svg" width="10" height="16">
             <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow03" />
           </svg>
-          <?php echo $category->name; ?>
+          <?php echo $cat->name; ?>
         </a>
       </li>
       <?php endforeach; ?>
