@@ -117,7 +117,6 @@
   margin-top: 40px;
 }
 
-
 .wpcf7-list-item {
   margin-left: 0;
 }
@@ -137,24 +136,25 @@ input[type="checkbox"] {
 
 .wpcf7-list-item-label {
   display: inline-block;
-    position: relative;
+  position: relative;
+  padding-left: 38px;
   @include global.fz(14, 16);
   @include global.lh(1.7);
   font-weight: 500;
-  padding-left: 38px;
+  cursor: pointer;
   @include global.mq(md) {
     //min-width 768px〜
     padding-left: 42px;
   }
 
-    &::before {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 28px;  
-    height: 28px; 
+    width: 28px;
+    height: 28px;
     border: 1px solid global.$color-text-black;
     border-radius: 2px;
     background-color: global.$color-text-white;
@@ -162,7 +162,7 @@ input[type="checkbox"] {
     @include global.mq(md) {
       width: 32px;
       height: 32px;
-    } 
+    }
   }
 
   &::after {
@@ -181,7 +181,7 @@ input[type="checkbox"] {
 
     @include global.mq(md) {
       width: 24px;
-    height: 16.8px;
+      height: 16.8px;
     }
   }
 }

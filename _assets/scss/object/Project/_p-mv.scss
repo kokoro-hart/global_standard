@@ -77,6 +77,7 @@
   font-size: 4.26667vw;
   @include global.lh(1.5);
   font-weight: 700;
+  letter-spacing: 0.9px;
 
   @include global.mq(md) {
     //min-width 768px〜

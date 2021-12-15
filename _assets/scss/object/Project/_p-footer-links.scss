@@ -110,8 +110,9 @@
 
   @include global.mq(md) {
     //min-width 768px〜
-    padding: 34px 15px;
     border-width: 3px;
+    max-width: 313px;
+    padding: 31px 15px;
   }
 
   &::after {

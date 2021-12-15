@@ -17,8 +17,7 @@
   height: inherit;
   padding-right: 20px;
 
-  @include global.mq(xl) {
-    //min-width 1280px〜
-    padding-right: 40px;
+  @include global.mq(md) {
+    padding-right: 17px;
   }
 }

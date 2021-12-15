@@ -7,7 +7,7 @@
   background: linear-gradient(transparent 19%, global.$color-main-thin 19%);
   @include global.mq(md) {
     //min-width 768px〜
-    margin-top: 30px;
+    margin-top: 3px;
     margin-bottom: 125px;
     background: linear-gradient(transparent 40.5%, global.$color-main-thin 40.5%);
   }
@@ -30,10 +30,12 @@
   @include global.fz(14);
   @include global.lh(1.7);
   font-weight: 500;
+  letter-spacing: 0.42;
   @include global.mq(md) {
     //min-width 768px〜
     width: calc(36.27% - 40px / 2);
     margin: 0;
+    letter-spacing: 0.72;
   }
 }
 
@@ -58,7 +60,7 @@
   @include global.mq(md) {
     //min-width 768px〜
     position: relative;
-    padding-top: 85px;
+    padding-top: 106px;
   }
 }
 
@@ -92,6 +94,6 @@
   }
   @include global.mq(lg) {
     //min-width 922px〜
-    width: 40%;
+    width: 39%;
   }
 }

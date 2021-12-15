@@ -20,11 +20,6 @@
   font-weight: 700;
   font-family: global.$font-family-logo;
   font-style: italic;
-  
-  @include global.mq(xl) {
-    //min-width 1280px〜
-    padding-left: 40px;
-  }
 }
 
 .p-header__logo-link {
