@@ -3,8 +3,6 @@
  * webpack.config.jsにて定義している
  */
 
-// import $ from "@modules/jquery";
-
 //IE対応のためのPolyfill
 
 //picture
@@ -86,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const targetId = link.hash;
       const targetElement = document.querySelector(targetId);
-      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top - 60;
+      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
 
       window.scrollTo({
         top: targetOffsetTop,
