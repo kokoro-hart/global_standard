@@ -2,7 +2,7 @@
 <aside class="p-sidebar l-archive__sidebar">
   <!--新着記事-->
   <article class="p-sidebar-new">
-    <h2 class="p-sidebar-title">新着記事</h2>
+    <h2 class="p-sidebar__title">新着記事</h2>
     <?php
       $args = array(
         'post_type' => 'post',
@@ -43,7 +43,7 @@
   <!--新着記事-->
   <!--カテゴリー-->
   <article class="p-sidebar-cats">
-    <h2 class="p-sidebar-title">カテゴリ</h2>
+    <h2 class="p-sidebar__title">カテゴリ</h2>
     <ul class="p-sidebar-cats__list">
       <?php
         $args = array(

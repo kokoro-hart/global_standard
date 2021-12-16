@@ -59,7 +59,7 @@
         <!--資料フォーム-->
         <div class="p-download-form">
           <h2 class="p-download-form__title">資料ダウンロード</h2>
-          <div class="p-download-form__items c-form">
+          <div class="p-download-form__items p-form">
             <?php the_content(); ?>
           </div>
         </div>
