@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width">
-  <link rel="apple-touch-icon" href="/img/common/apple-touch-icon.png">
-  <title>Global Standard</title>
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/common/apple-touch-icon.png">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/common/favicon.ico" id="favicon">
   <meta name="description" content="トップページの説明">
   <meta property="og:title" content="Global Standard">
   <meta property="og:description" content="トップページの説明">
   <meta property="og:url" content="サイトのドメイン/">
   <meta property="og:type" content="website ">
   <meta property="og:local" content="ja_JP">
-  <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/img/common/og-image.jpeg">
+  <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/img/common/img-mv01.jpeg">
   <meta property="og:site_name" content="サイトのドメイン ">
 
   <?php wp_head(); ?>
@@ -29,7 +29,7 @@
             Global Standard
           </a>
         </h1>
-        <nav class="p-global-nav" id="js-global-nav" area-label="ページ内のメニュー">
+        <nav class="p-global-nav" id="js-global-nav">
           <ul class="p-global-nav__list">
             <li class="p-global-nav__item">
               <a class="p-global-nav__link" href="<?php echo esc_url(home_url('/')); ?>"> 
@@ -68,7 +68,7 @@
             </li>
           </ul>
         </nav>
-        <button id="js-drawer" class="c-button-drawer u-hidden-xl-up" aria-controls="js-glabal-nav" aria-expanded="false" area-label="メニューを開閉する">
+        <button id="js-drawer" class="c-button-drawer u-hidden-xl-up" aria-controls="js-global-nav" aria-expanded="false">
           <span class="c-button-drawer__line"></span>
           <span class="c-button-drawer__line"></span>
           <span class="c-button-drawer__line"></span>
