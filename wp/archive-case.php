@@ -10,8 +10,8 @@
           <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
         </svg>
         <picture class="p-lower-mv__picture">
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" 　type="image/webp" />
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" 　type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
           <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
           <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="導入事例メインビジュアル">
         </picture>

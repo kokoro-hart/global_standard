@@ -17,33 +17,33 @@
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img lazyload" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
             </div>
             <div id="js-fv-trigger" class="p-mv__contents">
               <h2 class="p-mv__title-wrapper">
-                <p class="p-mv__title u-font-italic is-mask u-hidden-md-up">YOU CAN</p>
-                <p class="p-mv__title u-font-italic is-mask u-hidden-md-up">CHANGE</p>
-                <p class="p-mv__title u-font-italic is-mask u-hidden-md-down">YOU CAN CHANGE</p>
-                <p class="p-mv__title u-font-italic is-mask">THE WORLD</p>
+                <span class="p-mv__title u-font-italic is-mask u-hidden-md-up">YOU CAN</span>
+                <span class="p-mv__title u-font-italic is-mask u-hidden-md-up">CHANGE</span>
+                <span class="p-mv__title u-font-italic is-mask u-hidden-md-down">YOU CAN CHANGE</span>
+                <span class="p-mv__title u-font-italic is-mask">THE WORLD</span>
               </h2>
               <p class="p-mv__lead is-mask-white">世界で活躍できるグローバルな人材を育てる</p>
             </div>
@@ -293,7 +293,7 @@
                 <?php if($category[0]) : ?>
                   <span class="p-home-news__info-category"><?php echo $category[0]->cat_name; ?></span>
                 <?php endif; ?>
-                <span class="p-home-news__info-time" datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></span>
+                <time class="p-home-news__info-time" datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
               </div>
               <h3 class="p-home-news__title"><?php the_title(); ?></h3>
             </a>
