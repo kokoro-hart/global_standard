@@ -55,11 +55,12 @@
 
 .p-lower-mv__title-en {
   display: inline-block;
+  padding-right: 8px;
+  background-color: global.$color-text-white;
   color: global.$color-main;
   @include global.fz(32, 60);
   @include global.lh(1.2);
   font-weight: 500;
-  background-color: global.$color-text-white;
   font-family: global.$font-family-en;
 }
 

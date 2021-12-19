@@ -12,6 +12,10 @@
   position: absolute;
   top: -60px;
   right: 0;
+
+  @include global.browser('firefox') {
+    right: 2px;
+  }
 }
 
 .p-card-service__title {
