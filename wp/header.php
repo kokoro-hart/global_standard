@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width">
   <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/common/apple-touch-icon.png">
   <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/common/favicon.ico" id="favicon">
-  <meta name="description" content="トップページの説明">
-  <meta property="og:title" content="Global Standard">
-  <meta property="og:description" content="トップページの説明">
-  <meta property="og:url" content="サイトのドメイン/">
-  <meta property="og:type" content="website ">
+  <meta name="description" content="世界で活躍できるグローバルな人材を育てる">
+  <meta property="og:title" content="<?php the_title(); ?> - Global Standard">
+  <meta property="og:description" content="世界で活躍できるグローバルな人材を育てる">
+  <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
+  <meta property="og:type" content="website">
   <meta property="og:local" content="ja_JP">
   <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/img/common/img-mv01.jpeg">
-  <meta property="og:site_name" content="サイトのドメイン ">
+  <meta property="og:site_name" content="Global Standard">
 
   <?php wp_head(); ?>
 
