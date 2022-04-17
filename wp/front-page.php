@@ -8,34 +8,34 @@
           <div class="p-mv-slider">
             <div class="p-mv-slider__items">
               <picture class="p-mv-slider__item">
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv01_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv01_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv01_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv01_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv01_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv01_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
-                <source class="p-mv-slider__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
+                <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
               </picture>
             </div>
             <div id="js-fv-trigger" class="p-mv__contents">
@@ -80,8 +80,8 @@
             </div>
             <div class="p-home-about__img-wrapper">
               <picture class="p-home-about__picture">
-                <source class="p-home-about__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-company.webp" type="image/webp" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-company.jpeg" class="p-home-about__img lazyload" width="1362" height="852" alt="about画像">
+                <source class="p-home-about__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-company.webp" type="image/webp" />
+                <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-company.jpeg" class="p-home-about__img lazyload" width="1362" height="852" alt="about画像">
               </picture>
               <div class="p-home-about__link-wrapper u-hidden-md-up">
                 <a href="<?php echo esc_url(home_url('/about')); ?>" class="c-button-more">
@@ -122,8 +122,8 @@
                       </text></g>
                   </svg>
                   <picture class="p-card-service__picture">
-                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service01.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service01.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service01.webp" type="image/webp" />
+                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service01.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -145,8 +145,8 @@
                       </text></g>
                   </svg>
                   <picture class="p-card-service__picture">
-                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service02.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service02.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service02.webp" type="image/webp" />
+                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service02.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -172,8 +172,8 @@
                       </text></g>
                   </svg>
                   <picture class="p-card-service__picture">
-                    <source class="p-card-service__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service03.webp" type="image/webp" />
-                    <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service03.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service03.webp" type="image/webp" />
+                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service03.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -245,7 +245,7 @@
                   <div class="p-card-case__cat"><?php echo esc_html( get_the_terms( get_the_ID(), 'training' )[0]->name );//研修内容を出力 ?></div>
                 </div>
                 <svg class="c-svg p-card-case__arrow" width="29" height="29">
-                  <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow01" />
+                  <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-arrow01" />
                 </svg>
               </div>
             </a>

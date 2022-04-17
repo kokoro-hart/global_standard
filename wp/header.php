@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width">
-  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/common/apple-touch-icon.png">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/common/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/apple-touch-icon.png">
+  <link rel="icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/favicon.ico" id="favicon">
   <meta name="description" content="世界で活躍できるグローバルな人材を育てる">
   <meta property="og:title" content="<?php the_title(); ?> - Global Standard">
   <meta property="og:description" content="世界で活躍できるグローバルな人材を育てる">

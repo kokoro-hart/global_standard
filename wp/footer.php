@@ -6,7 +6,7 @@
           <a href="<?php echo esc_url(home_url('/download')); ?>" class="p-footer-links__button u-font-italic">
             View more
             <svg class="c-svg p-footer-links__svg" width="20" height="13.5">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
+              <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-arrow02" />
             </svg>
           </a>
         </div>
@@ -18,7 +18,7 @@
           <a href="<?php echo esc_url(home_url('/contact')); ?>" class="p-footer-links__button u-font-italic">
             View more
             <svg class="c-svg p-footer-links__svg" width="20" height="13.5">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
+              <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-arrow02" />
             </svg>
           </a>
         </div>

@@ -4,16 +4,16 @@
     <main>
       <div class="p-lower-mv">
         <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+          <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
         </svg>
         <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+          <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
         </svg>
         <picture class="p-lower-mv__picture">
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
-          <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="導入事例メインビジュアル">
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
+          <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="導入事例メインビジュアル">
         </picture>
         <div class="p-lower-mv__title">
           <h2 class="p-lower-mv__title-en u-font-italic">
@@ -121,7 +121,7 @@
                       <div class="p-case-item__row">
                         <dt class="p-case-item__dt">
                           <svg class="c-svg p-case-item__svg" width="15" height="15">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-check" />
+                            <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-check" />
                           </svg>
                           研修の目的
                         </dt>
@@ -134,7 +134,7 @@
                       <div class="p-case-item__row">
                         <dt class="p-case-item__dt">
                           <svg class="c-svg p-case-item__svg" width="15" height="15">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-check" />
+                            <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-check" />
                           </svg>
                           選んだ理由
                         </dt>
@@ -147,7 +147,7 @@
                       <div class="p-case-item__row">
                         <dt class="p-case-item__dt">
                           <svg class="c-svg p-case-item__svg" width="15" height="15">
-                            <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-check" />
+                            <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-check" />
                           </svg>
                           導入後の成果・効果
                         </dt>
@@ -169,7 +169,7 @@
             <a href="<?php echo esc_url(home_url('/service')) .'#'. $tax->slug; //service#slugの形式で出力 ?>" class="c-button-square p-case-summary__button">
               <?php echo $tax->name; // 研修内容 ?>の詳細
               <svg class="c-svg c-button-square__svg" width="18" height="12">
-                <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-arrow02" />
+                <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#icon-arrow02" />
               </svg>
             </a>
           </div>
