@@ -31,11 +31,6 @@
 
 .p-about-message__title--bg-01 {
   background-image: url(../img/webp/img-company01_sp.webp);
-
-  @include global.browser("ie") {
-    //IE11の場合
-    background-image: url(../img/common/img-company01_sp.jpeg);
-  }
   @include global.browser("safari") {
     //safariの場合
     background-image: url(../img/common/img-company01_sp.jpeg);
@@ -44,11 +39,6 @@
   @include global.mq(md) {
     //min-width 768px〜
     background-image: url(../img/webp/img-company01_pc.webp);
-
-    @include global.browser("ie") {
-      //IE11の場合
-      background-image: url(../img/common/img-company01_sp.jpeg);
-    }
     @include global.browser("safari") {
       //safariの場合
       background-image: url(../img/common/img-company01_sp.jpeg);
@@ -58,11 +48,6 @@
 
 .p-about-message__title--bg-02 {
   background-image: url(../img/webp/img-company02_sp.webp);
-
-  @include global.browser("ie") {
-    //IE11の場合
-    background-image: url(../img/common/img-company02_sp.jpeg);
-  }
   @include global.browser("safari") {
     //safariの場合
     background-image: url(../img/common/img-company02_sp.jpeg);
@@ -71,11 +56,6 @@
   @include global.mq(md) {
     //min-width 768px〜
     background-image: url(../img/webp/img-company02_pc.webp);
-
-    @include global.browser("ie") {
-      //IE11の場合
-      background-image: url(../img/common/img-company02_sp.jpeg);
-    }
     @include global.browser("safari") {
       //safariの場合
       background-image: url(../img/common/img-company02_sp.jpeg);

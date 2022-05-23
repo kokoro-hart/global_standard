@@ -1,6 +1,6 @@
 @use "foundation/global";
 
-// Project サービス　カード
+// Project サービス カード
 //--------------------------------------------------------------------------
 
 .p-card-service__head {
@@ -11,10 +11,11 @@
 .p-card-service__number {
   position: absolute;
   top: -60px;
-  right: 0;
+  right: -10px;
 
-  @include global.browser('firefox') {
-    right: 2px;
+  @include global.mq(lg) {
+    right: -20px;  
+    width: 140px;
   }
 }
 

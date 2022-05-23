@@ -40,12 +40,12 @@
             </div>
             <div id="js-fv-trigger" class="p-mv__contents">
               <h2 class="p-mv__title-wrapper">
-                <span class="p-mv__title u-font-italic is-mask u-hidden-md-up">YOU CAN</span>
-                <span class="p-mv__title u-font-italic is-mask u-hidden-md-up">CHANGE</span>
-                <span class="p-mv__title u-font-italic is-mask u-hidden-md-down">YOU CAN CHANGE</span>
-                <span class="p-mv__title u-font-italic is-mask">THE WORLD</span>
+                <span class="p-mv__title u-font-italic is-mask-text u-hidden-md-up">YOU CAN</span>
+                <span class="p-mv__title u-font-italic is-mask-text u-hidden-md-up">CHANGE</span>
+                <span class="p-mv__title u-font-italic is-mask-text u-hidden-md-down">YOU CAN CHANGE</span>
+                <span class="p-mv__title u-font-italic is-mask-text">THE WORLD</span>
               </h2>
-              <p class="p-mv__lead is-mask-white">世界で活躍できるグローバルな人材を育てる</p>
+              <p class="p-mv__lead is-mask-text--white">世界で活躍できるグローバルな人材を育てる</p>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
             <div class="p-home-about__img-wrapper">
               <picture class="p-home-about__picture">
                 <source class="p-home-about__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-company.webp" type="image/webp" />
-                <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-company.jpeg" class="p-home-about__img lazyload" width="1362" height="852" alt="about画像">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-company.jpeg" class="p-home-about__img" width="1362" height="852" alt="about画像" loading="lazy">
               </picture>
               <div class="p-home-about__link-wrapper u-hidden-md-up">
                 <a href="<?php echo esc_url(home_url('/about')); ?>" class="c-button-more">
@@ -114,16 +114,12 @@
             <ul class="p-home-service__cards">
               <li class="p-card-service p-home-service__card">
                 <div class="p-card-service__head">
-                  <svg class="p-card-service__number" height="121" width="98" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
-                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
-                        <tspan x="-98.4" y="0">01</tspan>
-                      </text><text fill="#023e78" transform="translate(99 94)">
-                        <tspan x="-98.4" y="0">01</tspan>
-                      </text></g>
+                  <svg class="p-card-service__number" width="121" height="98" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)"><tspan x="-98.4" y="0">01</tspan></text><text fill="#023e78" transform="translate(99 94)"><tspan x="-98.4" y="0">01</tspan></text></g>
                   </svg>
                   <picture class="p-card-service__picture">
                     <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service01.webp" type="image/webp" />
-                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service01.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service01.jpeg" class="p-card-service__img" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -137,16 +133,12 @@
               </li>
               <li class="p-card-service p-home-service__card">
                 <div class="p-card-service__head">
-                  <svg class="p-card-service__number" height="121" width="105" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
-                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
-                        <tspan x="-98.4" y="0">02</tspan>
-                      </text><text fill="#023e78" transform="translate(99 94)">
-                        <tspan x="-98.4" y="0">02</tspan>
-                      </text></g>
+                  <svg class="p-card-service__number" width="121" height="105" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)"><tspan x="-98.4" y="0">02</tspan></text><text fill="#023e78" transform="translate(99 94)"><tspan x="-98.4" y="0">02</tspan></text></g>
                   </svg>
                   <picture class="p-card-service__picture">
                     <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service02.webp" type="image/webp" />
-                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service02.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service02.jpeg" class="p-card-service__img" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -164,16 +156,13 @@
                 </p>
               </li>
               <li class="p-card-service p-home-service__card">
-                <div class="p-card-service__head"><svg class="p-card-service__number" height="121" width="106" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
-                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)">
-                        <tspan x="-98.4" y="0">03</tspan>
-                      </text><text fill="#023e78" transform="translate(99 94)">
-                        <tspan x="-98.4" y="0">03</tspan>
-                      </text></g>
+                <div class="p-card-service__head">
+                  <svg class="p-card-service__number" width="121" height="106" viewBox="0 0 103 125" xmlns="http://www.w3.org/2000/svg">
+                    <g font-family="FiraSans-MediumItalic, Fira Sans" font-size="100" font-style="italic" font-weight="500"><text fill="#fff" transform="translate(103 98)"><tspan x="-98.4" y="0">03</tspan></text><text fill="#023e78" transform="translate(99 94)"><tspan x="-98.4" y="0">03</tspan></text></g>
                   </svg>
                   <picture class="p-card-service__picture">
                     <source class="p-card-service__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-service03.webp" type="image/webp" />
-                    <img data-src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service03.jpeg" class="p-card-service__img lazyload" width="640" height="854" alt="service画像">
+                    <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-service03.jpeg" class="p-card-service__img" width="640" height="854" alt="service画像">
                   </picture>
                   <h2 class="p-card-service__title">
                     <span class="p-card-service__title-inside">
@@ -227,15 +216,15 @@
           <div class="p-home-case__cards">
             <?php while ( $case_query->have_posts() ): $case_query->the_post();  ?>
             <?php $slug = $post->post_name; //投稿のスラッグを取得 ?>
-            <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case__card p-card-case lazyload">
+            <a href="<?php echo esc_url(home_url('/case')) .'#'.$slug; //case#slugの形式で出力?>" class="p-home-case__card p-card-case">
               <p class="p-card-case__img-wrapper">
                 <?php
                   if(has_post_thumbnail()) {
                     the_post_thumbnail('full', array(
-                      'class' => 'p-card-case__img lazyload'
+                      'class' => 'p-card-case__img'
                     ));
                   } else {
-                    echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-card-case__img lazyload';
+                    echo '<img src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-card-case__img';
                   }
                 ?>
               </p>

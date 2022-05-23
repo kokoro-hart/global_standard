@@ -111,7 +111,7 @@
               <p class="p-officer-item__avatar">
                 <picture class="p-officer-item__picture">
                   <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors01.webp" type="image/webp" />
-                  <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors01.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors01.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
               <div class="p-officer-item__info">
@@ -152,7 +152,7 @@
               <p class="p-officer-item__avatar">
                 <picture class="p-officer-item__picture">
                   <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors02.webp" type="image/webp" />
-                  <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors02.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors02.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
               <div class="p-officer-item__info">
@@ -193,7 +193,7 @@
               <p class="p-officer-item__avatar">
                 <picture class="p-officer-item__picture">
                   <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors03.webp" type="image/webp" />
-                  <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors03.jpeg" class="p-officer-item__img lazyload" width="240" height="320" alt="役員の写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors03.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
               <div class="p-officer-item__info">

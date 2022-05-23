@@ -33,11 +33,6 @@ const config = {
                   // プリセットを指定することで、ES2020 を ES5 に変換
                   '@babel/preset-env',
                   {
-                    targets: { ie: '11' },
-                    //core-jsの設定 設定可能なキー：false(default) / entry / usage
-                    //usage ⇒必要なpolifillだけをインストール
-                    //@babel/preset-envについては以下を参考にするといい
-                    // https://zenn.dev/sa2knight/articles/67f6f5cc4ed5e26e391c
                     useBuiltIns: 'entry',
                     corejs: 3//corejsのバージョン
                   }

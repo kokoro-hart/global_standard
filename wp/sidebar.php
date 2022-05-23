@@ -18,10 +18,10 @@
         <?php
           if(has_post_thumbnail()) {
             the_post_thumbnail('full' , array(
-              'class' => 'p-sidebar-item__img lazyload'
+              'class' => 'p-sidebar-item__img'
             ));
           } else {
-            echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/icatch-news.jpeg" alt="記事の画像" class="p-sidebar-item__img lazyload">';
+            echo '<img src="'. esc_url(get_template_directory_uri()) . '/img/common/icatch-news.jpeg" alt="記事の画像" class="p-sidebar-item__img">';
           }
         ?>
       </div>

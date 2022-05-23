@@ -51,7 +51,7 @@
             <figure class="p-service-detail__figure">
               <picture class="p-service-detail__picture">
                 <source class="p-service-detail__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service-detail01.webp" type="image/webp" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail01.jpeg" class="p-service-detail__img lazyload" alt="ビジネス英語研修の画像">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail01.jpeg" class="p-service-detail__img" alt="ビジネス英語研修の画像">
               </picture>
             </figure>
             <div class="p-service-detail__contents">
@@ -96,7 +96,7 @@
             <figure class="p-service-detail__figure">
               <picture class="p-service-detail__picture">
                 <source class="p-service-detail__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service-detail02.webp" type="image/webp" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail02.jpeg" class="p-service-detail__img lazyload" alt="異文化コミニュケーションの画像">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail02.jpeg" class="p-service-detail__img" alt="異文化コミニュケーションの画像">
               </picture>
             </figure>
             <div class="p-service-detail__contents">
@@ -146,7 +146,7 @@
             <figure class="p-service-detail__figure">
               <picture class="p-service-detail__picture">
                 <source class="p-service-detail__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-service-detail03.webp" type="image/webp" />
-                <img data-src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail03.jpeg" class="p-service-detail__img lazyload" alt="ビジネス留学プログラムの画像">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-service-detail03.jpeg" class="p-service-detail__img" alt="ビジネス留学プログラムの画像">
               </picture>
             </figure>
             <div class="p-service-detail__contents">

@@ -74,11 +74,6 @@
   z-index: -2;
   background: url(../img/webp/bg-company.webp) no-repeat center center / cover;
 
-  @include global.browser("ie") {
-    //IE11の場合
-    background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;
-  }
-
   @include global.browser("safari") {
     //safariの場合
     background: url(../img/common/bg-company.jpeg) no-repeat center center / cover;

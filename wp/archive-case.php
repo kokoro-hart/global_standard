@@ -101,10 +101,10 @@
                         //企業ロゴ（アイキャッチ画像）
                         if(has_post_thumbnail()) {
                           the_post_thumbnail('full', array(
-                            'class' => 'p-case-item__img lazyload'
+                            'class' => 'p-case-item__img'
                           ));
                         } else {
-                          echo '<img data-src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-case-item__img lazyload';
+                          echo '<img src="'. esc_url(get_template_directory_uri()) . '/img/common/img-case01.png" alt="導入事例ロゴ" class="p-case-item__img';
                         }
                       ?>
                     </p>

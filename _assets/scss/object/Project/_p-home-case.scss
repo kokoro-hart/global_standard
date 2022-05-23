@@ -8,10 +8,6 @@
   z-index: 1;
   width: 100%;
   background: url(../img/webp/bg-case.webp) no-repeat center center / cover;
-  @include global.browser("ie") {
-    //IE11の場合
-    background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;
-  }
   @include global.browser("safari") {
     //safariの場合
     background: url(../img/common/bg-case.jpeg) no-repeat center center / cover;

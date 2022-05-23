@@ -35,10 +35,6 @@
 
   &:nth-of-type(1) {
     background-image: url(../img/webp/img-download.webp);
-    @include global.browser("ie") {
-      //IE11の場合
-      background-image: url(../img/common/img-download.jpeg);
-    }
     @include global.browser("safari") {
       //safariの場合
       background-image: url(../img/common/img-download.jpeg);
@@ -50,10 +46,6 @@
 
   &:nth-of-type(2) {
     background-image: url(../img/webp/img-contact.webp);
-    @include global.browser("ie") {
-      //IE11の場合
-      background-image: url(../img/common/img-contact.jpeg);
-    }
     @include global.browser("safari") {
       //safariの場合
       background-image: url(../img/common/img-contact.jpeg);
