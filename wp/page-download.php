@@ -12,7 +12,7 @@
         <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-download_sp.webp" media="(max-width: 767px)" type="image/webp" />
         <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-download_pc.webp" media="(min-width: 768px)" type="image/webp" />
         <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_sp.jpeg" media="(max-width: 767px)" />
-        <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="資料ダウンロードメインビジュアル">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="資料ダウンロードメインビジュアル">
       </picture>
       <div class="p-lower-mv__title">
         <h2 class="p-lower-mv__title-en u-font-italic">

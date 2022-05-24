@@ -11,31 +11,31 @@
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv01_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv01_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv01_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv01_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv01_pc.jpeg" class="p-mv-slider__img" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv05_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv05_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv05_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv05_pc.jpeg" class="p-mv-slider__img" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv03_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv03_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv03_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv03_pc.jpeg" class="p-mv-slider__img" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv04_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv04_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv04_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv04_pc.jpeg" class="p-mv-slider__img" alt="スライダー画像" decoding="async">
               </picture>
               <picture class="p-mv-slider__item">
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv02_sp.webp" media="(max-width: 767px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/img-mv02_pc.webp" media="(min-width: 768px)" type="image/webp" />
                 <source class="p-mv-slider__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv02_sp.jpeg" media="(max-width: 767px)" />
-                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img" media="(min-width: 768px)" alt="スライダー画像" decoding="async">
+                <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/img-mv02_pc.jpeg" class="p-mv-slider__img" alt="スライダー画像" decoding="async">
               </picture>
             </div>
             <div id="js-fv-trigger" class="p-mv__contents">

@@ -13,7 +13,7 @@
           <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
           <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
           <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
-          <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" media="(min-width: 768px)" decoding="async" alt="導入事例メインビジュアル">
+          <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="導入事例メインビジュアル">
         </picture>
         <div class="p-lower-mv__title">
           <h2 class="p-lower-mv__title-en u-font-italic">
