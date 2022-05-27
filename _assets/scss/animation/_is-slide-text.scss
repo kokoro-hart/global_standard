@@ -1,0 +1,41 @@
+@use "foundation/global";
+
+// Javascript スライドテキストアニメーション
+//--------------------------------------------------------------------------
+
+.is-slide-text {
+  opacity: 0;
+
+  &.is-active {
+    opacity: 1;
+
+    .char {
+      display: inline-block;
+
+      @include global.animation(
+        $name: kf-animate-chars,
+        $duration: 1.2s,
+        $timing-function: global.ease(out-quint),
+        $fill-mode: both
+      );
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.07s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes kf-animate-chars {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

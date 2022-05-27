@@ -1,0 +1,83 @@
+@use "foundation/global";
+
+// Javascript マスクテキストアニメーション
+//--------------------------------------------------------------------------
+$pattern: (
+  "left": mask-left,
+  "right": mask-right,
+);
+
+@each $key, $value in $pattern {
+  .is-mask-#{$key} {
+    position: relative;
+    overflow: hidden;
+
+    background-color: transparent;
+    color: transparent;
+  }
+  .is-active {
+    .is-mask-#{$key} {
+      color: global.$color-main;
+      background-color: global.$color-text-white;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: global.$color-main;
+        transform: translate(101%, 0);
+        animation: $value 1.4s global.ease(out-expo);
+      }
+      @for $i from 1 through 15 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.07s + 0.5s;
+          &::after {
+            content: "";
+            animation-delay: $i * 0.04s;
+
+            @include global.mq(md) {
+              animation-delay: $i * 0.07s;
+            }
+          }
+        }
+      }
+      @keyframes mask-left {
+        0% {
+          transform: translate(-101%, 0);
+        }
+        40%,
+        60% {
+          transform: translate(0, 0%);
+        }
+        100% {
+          transform: translate(100%, 0);
+        }
+      }
+      @keyframes mask-right {
+        0% {
+          transform: translate(-101%, 0);
+        }
+        40%,
+        60% {
+          transform: translate(0, 0%);
+        }
+        100% {
+          transform: translate(100%, 0);
+        }
+      }
+    }
+    .is-mask-#{$key}--white {
+      @extend .is-mask-#{$key};
+      color: global.$color-text-white;
+      background-color: global.$color-main;
+      &::after {
+        background-color: global.$color-text-white;
+      }
+    }
+  }
+}

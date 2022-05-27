@@ -1,9 +1,7 @@
-
 // ドロワーメニュー
 const drawerButton = document.getElementById('js-drawer');
 const body = document.body;
 const drawerNav = document.getElementById('js-global-nav');
-
 drawerButton.addEventListener('click', function () {
   body.classList.toggle('is-drawerActive')
   if (drawerButton.getAttribute('aria-expanded') == 'false') {

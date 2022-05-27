@@ -29,8 +29,6 @@
 }
 
 .p-about-company__dl {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   margin-top: 41px;
   @include global.mq(md) {
@@ -39,16 +37,26 @@
   }
 }
 
+.p-about-company__row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &:last-of-type {
+    .p-about-company__dt {
+      border-bottom: 1px solid global.$color-main;
+    }
+    .p-about-company__dd {
+      border-bottom: 1px solid global.$color-border-thin;
+    }
+  }
+}
+
 .p-about-company__dt,
 .p-about-company__dd {
-  border-top: 1px solid global.$color-main;
   padding: 16px 0;
   @include global.fz(14, 16);
   @include global.lh(1.43, 1.5);
   font-weight: 500;
-  &:last-of-type {
-    border-bottom: 1px solid global.$color-main;
-  }
   @include global.mq(md) {
     //min-width 768px〜
     padding: 24px 0;
@@ -59,6 +67,7 @@
   display: flex;
   align-items: center;
   width: 33.9%;
+  border-top: 1px solid global.$color-main;
   @include global.mq(sm) {
     //min-width 576px〜
     padding-left: 12px;
@@ -73,10 +82,7 @@
 .p-about-company__dd {
   width: 66.1%;
   padding-left: 24px;
-  border-color: global.$color-border-thin;
-  &:last-of-type {
-    border-color: global.$color-border-thin;
-  }
+  border-top: 1px solid global.$color-border-thin;
   @include global.mq(md) {
     //min-width 768px〜
     width: 70.93%;

@@ -1,0 +1,23 @@
+@use "foundation/global";
+
+// external swiperのスタイル上書き
+//--------------------------------------------------------------------------
+
+[class*="swiper"]:focus {
+  outline: none;
+}
+
+.p-mv .p-mv-slider__img {
+  transition: 1s;
+}
+
+.p-mv .swiper-slide {
+  overflow: hidden;
+}
+
+.p-mv .swiper-slide[class*="-prev"] .p-mv-slider__img {
+  transform: translateX(80vw);
+}
+.p-mv .swiper-slide[class*="-next"] .p-mv-slider__img {
+  transform: translateX(-80vw);
+}

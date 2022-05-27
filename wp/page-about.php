@@ -2,25 +2,25 @@
     <?php get_header(); ?>
     
     <main>
-      <div class="p-lower-mv">
+      <div id="js-fv-trigger" class="p-lower-mv">
         <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+          <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
         </svg>
         <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+          <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
         </svg>
         <picture class="p-lower-mv__picture">
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
-          <source class="p-lower-mv__img" srcset="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
-          <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img"  decoding="async" alt="当社についてメインビジュアル">
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/mv-company_sp.webp" media="(max-width: 767px)" type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/mv-company_pc.webp" media="(min-width: 768px)" type="image/webp" />
+          <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/mv-company_sp.jpeg" media="(max-width: 767px)" />
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/mv-company_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="当社についてメインビジュアル">
         </picture>
         <div class="p-lower-mv__title">
-          <h2 class="p-lower-mv__title-en u-font-italic">
+          <h2 class="p-lower-mv__title-en u-font-italic is-mask-right">
             ABOUT US
           </h2>
           <br>
-          <p class="p-lower-mv__title-ja">
+          <p class="p-lower-mv__title-ja is-mask-right">
             当社について
           </p>
         </div>
@@ -35,15 +35,16 @@
           ?>
         </div>
       </div>
+      <!--/パンくずリスト-->
       <!--MISSION VISION-->
       <section class="p-about-message l-section">
         <div class="l-inner">
-          <div class="p-about-message__item">
-            <div class="p-about-message__title p-about-message__title--bg-01">
-              <h2 class="p-about-message__title-head u-font-italic">MISSION</h2>
-              <p class="p-about-message__title-foot">社会的使命</p>
+          <div class="p-about-message__item js-trigger">
+            <div class="p-about-message__title p-about-message__title--bg-01 is-fade-right">
+              <h2 class="p-about-message__title-head u-font-italic is-slide-text">MISSION</h2>
+              <p class="p-about-message__title-foot is-fade-up">社会的使命</p>
             </div>
-            <div class="p-about-message__text">
+            <div class="p-about-message__text is-fade-up">
               <h3 class="p-about-message__text-head">
                 人財育成を通じて、<br>
                 豊かな世界を創造する
@@ -53,12 +54,12 @@
               </p>
             </div>
           </div>
-          <div class="p-about-message__item">
-            <div class="p-about-message__title p-about-message__title--bg-02">
-              <h2 class="p-about-message__title-head">VISION</h2>
-              <p class="p-about-message__title-foot">企業理念</p>
+          <div class="p-about-message__item js-trigger">
+            <div class="p-about-message__title p-about-message__title--bg-02 is-fade-right">
+              <h2 class="p-about-message__title-head is-slide-text">VISION</h2>
+              <p class="p-about-message__title-foot is-fade-up">企業理念</p>
             </div>
-            <div class="p-about-message__text">
+            <div class="p-about-message__text is-fade-up">
               <h3 class="p-about-message__text-head">
                 文化の垣根を越えた<br class="u-hidden-sm-down">
                 人と人とのつながりが新しい価値を生む
@@ -72,31 +73,45 @@
       </section>
       <!--/ MISSION VISION-->
       <!--会社概要-->
-      <section class="p-about-company l-section">
+      <section class="p-about-company l-section js-trigger">
         <div class="l-inner l-inner--narrow">
           <div class="p-about-company__contents">
             <h2 class="p-about-company__title">
               会社概要
             </h2>
             <dl class="p-about-company__dl">
-              <dt class="p-about-company__dt">代表</dt>
-              <dd class="p-about-company__dd">波瑠　慶太</dd>
-              <dt class="p-about-company__dt">事業内容</dt>
-              <dd class="p-about-company__dd">
-                ・ビジネス英会話教育事業<br>
-                ・異文化交流サポート事業<br>
-                ・ビジネス留学事業
-              </dd>
-              <dt class="p-about-company__dt">設立</dt>
-              <dd class="p-about-company__dd">2012年10月03日</dd>
-              <dt class="p-about-company__dt">所在地</dt>
-              <dd class="p-about-company__dd">〒550-1000 大阪市西区土佐堀9-5-5</dd>
-              <dt class="p-about-company__dt">TEL</dt>
-              <dd class="p-about-company__dd">06-123-4567（代表）</dd>
-              <dt class="p-about-company__dt">FAX</dt>
-              <dd class="p-about-company__dd">06-123-4568（代表）</dd>
-              <dt class="p-about-company__dt">E-mail</dt>
-              <dd class="p-about-company__dd">globalstandard@example.com</dd>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">代表</dt>
+                <dd class="p-about-company__dd">波瑠　慶太</dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">事業内容</dt>
+                <dd class="p-about-company__dd">
+                  ・ビジネス英会話教育事業<br>
+                  ・異文化交流サポート事業<br>
+                  ・ビジネス留学事業
+                </dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">設立</dt>
+                <dd class="p-about-company__dd">2012年10月03日</dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">所在地</dt>
+                <dd class="p-about-company__dd">〒550-1000 大阪市西区土佐堀9-5-5</dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">TEL</dt>
+                <dd class="p-about-company__dd">06-123-4567（代表）</dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">FAX</dt>
+                <dd class="p-about-company__dd">06-123-4568（代表）</dd>
+              </div>
+              <div class="p-about-company__row is-fade-right">
+                <dt class="p-about-company__dt">E-mail</dt>
+                <dd class="p-about-company__dd">globalstandard@example.com</dd>
+              </div>
             </dl>
           </div>
         </div>
@@ -107,14 +122,14 @@
         <div class="l-inner">
           <h2 class="p-about-officer__title">役員紹介</h2>
           <ul class="p-about-officer__list">
-            <li class="p-about-officer__item p-officer-item">
-              <p class="p-officer-item__avatar">
+            <li class="p-about-officer__item p-officer-item js-trigger">
+              <p class="p-officer-item__avatar is-fade-up">
                 <picture class="p-officer-item__picture">
-                  <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors01.webp" type="image/webp" />
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors01.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
+                  <source class="p-officer-item__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/img-directors01.webp" type="image/webp" />
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/img-directors01.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
-              <div class="p-officer-item__info">
+              <div class="p-officer-item__info is-fade-up">
                 <div class="p-officer-item__profile">
                   <p class="p-officer-item__director">代表取締役社長</p>
                   <h3 class="p-officer-item__name">波瑠　慶太</h3>
@@ -127,35 +142,35 @@
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-twitter" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-twitter" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-facebook" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-facebook" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-instagram" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-instagram" />
                       </svg>
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="p-about-officer__item p-officer-item">
-              <p class="p-officer-item__avatar">
+            <li class="p-about-officer__item p-officer-item js-trigger">
+              <p class="p-officer-item__avatar is-fade-up">
                 <picture class="p-officer-item__picture">
-                  <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors02.webp" type="image/webp" />
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors02.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
+                  <source class="p-officer-item__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/img-directors02.webp" type="image/webp" />
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/img-directors02.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
-              <div class="p-officer-item__info">
+              <div class="p-officer-item__info is-fade-up">
                 <div class="p-officer-item__profile">
                   <p class="p-officer-item__director">取締役</p>
                   <h3 class="p-officer-item__name">ジャック・スミス</h3>
@@ -168,35 +183,35 @@
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-twitter" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-twitter" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-facebook" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-facebook" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-instagram" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-instagram" />
                       </svg>
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="p-about-officer__item p-officer-item">
-              <p class="p-officer-item__avatar">
+            <li class="p-about-officer__item p-officer-item js-trigger">
+              <p class="p-officer-item__avatar is-fade-up">
                 <picture class="p-officer-item__picture">
-                  <source class="p-officer-item__img" srcset="<?php echo get_template_directory_uri(); ?>/img/webp/img-directors03.webp" type="image/webp" />
-                  <img src="<?php echo get_template_directory_uri(); ?>/img/common/img-directors03.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
+                  <source class="p-officer-item__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/img-directors03.webp" type="image/webp" />
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/img-directors03.jpeg" class="p-officer-item__img" width="240" height="320" alt="役員の写真">
                 </picture>
               </p>
-              <div class="p-officer-item__info">
+              <div class="p-officer-item__info is-fade-up">
                 <div class="p-officer-item__profile">
                   <p class="p-officer-item__director">取締役</p>
                   <h3 class="p-officer-item__name">メアリー・ジャクソン</h3>
@@ -208,21 +223,21 @@
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg " width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-twitter" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-twitter" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-facebook" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-facebook" />
                       </svg>
                     </a>
                   </li>
                   <li class="p-officer-item__sns-item">
                     <a href="" class="p-officer-item__sns-link" target="_blank" rel="noopener noreferrer">
                       <svg class="c-svg p-officer-item__sns-svg" width="28" height="28">
-                        <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#icon-instagram" />
+                        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#icon-instagram" />
                       </svg>
                     </a>
                   </li>

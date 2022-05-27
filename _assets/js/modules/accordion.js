@@ -1,7 +1,5 @@
-
-//  アコーディオンメニュー
+// アコーディオンメニュー
 const accordionTitle = document.querySelectorAll('.js-accordion-title');
-
 accordionTitle.forEach(titleEach => {
   let content = titleEach.nextElementSibling
   titleEach.addEventListener('click', () => {

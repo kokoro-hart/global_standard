@@ -1,1 +1,1 @@
-# global_standard
+# Global Standard（架空コーポレートサイト）

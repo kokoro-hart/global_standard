@@ -4,12 +4,36 @@
 //--------------------------------------------------------------------------
 
 .p-home-about {
-  background: linear-gradient(transparent 19%, global.$color-main-thin 19%);
+  position: relative;
+  &.is-slide-bg {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
   @include global.mq(md) {
     //min-width 768px〜
     margin-top: 3px;
     margin-bottom: 125px;
-    background: linear-gradient(transparent 40.5%, global.$color-main-thin 40.5%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent 19%, global.$color-main-thin 19%);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease 0.2s;
+
+    @include global.mq(md) {
+      background: linear-gradient(transparent 40.5%, global.$color-main-thin 40.5%);
+      transition: transform 1s ease 0.2s;
+    }
   }
 }
 

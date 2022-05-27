@@ -2,70 +2,48 @@
 
 // Project メインビジュアル
 //--------------------------------------------------------------------------
-
-.p-mv {
-  position: relative;
-  overflow: hidden;
-  margin-left: 20px;
-
-  @include global.mq(md) {
-    //min-width 768px〜
-    margin-left: 45px;
-  }
-
-  @include global.mq(xl) {
-    //min-width 1280px〜
-    max-height: calc(105vh - global.$header-height-pc);
-    min-height: 650px;
-  }
-}
-
 .p-mv__inner {
+  position: relative;
   width: 100%;
 }
 
-.p-mv__contents {
+.p-mv__content {
   position: absolute;
   bottom: 20px;
-  left: 0;
-
+  left: 10px;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
   @include global.mq(md) {
     //min-width 768px〜
-    bottom: 7vh;
+    left: 45px;
+    bottom: 2.5vw;
   }
 }
 
-.p-mv__title-wrapper {
-  width: 74.66667vw;
-
-  @include global.mq(md) {
-    //min-width 768px〜
-    width: 46.875vw;
+.p-mv__content {
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 
-.p-mv__title {
+.p-mv__heading {
   display: inline-block;
-  padding-right: 6px;
+  padding-right: 0.15em;
   background-color: transparent;
   color: transparent;
-  font-size: 10.66667vw;
+  @include global.max-function("font-size", 40, 375);
   @include global.lh(1.2);
+  font-style: italic;
   font-family: global.$font-family-en;
 
   @include global.mq(md) {
     //min-width 768px〜
-    font-size: 4.6875vw;
+    @include global.font-vw(90, 1920); 
   }
   &:not(:first-child) {
     margin-top: 8px;
-  }
-  &:nth-of-type(2) {
-    @include global.mq(md) {
-      //min-width 768px〜
-      margin-top: 0;
-      padding-left: 10px;
-    }
   }
 }
 
@@ -74,13 +52,13 @@
   margin-top: 16px;
   background-color: transparent;
   color: transparent;
-  font-size: 4.26667vw;
+  @include global.max-function("font-size", 16, 375);
   @include global.lh(1.5);
   font-weight: 700;
-  letter-spacing: 0.9px;
+  letter-spacing: 0.01em;
 
   @include global.mq(md) {
     //min-width 768px〜
-    font-size: 1.5625vw;
+    @include global.font-vw(30, 1920); 
   }
 }

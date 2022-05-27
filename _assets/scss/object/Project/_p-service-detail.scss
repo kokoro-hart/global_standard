@@ -21,9 +21,31 @@
   }
 
   &:nth-of-type(2n) {
+    position: relative;
     padding-top: 0;
     margin: 69px 0 80px;
-    background: linear-gradient(transparent 0%, global.$color-main-thin 0%);
+    &.is-active {
+      &::before {
+        transform: translateX(0);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 0%, global.$color-main-thin 0%);
+      transition: transform 0.4s ease;
+      transform: translateX(-100%);
+
+      @include global.mq(md) {
+        transition: transform 0.8s ease;
+      }
+    }
     @include global.mq(md) {
       //min-width 768px〜
       margin: 195px 0 81px;
@@ -78,9 +100,6 @@
 
 .p-service-detail__item {
   width: 100%;
-  @include global.mq(md) {
-    //min-width 768px〜
-  }
 }
 
 .p-service-detail__figure {
@@ -107,7 +126,7 @@
   @include global.mq(md) {
     //min-width 768px〜
     max-width: 590px;
-    width: 70%;
+    width: 100%;
     margin: 0;
     padding: 80px 30px 60px;
     transform: translateX(30px);

@@ -1,7 +1,7 @@
 
     <?php get_header(); ?>
 
-    <div class="p-lower-mv">
+    <div id="js-fv-trigger" class="p-lower-mv">
       <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
@@ -15,11 +15,11 @@
         <img src="<?php echo get_template_directory_uri(); ?>/img/common/mv-download_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="資料ダウンロードメインビジュアル">
       </picture>
       <div class="p-lower-mv__title">
-        <h2 class="p-lower-mv__title-en u-font-italic">
+        <h2 class="p-lower-mv__title-en u-font-italic is-mask-right">
           DOWNLOAD
         </h2>
         <br>
-        <p class="p-lower-mv__title-ja">
+        <p class="p-lower-mv__title-ja is-mask-right">
           資料ダウンロード
         </p>
       </div>

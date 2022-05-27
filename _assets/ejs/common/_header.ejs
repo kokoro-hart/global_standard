@@ -44,7 +44,7 @@
           </h1>
         <% } %>
 
-        <nav class="p-global-nav" id="js-global-nav" area-label="ページ内のメニュー">
+        <nav class="p-global-nav" id="js-global-nav">
           <ul class="p-global-nav__list">
             <% for(let page in jsonData.pages){ %>
               <% if (page===pageId) { %>
@@ -64,7 +64,7 @@
           </ul>
         </nav>
 
-        <button id="js-drawer" class="c-button-drawer u-hidden-xl-up" aria-controls="js-glabal-nav" aria-expanded="false" area-label="メニューを開閉する">
+        <button id="js-drawer" class="c-button-drawer u-hidden-xl-up" aria-expanded="false">
           <span class="c-button-drawer__line"></span>
           <span class="c-button-drawer__line"></span>
           <span class="c-button-drawer__line"></span>

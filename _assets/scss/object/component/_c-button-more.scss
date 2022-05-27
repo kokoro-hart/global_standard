@@ -27,6 +27,7 @@
   @include global.lh(1.2);
   font-weight: 500;
   font-family: global.$font-family-en;
+  font-style: italic;
 
   @include global.mq(md) {
     //min-width 768px〜
@@ -54,7 +55,7 @@
     right: 1%;
     transform: translateY(-50%);
     width: 95px;
-    transition: width 0.3s, right 0.3s;
+    transition: width 0.6s global.ease(out-quint), right 0.6s global.ease(out-quint);
   }
 
   &::after {

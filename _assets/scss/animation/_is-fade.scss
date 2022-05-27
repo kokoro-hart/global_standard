@@ -1,0 +1,31 @@
+@use "foundation/global";
+
+// Javascript フェード
+//--------------------------------------------------------------------------
+
+$pattern: (
+  "up": translateY(60px),
+  "down": translateY(-60px),
+  "left": translateX(40px),
+  "right": translateX(-40px),
+);
+
+@each $key, $value in $pattern {
+  .is-fade-#{$key} {
+    transform: $value;
+    opacity: 0;
+    transition: opacity 1.3s global.ease(out-expo), transform 1.7s global.ease(out-expo);
+  }
+  .is-active {
+    .is-fade-#{$key} {
+      opacity: 1;
+      transform: translate(0);
+
+      @for $i from 1 through 15 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.1s;
+        }
+      }
+    }
+  }
+}

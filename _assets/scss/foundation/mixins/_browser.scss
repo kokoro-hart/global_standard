@@ -1,4 +1,5 @@
-
+// ブラウザ判定
+//--------------------------------------------------------------------------
 @mixin browser($browsers) {
   @each $browser in $browsers {
     html.#{$browsers} & {

@@ -6,10 +6,6 @@
   $this: &;
   background: no-repeat center center / cover;
   background-image: url(../img/webp/bg-case.webp);
-  @include global.browser("ie") {
-    //IE11の場合
-    background-image: url(../img/common/bg-case.jpeg);
-  }
   @include global.browser("safari") {
     //safariの場合
     background-image: url(../img/common/bg-case.jpeg);
@@ -56,9 +52,11 @@
   }
 
   &:nth-of-type(1n) {
+    z-index: 4;
     .p-service-flow__item-textarea {
       background-color: global.$color-main-thin;
       &:after {
+        content: "";
         background: linear-gradient(to top right, transparent 50%, global.$color-main-thin 50%) no-repeat top left / 50%
             100%,
           linear-gradient(to top left, transparent 50%, global.$color-main-thin 50%) no-repeat bottom right/ 50% 100%;
@@ -73,9 +71,11 @@
   }
 
   &:nth-of-type(2n) {
+    z-index: 3;
     .p-service-flow__item-textarea {
       background-color: global.$color-main-thin02;
       &:after {
+        content: "";
         background: linear-gradient(to top right, transparent 50%, global.$color-main-thin02 50%) no-repeat top left /
             50% 100%,
           linear-gradient(to top left, transparent 50%, global.$color-main-thin02 50%) no-repeat bottom right/50% 100%;
@@ -90,9 +90,11 @@
   }
 
   &:nth-of-type(3n) {
+    z-index: 2;
     .p-service-flow__item-textarea {
       background-color: global.$color-main-thin03;
       &:after {
+        content: "";
         background: linear-gradient(to top right, transparent 50%, global.$color-main-thin03 50%) no-repeat top left /
             50% 100%,
           linear-gradient(to top left, transparent 50%, global.$color-main-thin03 50%) no-repeat bottom right/50% 100%;
@@ -107,9 +109,11 @@
   }
 
   &:nth-of-type(4n) {
+    z-index: 1;
     .p-service-flow__item-textarea {
       background-color: global.$color-main-thin04;
       &:after {
+        content: "";
         display: none;
       }
     }

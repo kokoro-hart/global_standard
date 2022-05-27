@@ -6,6 +6,7 @@
   $this: &;
   position: relative;
   display: inline-block;
+  overflow: hidden;
   max-width: 295px;
   width: 100%;
   padding: 28px 10px;
@@ -14,7 +15,7 @@
   @include global.fz(14, 16);
   @include global.lh(1.7, 1.5);
   text-align: center;
-  transition: color 0.3s ease-out;
+  transition: color 0.6s global.ease(out-quint);
 
   @include global.mq(md) {
     //min-width 768px〜
@@ -33,10 +34,11 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 0;
+    width: 100%;
     height: 100%;
+    transform: translateX(-100%);
     background-color: global.$color-main;
-    transition: width 0.3s ease-out;
+    transition: transform 0.6s global.ease(out-quint);
   }
 
   &:hover,
@@ -46,7 +48,7 @@
       transform: translateY(-50%) translateX(5px);
     }
     &::before {
-      width: 100%;
+      transform: translateX(0);
     }
   }
 }
@@ -56,7 +58,7 @@
   top: 50%;
   right: 12px;
   transform: translateY(-50%);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.6s global.ease(out-quint);
 
   @include global.mq(md) {
     //min-width 768px〜
@@ -67,7 +69,7 @@
 
 //四角の送信ボタン
 .c-button-square--submit {
-  transition: background-color 0.3s ease-out;
+  transition: background-color 0.6s global.ease(out-quint);
   background-color: global.$color-text-white;
 
   &:hover,

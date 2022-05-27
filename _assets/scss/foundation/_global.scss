@@ -1,6 +1,11 @@
 //setting
-@forward "tools/variables";
 @forward "tools/fonts";
+
+//variables
+@forward "variables/font-famiry";
+@forward "variables/color";
+@forward "variables/layout";
+@forward "variables/easing";
 
 //mixins
 @forward "mixins/breakpoint";
@@ -9,6 +14,7 @@
 @forward "mixins/object-fit";
 @forward "mixins/font-size";
 @forward "mixins/line-height";
+@forward "mixins/animation";
+@forward "mixins/font-vw";
+@forward "mixins/max-function";
 
-//functions
-@forward "tools/functions";

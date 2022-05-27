@@ -1,4 +1,6 @@
 
+// object-fitの指定
+//--------------------------------------------------------------------------
 @mixin object-fit($value: fill, $position: null) {
   object-fit: $value;
 

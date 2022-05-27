@@ -90,6 +90,12 @@ small {
   font-size: 100%;
 }
 
+br {
+  content: "";
+  display: block;
+  height: 0;
+}
+
 // 半角英数表示崩れ
 h1,
 h2,

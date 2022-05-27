@@ -12,6 +12,7 @@
   @include global.lh(1.2);
   font-family: global.$font-family-en;
   font-weight: 500;
+  font-style: italic;
   @include global.mq(md) {
     font-size: 7.815vw;
   }

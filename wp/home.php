@@ -1,24 +1,24 @@
     <?php get_header(); ?>
 
-    <div class="p-lower-mv">
+    <div id="js-fv-trigger" class="p-lower-mv">
       <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--sp u-hidden-md-up">
-        <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
+        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#mv-lower-decoration_sp" />
       </svg>
       <svg class="c-svg p-lower-mv__svg p-lower-mv__svg--pc u-hidden-md-down">
-        <use xlink:href="<?php echo esc_url(get_template_directory_uri());  ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
+        <use xlink:href="<?php echo esc_url(get_template_directory_uri()); ?>/img/svg/sprite.min.svg#mv-lower-decoration_pc" />
       </svg>
       <picture class="p-lower-mv__picture">
-        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-news_sp.webp" media="(max-width: 767px)" type="image/webp" />
-        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/webp/mv-news_pc.webp" media="(min-width: 768px)" type="image/webp" />
-        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-news_sp.jpeg" media="(max-width: 767px)" />
-        <img src="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/mv-news_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="お知らせメインビジュアル">
+        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/mv-news_sp.webp" media="(max-width: 767px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/webp/mv-news_pc.webp" media="(min-width: 768px)" type="image/webp" />
+        <source class="p-lower-mv__img" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/mv-news_sp.jpeg" media="(max-width: 767px)" />
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/common/mv-news_pc.jpeg" class="p-lower-mv__img" decoding="async" alt="お知らせメインビジュアル">
       </picture>
       <div class="p-lower-mv__title">
-        <h2 class="p-lower-mv__title-en u-font-italic">
+        <h2 class="p-lower-mv__title-en u-font-italic is-mask-right">
           NEWS
         </h2>
         <br>
-        <p class="p-lower-mv__title-ja">
+        <p class="p-lower-mv__title-ja is-mask-right">
           お知らせ
         </p>
       </div>

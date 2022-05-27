@@ -2,12 +2,15 @@
    --------------------------------------------------------------- */
 @use "vendor/ress";
 
+/* external（ライブラリなどの外部クラス上書き）
+   --------------------------------------------------------------- */
+@use "external/swiper";
+@use "external/swiper-custom";
+
 /* Foundation
    ----------------------------------------------------------------- */
 // base
 @use "foundation/base";
-//animations
-@use "foundation/animation";
 
 /* Layout (prefix: l- )
    ----------------------------------------------------------------- */
@@ -84,3 +87,9 @@
 @use "object/utility/u-hidden";
 @use "object/utility/u-font";
 @use "object/utility/u-margin";
+
+/* animation (アニメーション)
+   ----------------------------------------------------------------- */
+@use "animation/is-mask";
+@use "animation/is-slide-text";
+@use "animation/is-fade";

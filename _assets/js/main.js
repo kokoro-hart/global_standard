@@ -3,19 +3,13 @@
  * webpack.config.jsにて定義している
  */
 
-//SVGスプライトをIEで使用するためのライブラリ
 import '@modules/svgxuse';
-
-//ブラウザ判定のためライブラリ
 import './lib/b_browser_switcher';
 
-//line-clampをIEで使用するためのライブラリ
-import './lib/clamp';
-
-import './common'
-
-//ドロワーメニュー
+import './modules/resize'
+import './modules/fvTrigger'
+import './modules/slider'
+import './modules/scrollEvent'
+import './modules/anchorLink'
 import './modules/drawer'
-
-//アコーディオンメニュー
 import './modules/accordion'
