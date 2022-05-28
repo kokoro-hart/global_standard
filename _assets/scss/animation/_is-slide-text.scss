@@ -6,6 +6,11 @@
 .is-slide-text {
   opacity: 0;
 
+  .char {
+    padding-right: 0.5em;
+    margin-right: -0.5em;
+  }
+
   &.is-active {
     opacity: 1;
 
