@@ -6,19 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/apple-touch-icon.png">
   <link rel="icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/favicon.ico" id="favicon">
-  <meta name="description" content="<?php bloginfo('description'); ?>">
-  <meta property="og:description" content="<?php bloginfo('description'); ?>">
-  <?php if(is_front_page()) : ?>
-    <meta property="og:title" content="<?php bloginfo( 'name' ); ?>">
-    <meta property="og:type" content="website">
-  <?php else: ?>
-    <meta property="og:title" content="<?php the_title(); ?> - <?php bloginfo( 'name' ); ?>">
-    <meta property="og:type" content="article">
-  <?php endif; ?>
-  <meta property="og:url" content="<?php echo get_pagenum_link(get_query_var('paged')); ?>">
-  <meta property="og:local" content="ja_JP">
-  <meta property="og:image" content="<?php echo get_template_directory_uri() ?>/img/common/img-mv01.jpeg">
-  <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+  <?php my_meta_ogp(); ?>
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Noto+Sans+JP:wght@500;700&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
   <?php wp_head(); ?>
