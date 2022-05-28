@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/apple-touch-icon.png">
   <link rel="icon" href="<?php echo esc_url(get_template_directory_uri());  ?>/img/common/favicon.ico" id="favicon">
+  <meta name="description" content="<?php bloginfo('description'); ?>">
   <?php my_meta_ogp(); ?>
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Noto+Sans+JP:wght@500;700&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
